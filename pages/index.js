@@ -16,7 +16,15 @@ export default class extends React.Component {
     return (
       <div>
         <HeadBloc />
-        <Menu links={this.props.socials} />
+        <Menu links={this.props.socials}
+          style={{
+            display: 'inline-block',
+            margin: '10px 10px',
+            transformOrigin: 'left top',
+            transform: 'rotate(270deg) translateX(-100%)',
+            textTransform: 'uppercase',
+            textDecoration: 'none'
+          }} />
         <H1 title="Guillaume Kolly"
           style={{ color: '#000', fontSize: '4em' }} />
         <Paragraph>

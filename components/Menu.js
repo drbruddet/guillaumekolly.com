@@ -9,16 +9,22 @@ export default class Menu extends React.Component {
   }
 
   renderLinks() {
-    return this.props.links.map( (link, i) => (
-      <Link key={i} href={ link.url }>
-        <a className={a} target="_blank">{ link.name }</a>
-      </Link>
-    ))
+    return this.props.links.map( (link, i) => {
+      if (link.type === 'email') {
+        return <a className={a} href={ link.url }>{ link.name }</a>
+      } else {
+        return (
+          <Link key={i} href={ link.url }>
+            <a className={a} target="_blank">{ link.name }</a>
+          </Link>
+        )
+      }
+    })
   }
 
   render() {
     return (
-      <div>
+      <div {...this.props}>
         {this.renderLinks()}
       </div>
     )
@@ -26,10 +32,9 @@ export default class Menu extends React.Component {
 }
 
 const a = css({
-  color: '#000',
-  fontSize: '1em',
   margin: '0 10px 0 0',
   textDecoration: 'none',
+  color: '#000',
   ':hover': {
     textDecoration: 'line-through',
   }
