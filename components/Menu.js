@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import css from 'next/css'
 import Link from 'next/link'
 
 export default class Menu extends React.Component {
@@ -10,7 +11,7 @@ export default class Menu extends React.Component {
   renderLinks() {
     return this.props.links.map( (link, i) => (
       <Link key={i} href={ link.url }>
-        <a target="_blank">{ link.name }</a>
+        <a className={a} target="_blank">{ link.name }</a>
       </Link>
     ))
   }
@@ -23,3 +24,13 @@ export default class Menu extends React.Component {
     )
   }
 }
+
+const a = css({
+  color: '#000',
+  fontSize: '1em',
+  margin: '0 10px 0 0',
+  textDecoration: 'none',
+  ':hover': {
+    textDecoration: 'line-through',
+  }
+})
