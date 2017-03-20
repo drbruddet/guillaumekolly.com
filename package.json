@@ -1,0 +1,15 @@
+{
+  "name": "guillaumekolly.com",
+  "version": "1.0.0",
+  "description": "Personal Website using NextJS",
+  "main": "index.js",
+  "repository": "https://github.com/guillaumeko/guillaumekolly.com.git",
+  "author": "Guillaume Kolly",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^1.2.3"
+  },
+  "scripts": {
+    "dev": "next"
+  }
+}
