@@ -33,33 +33,35 @@ export default class MovingText extends React.Component {
 
     let offset = {
       transform: `translate3d( ${this.state.mousePos.x / -100}px, ${this.state.mousePos.y / -100}px, 0 )`,
-      textShadow: `${- this.state.mousePos.x / -90}px ${this.state.mousePos.y / 100}px rgba(0, 0, 0, 0.3)`
+      textShadow: `${- this.state.mousePos.x / -90}px ${this.state.mousePos.y / 100}px rgba(99, 231, 175, 0.9)`
     }
 
     return (
-      <div className={move} onMouseMove={this.mouseMove.bind(this)}>
-        <h1 className={title}>I'm <span className={moving} style={offset}>Guillaume Kolly</span>.</h1>
+      <div className={backgroundSize} onMouseMove={this.mouseMove.bind(this)}>
+        <h1 className={title}>I'm <span className={movingtitle} style={offset}>Guillaume Kolly</span>.</h1>
       </div>
     )
   }
 }
 
-const move = css({
+const backgroundSize = css({
   height: '100vh',
-  width: 'calc(100vh - 30px)',
+  width: 'calc(100vw - 30px)',
   position: 'absolute',
   top: '0',
-  left: '0',
-  marginLeft: '30px',
+  left: '30px',
 })
 
 const title = css({
   whiteSpace: 'nowrap',
+  position: 'absolute',
   fontSize: '4em',
+  right: '10%',
+  top: '30%',
 })
 
-const moving = css({
+const movingtitle = css({
   display: 'inline-block',
-  color: '#0000ff',
+  color: '#2b2b2b',
   willChange: 'transform'
 })
