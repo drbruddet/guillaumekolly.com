@@ -17,15 +17,7 @@ export default class extends React.Component {
     return (
       <div className={container}>
         <HeadBloc />
-        <Menu links={this.props.socials}
-          style={{
-            display: 'inline-block',
-            margin: '5px 10px',
-            transformOrigin: 'left top',
-            transform: 'rotate(270deg) translateX(-100%)',
-            textTransform: 'uppercase',
-            textDecoration: 'none'
-          }} />
+        <Menu links={this.props.socials} style={social} />
         <section className={introduction}>
           <H1 title="Guillaume Kolly"
             style={{ color: '#000', fontSize: '4em' }} />
@@ -37,6 +29,15 @@ export default class extends React.Component {
     )
   }
 }
+
+const social = css({
+  display: 'inline-block',
+  margin: '5px 10px',
+  transformOrigin: 'left top',
+  transform: 'rotate(270deg) translateX(-100%)',
+  textTransform: 'uppercase',
+  textDecoration: 'none'
+})
 
 const introduction = css({
   position: 'absolute',
