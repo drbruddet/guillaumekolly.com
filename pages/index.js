@@ -5,6 +5,7 @@ import HeadBloc from '../components/layout/HeadBloc'
 import Menu from '../components/Menu'
 import H1 from '../components/utils/H1'
 import Paragraph from '../components/utils/Paragraph'
+import MovingText from '../components/MovingText'
 import socials from '../data/socials'
 
 export default class extends React.Component {
@@ -20,6 +21,7 @@ export default class extends React.Component {
       <div className={container}>
         <HeadBloc />
         <Menu links={socials} style={social} />
+        <MovingText text="I'm" movingtext="Guillaume Kolly" />
         <section className={introduction}>
           <H1 title="Guillaume Kolly"
             style={{ color: '#000', fontSize: '4em' }} />
@@ -38,7 +40,8 @@ const social = css({
   transformOrigin: 'left top',
   transform: 'rotate(270deg) translateX(-100%)',
   textTransform: 'uppercase',
-  textDecoration: 'none'
+  textDecoration: 'none',
+  zIndex: '1',
 })
 
 const introduction = css({
@@ -46,6 +49,7 @@ const introduction = css({
   right: '20%',
   top: '30%',
   border: '1px solid blue',
+  zIndex: '-1'
 })
 
 const container = css({
