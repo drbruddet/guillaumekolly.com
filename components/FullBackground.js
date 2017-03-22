@@ -16,7 +16,7 @@ export default class FullBackground extends React.Component {
                 value_area: 800
               }
             },
-            color: { value: "#ff0000" },
+            color: { value: "#63E7AF" },
             line_linked: {
               enable: true,
               distance: 130,
@@ -26,7 +26,7 @@ export default class FullBackground extends React.Component {
             },
             move: {
               enable: true,
-              speed: 5,
+              speed: 3,
               direction: 'none',
               random: false,
               straight: false,
