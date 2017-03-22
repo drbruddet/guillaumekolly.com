@@ -5,11 +5,12 @@ import Link from 'next/link'
 export default class Menu extends React.Component {
 
   static propTypes = {
-    links: PropTypes.array.isRequired
+    links: PropTypes.array.isRequired,
+    style: PropTypes.object
   }
 
-  renderLinks() {
-    return this.props.links.map( (link, i) => {
+  renderLinks = (links) => {
+    return links.map( (link, i) => {
       if (link.type === 'email') {
         return <a key={i} className={a} href={ link.url }>{ link.name }</a>
       } else {
@@ -23,9 +24,11 @@ export default class Menu extends React.Component {
   }
 
   render() {
+    const { links, style } = this.props
+
     return (
-      <div className={this.props.style}>
-        {this.renderLinks()}
+      <div className={style}>
+        {this.renderLinks(links)}
       </div>
     )
   }

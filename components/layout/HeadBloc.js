@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { css } from 'glamor'
 
-export default () => (
+export default () =>
   <Head>
     <title>Guillaume Kolly</title>
     <meta charSet='utf-8' />
@@ -10,7 +10,6 @@ export default () => (
     <meta name='keywords' content='guillaume, kolly, frontend, backend, full stack, developer, web, javascript, reactJS, Meteor, Js, NextJS, Webpack' />
     <meta name='copyright' content='Guillaume Kolly' />
   </Head>
-)
 
 css.global('html, body',  {
   padding: '0',

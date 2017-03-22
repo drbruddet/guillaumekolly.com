@@ -6,6 +6,10 @@ export default class H1 extends React.Component {
     title: PropTypes.string.isRequired
   }
 
+  static defaultProps = {
+    title: 'Title H1'
+  }
+
   render() {
     return (
       <h1 {...this.props}>

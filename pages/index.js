@@ -14,10 +14,12 @@ export default class extends React.Component {
   }
 
   render() {
+    const { socials } = this.props
+
     return (
       <div className={container}>
         <HeadBloc />
-        <Menu links={this.props.socials} style={social} />
+        <Menu links={socials} style={social} />
         <section className={introduction}>
           <H1 title="Guillaume Kolly"
             style={{ color: '#000', fontSize: '4em' }} />
