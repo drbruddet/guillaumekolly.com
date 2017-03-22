@@ -3,8 +3,6 @@ import css from 'next/css'
 
 import HeadBloc from '../components/layout/HeadBloc'
 import Menu from '../components/Menu'
-import H1 from '../components/utils/H1'
-import Paragraph from '../components/utils/Paragraph'
 import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
 import socials from '../data/socials'

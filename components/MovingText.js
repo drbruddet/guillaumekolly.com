@@ -14,9 +14,7 @@ export default class MovingText extends React.Component {
   }
 
   init() {
-    this.state = {
-      mousePos: { x: 0, y: 0 }
-    }
+    this.state = { mousePos: { x: 0, y: 0 } }
   }
 
   mouseMove(e) {
@@ -37,8 +35,14 @@ export default class MovingText extends React.Component {
     }
 
     return (
-      <div className={backgroundSize} onMouseMove={this.mouseMove.bind(this)}>
-        <h1 className={title}>I'm <span className={movingtitle} style={offset}>Guillaume Kolly</span>.</h1>
+      <div
+        className={backgroundSize}
+        onMouseMove={ this.mouseMove.bind(this) } >
+        <h1 className={title}>I'm&nbsp;
+          <span className={movingtitle}
+            style={offset}>Guillaume Kolly
+          </span>.
+        </h1>
       </div>
     )
   }
