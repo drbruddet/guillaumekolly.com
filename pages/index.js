@@ -1,4 +1,5 @@
 import React from 'react'
+import css from 'next/css'
 
 import HeadBloc from '../components/layout/HeadBloc'
 import Menu from '../components/Menu'
@@ -14,23 +15,37 @@ export default class extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={container}>
         <HeadBloc />
         <Menu links={this.props.socials}
           style={{
             display: 'inline-block',
-            margin: '10px 10px',
+            margin: '5px 10px',
             transformOrigin: 'left top',
             transform: 'rotate(270deg) translateX(-100%)',
             textTransform: 'uppercase',
             textDecoration: 'none'
           }} />
-        <H1 title="Guillaume Kolly"
-          style={{ color: '#000', fontSize: '4em' }} />
-        <Paragraph>
-          Text of the paragraph
-        </Paragraph>
+        <section className={introduction}>
+          <H1 title="Guillaume Kolly"
+            style={{ color: '#000', fontSize: '4em' }} />
+          <Paragraph>
+            Text of the paragraph
+          </Paragraph>
+        </section>
       </div>
     )
   }
 }
+
+const introduction = css({
+  position: 'absolute',
+  right: '20%',
+  top: '30%',
+  border: '1px solid blue',
+})
+
+const container = css({
+  minHeight: '100vh',
+  position: 'relative',
+})

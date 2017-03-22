@@ -11,7 +11,7 @@ export default class Menu extends React.Component {
   renderLinks() {
     return this.props.links.map( (link, i) => {
       if (link.type === 'email') {
-        return <a className={a} href={ link.url }>{ link.name }</a>
+        return <a key={i} className={a} href={ link.url }>{ link.name }</a>
       } else {
         return (
           <Link key={i} href={ link.url }>
