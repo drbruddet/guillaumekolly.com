@@ -1,5 +1,6 @@
 import React from 'react'
 import css from 'next/css'
+import { style } from 'glamor'
 import Link from 'next/link'
 
 import HeadBloc from '../components/layout/HeadBloc'
@@ -24,10 +25,11 @@ export default class extends React.Component {
         <FullBackground />
         <Menu links={socials} style={social} />
         <MovingText
-          text="I'm"
+          beforetext="Hi, I'm "
           movingtext="Guillaume Kolly"
-          style={backgroundSize} />
-        <TextTyped style={text}>
+          aftertext="."
+          style={movingText} />
+        <TextTyped style={texttyped}>
           I’m a full stack developer born and raised in the French Alps,
           but I’m currently living in Lyon - France. I’m fluent in
           Node / Meteor / JS / React, but I’m recently started
@@ -40,30 +42,54 @@ export default class extends React.Component {
   }
 }
 
-const backgroundSize = css({
-  height: '100vh',
-  width: 'calc(100vw - 30px)',
-  position: 'absolute',
-  top: '0',
-  left: '30px',
-})
-
-const social = css({
-  display: 'inline-block',
-  margin: '5px 10px',
-  transformOrigin: 'left top',
-  transform: 'rotate(270deg) translateX(-100%)',
-  textTransform: 'uppercase',
-  zIndex: '1',
-  textDecoration: 'none'
-})
-
-const text = css({
-  width: '602px',
+const texttyped = css({
+  width: '702px',
   position: 'absolute',
   right: '10%',
-  top: 'calc(30% + 4em + 4em)'
+  fontSize: '18px',
+  lineHeight: '1.7',
+  top: 'calc(30% + 4em + 3em)'
 })
+
+const movingText = {
+  background: style({
+    height: '100vh',
+    width: 'calc(100vw - 30px)',
+    position: 'absolute',
+    top: '0',
+    left: '30px',
+  }),
+  fixedtitle: style({
+    position: 'absolute',
+    fontSize: '4em',
+    right: '10%',
+    top: '30%',
+  }),
+  movingtitle: style({
+    color: '#2b2b2b',
+  }),
+  movingtitlebackground: 'rgba(99, 231, 175, 0.9)'
+}
+
+const social = {
+  component: style({
+    display: 'inline-block',
+    margin: '5px 10px',
+    transformOrigin: 'left top',
+    transform: 'rotate(270deg) translateX(-100%)',
+    textTransform: 'uppercase',
+    zIndex: '1',
+    textDecoration: 'none'
+  }),
+  link: style({
+    margin: '0 10px 0 0',
+    textDecoration: 'none',
+    color: '#000',
+    ':hover': {
+      textDecoration: 'line-through',
+    }
+  })
+}
 
 const container = css({
   height: '100vh',

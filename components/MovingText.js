@@ -4,7 +4,8 @@ import css from 'next/css'
 export default class MovingText extends React.Component {
 
   static propTypes = {
-    text: PropTypes.string,
+    beforetext: PropTypes.string,
+    aftertext: PropTypes.string,
     movingtext: PropTypes.string.isRequired,
     style: PropTypes.object
   }
@@ -28,37 +29,32 @@ export default class MovingText extends React.Component {
   }
 
   render() {
-    const { text, movingtext } = this.props
+    const { beforetext, aftertext, movingtext, style } = this.props
 
     let offset = {
-      transform: `translate3d( ${this.state.mousePos.x / -100}px, ${this.state.mousePos.y / -100}px, 0 )`,
-      textShadow: `${- this.state.mousePos.x / -90}px ${this.state.mousePos.y / 100}px rgba(99, 231, 175, 0.9)`
+      transform: `translate3d( ${this.state.mousePos.x / -100}px,
+        ${this.state.mousePos.y / -100}px, 0 )`,
+      textShadow: `${- this.state.mousePos.x / -90}px
+        ${this.state.mousePos.y / 100}px
+        ${this.props.style.movingtitlebackground}`
     }
 
     return (
-      <div
-        className={this.props.style}
+      <div className={style.background}
         onMouseMove={ this.mouseMove.bind(this) } >
-        <h1 className={title}>I'm&nbsp;
-          <span className={movingtitle}
-            style={offset}>Guillaume Kolly
-          </span>.
+        <h1 style={{whiteSpace: 'nowrap'}} className={style.fixedtitle}>
+          {beforetext}
+
+          <span style={{display: 'inline-block',
+                  willChange: 'transform'}}
+            className={style.movingtitle}
+            style={offset}>
+            {movingtext}
+          </span>
+
+          {aftertext}
         </h1>
       </div>
     )
   }
 }
-
-const title = css({
-  whiteSpace: 'nowrap',
-  position: 'absolute',
-  fontSize: '4em',
-  right: '10%',
-  top: '30%',
-})
-
-const movingtitle = css({
-  display: 'inline-block',
-  color: '#2b2b2b',
-  willChange: 'transform'
-})

@@ -15,8 +15,8 @@ export default class TextTyped extends React.Component {
     return (
       <div className={style}>
         <Typist
-          className="Typist"
-          avgTypingSpeed={5}
+          avgTypingSpeed={10}
+          stdTypingDelay={30}
           startDelay={1000}
           cursor={{ hideWhenDone: true }}>
 
