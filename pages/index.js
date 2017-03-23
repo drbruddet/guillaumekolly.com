@@ -30,12 +30,13 @@ export default class extends React.Component {
           aftertext="."
           style={movingText} />
         <TextTyped style={texttyped}>
-          I’m a full stack developer born and raised in the French Alps,
-          but I’m currently living in Lyon - France. I’m fluent in
-          Node / Meteor / JS / React, but I’m recently started
-          experimenting with GraphQL, Redux and Webpack. I also
+          I’m a <strong>Full Stack Developer</strong> born & raised
+          in the French Alps, but I’m currently living in Lyon - France.
+          I’m fluent in Node / Meteor / JS / React, but I’m recently
+          started experimenting with GraphQL, Redux and Webpack. I also
           have skills with Photoshop / Illustrator. Do not hezitate
-          to <Link href="#"><a>contact me</a></Link>.
+          to <Link href="#"><a>contact me</a></Link>. <br/>
+          PS: This website is made with NextJS / ReactJS / Glamor.
         </TextTyped>
       </div>
     )
@@ -48,6 +49,8 @@ const texttyped = css({
   right: '10%',
   fontSize: '18px',
   lineHeight: '1.7',
+  textAlign: 'justify',
+  textJustify: 'inter-word',
   top: 'calc(30% + 4em + 3em)'
 })
 
@@ -57,18 +60,18 @@ const movingText = {
     width: 'calc(100vw - 30px)',
     position: 'absolute',
     top: '0',
-    left: '30px',
+    left: '30px'
   }),
   fixedtitle: style({
     position: 'absolute',
     fontSize: '4em',
     right: '10%',
-    top: '30%',
+    top: '30%'
   }),
   movingtitle: style({
-    color: '#2b2b2b',
+    color: '#2b2b2b'
   }),
-  movingtitlebackground: 'rgba(99, 231, 175, 0.9)'
+  movingtitlebackground: 'rgba(99, 231, 175, 0.8)'
 }
 
 const social = {
@@ -86,7 +89,7 @@ const social = {
     textDecoration: 'none',
     color: '#000',
     ':hover': {
-      textDecoration: 'line-through',
+      textDecoration: 'line-through'
     }
   })
 }
@@ -94,5 +97,5 @@ const social = {
 const container = css({
   height: '100vh',
   width: '100vw',
-  position: 'relative',
+  position: 'relative'
 })
