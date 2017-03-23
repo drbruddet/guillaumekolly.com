@@ -49,7 +49,10 @@ const movingText = {
   }),
   movingtitle: style({
     color: '#2b2b2b',
-    fontSize: '1000%'
+    fontSize: '1000%',
+    '@media(max-width: 640px)': {
+      fontSize: '300%',
+    }
   }),
   movingtitlebackground: 'rgba(99, 231, 175, 0.8)',
   animation: {
@@ -57,7 +60,7 @@ const movingText = {
     transform_mouse_pos_y: '-100',
     shadow_mouse_pos_x: '-20',
     shadow_mouse_pos_y: '20',
-  }
+  },
 }
 
 const errortext = css({
