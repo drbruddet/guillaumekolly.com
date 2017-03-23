@@ -5,7 +5,8 @@ export default class MovingText extends React.Component {
 
   static propTypes = {
     text: PropTypes.string,
-    movingtext: PropTypes.string.isRequired
+    movingtext: PropTypes.string.isRequired,
+    style: PropTypes.object
   }
 
   constructor(props) {
@@ -36,7 +37,7 @@ export default class MovingText extends React.Component {
 
     return (
       <div
-        className={backgroundSize}
+        className={this.props.style}
         onMouseMove={ this.mouseMove.bind(this) } >
         <h1 className={title}>I'm&nbsp;
           <span className={movingtitle}
@@ -47,14 +48,6 @@ export default class MovingText extends React.Component {
     )
   }
 }
-
-const backgroundSize = css({
-  height: '100vh',
-  width: 'calc(100vw - 30px)',
-  position: 'absolute',
-  top: '0',
-  left: '30px',
-})
 
 const title = css({
   whiteSpace: 'nowrap',

@@ -9,31 +9,59 @@ export default class FullBackground extends React.Component {
       <div className={background}>
         <Particles height="100vh" width="100vw" params={{
           particles: {
-            number: {
-              value: 200,
-              density: {
+              number: {
+                value: 80,
+                density: {
+                  enable: true,
+                  value_area: 800
+                }
+              },
+              color: {
+                value: "#000"
+              },
+              opacity: {
+                value: 0.5,
+                random: false,
+                anim: {
+                  enable: false,
+                  speed: 1,
+                  opacity_min: 0.1,
+                  sync: false
+                }
+              },
+              size: {
+                value: 3,
+                random: true,
+                anim: {
+                  enable: false,
+                  speed: 40,
+                  size_min: 0.1,
+                  sync: false
+                }
+              },
+              line_linked: {
                 enable: true,
-                value_area: 800
+                distance: 150,
+                color: "#000",
+                opacity: 0.4,
+                width: 1
+              },
+              move: {
+                enable: true,
+                speed: 6,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: {
+                  enable: false,
+                  rotateX: 600,
+                  rotateY: 1200
+                }
               }
             },
-            color: { value: "#63E7AF" },
-            line_linked: {
-              enable: true,
-              distance: 130,
-              color: "#000",
-              opacity: 0.2,
-              width: 2,
-            },
-            move: {
-              enable: true,
-              speed: 3,
-              direction: 'none',
-              random: false,
-              straight: false,
-              out_mode: 'out',
-            },
-            retina_detect: true,
-          }
+            retina_detect: true
         }} />
       </div>
     )
@@ -41,7 +69,7 @@ export default class FullBackground extends React.Component {
 }
 
 const background = css({
-  backgroundColor: '#fff',
+  backgroundColor: 'transparent',
   position: 'fixed',
   width: '100%',
   height: '100vh',
