@@ -21,7 +21,10 @@ export default class extends React.Component {
 
     return (
       <div className={container}>
-        <HeadBloc />
+        <HeadBloc
+          title="Guillaume Kolly"
+          description="Guillaume Kolly | Full stack developer living in Lyon."
+        />
         <FullBackground style={background}/>
         <Menu links={socials} style={social} />
         <MovingText

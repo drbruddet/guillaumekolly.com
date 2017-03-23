@@ -3,6 +3,7 @@ import css from 'next/css'
 import Link from 'next/link'
 import { style } from 'glamor'
 
+import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
 
@@ -22,8 +23,15 @@ export default class Error extends React.Component {
   }
 
   render () {
+    const title = `Guillaume kolly | ${this.props.statusCode} Page not found`;
+    const movingtextstringify = String(this.props.statusCode);
+
     return (
       <div className={centeredbox}>
+        <HeadBloc
+          title={title}
+          description="Guillaume Kolly's Website. Do not hesitate to contact me."
+        />
         <FullBackground />
         <div className={centeredvert}>
           <h2 className={errortext}>
@@ -31,7 +39,7 @@ export default class Error extends React.Component {
             {this.renderError()}
           </h2>
           <MovingText
-            movingtext={this.props.statusCode}
+            movingtext={movingtextstringify}
             style={movingText} />
           <Link href="/">
             <a className={link}>Go Back Home</a>
@@ -95,7 +103,7 @@ const centeredbox = css({
   alignItems: 'center',
   justifyContent: 'center',
   width: '100vw',
-  height: '100vh'
+  height: '100vh',
 })
 
 const centeredvert = css({
