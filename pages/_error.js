@@ -1,8 +1,10 @@
 import React from 'react'
 import css from 'next/css'
 import Link from 'next/link'
+import { style } from 'glamor'
 
 import FullBackground from '../components/FullBackground'
+import MovingText from '../components/MovingText'
 
 export default class Error extends React.Component {
 
@@ -28,15 +30,33 @@ export default class Error extends React.Component {
             The page your looking for can't be found.
             {this.renderError()}
           </h2>
-          <h1 className={errornumber}>
-            {this.props.statusCode}
-          </h1>
+          <MovingText
+            movingtext={this.props.statusCode}
+            style={movingText} />
           <Link href="/">
             <a className={link}>Go Back Home</a>
           </Link>
         </div>
       </div>
     )
+  }
+}
+
+const movingText = {
+  background: style({
+    height: '100%',
+    width: '100%',
+  }),
+  movingtitle: style({
+    color: '#2b2b2b',
+    fontSize: '1000%'
+  }),
+  movingtitlebackground: 'rgba(99, 231, 175, 0.8)',
+  animation: {
+    transform_mouse_pos_x: '-100',
+    transform_mouse_pos_y: '-100',
+    shadow_mouse_pos_x: '-20',
+    shadow_mouse_pos_y: '20',
   }
 }
 

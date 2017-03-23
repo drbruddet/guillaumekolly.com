@@ -71,7 +71,13 @@ const movingText = {
   movingtitle: style({
     color: '#2b2b2b'
   }),
-  movingtitlebackground: 'rgba(99, 231, 175, 0.8)'
+  movingtitlebackground: 'rgba(99, 231, 175, 0.8)',
+  animation: {
+    transform_mouse_pos_x: '-100',
+    transform_mouse_pos_y: '-100',
+    shadow_mouse_pos_x: '-70',
+    shadow_mouse_pos_y: '80',
+  }
 }
 
 const social = {
