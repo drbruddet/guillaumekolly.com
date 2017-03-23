@@ -22,7 +22,7 @@ export default class extends React.Component {
     return (
       <div className={container}>
         <HeadBloc />
-        <FullBackground />
+        <FullBackground style={background}/>
         <Menu links={socials} style={social} />
         <MovingText
           beforetext="Hi, I'm "
@@ -35,7 +35,7 @@ export default class extends React.Component {
           I’m fluent in Node / Meteor / JS / React, but I’m recently
           started experimenting with GraphQL, Redux and Webpack. I also
           have skills with Photoshop / Illustrator. Do not hezitate
-          to <Link href="#"><a>contact me</a></Link>. <br/>
+          to <Link href="#"><a className='a'>contact me</a></Link>. <br/>
           PS: This website is made with NextJS / ReactJS / Glamor.
         </TextTyped>
       </div>
@@ -57,10 +57,10 @@ const texttyped = css({
 const movingText = {
   background: style({
     height: '100vh',
-    width: 'calc(100vw - 30px)',
+    width: 'calc(100vw - 50px)',
     position: 'absolute',
     top: '0',
-    left: '30px'
+    left: '50px'
   }),
   fixedtitle: style({
     position: 'absolute',
@@ -77,7 +77,7 @@ const movingText = {
 const social = {
   component: style({
     display: 'inline-block',
-    margin: '5px 10px',
+    margin: '15px 20px',
     transformOrigin: 'left top',
     transform: 'rotate(270deg) translateX(-100%)',
     textTransform: 'uppercase',
@@ -93,6 +93,10 @@ const social = {
     }
   })
 }
+
+const background = css({
+  zIndex: '-1',
+})
 
 const container = css({
   height: '100vh',
