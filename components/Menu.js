@@ -2,34 +2,25 @@ import React, { PropTypes } from 'react'
 import css from 'next/css'
 import Link from 'next/link'
 
-export default class Menu extends React.Component {
-
-  static propTypes = {
-    links: PropTypes.array.isRequired,
-    style: PropTypes.object
-  }
-
-  renderLinks = (links, style) => {
-    return links.map( (link, i) => {
-      if (link.type === 'email') {
-        return <a key={i} className={style.link} href={ link.url }>{ link.name }</a>
-      } else {
-        return (
-          <Link key={i} href={ link.url }>
-            <a className={style.link} target="_blank">{ link.name }</a>
-          </Link>
-        )
-      }
-    })
-  }
-
-  render() {
-    const { links, style } = this.props
-
-    return (
-      <div className={style.component}>
-        {this.renderLinks(links, style)}
-      </div>
-    )
-  }
+const propTypes = {
+  links: PropTypes.array.isRequired,
+  style: PropTypes.object
 }
+
+const renderLinks = (links, style) => {
+  return links.map( (link, i) => {
+    return link.type === 'email'
+      ? <a key={i} className={style.link} href={ link.url }>{ link.name }</a>
+      : <Link key={i} href={ link.url }>
+          <a className={style.link} target="_blank">{ link.name }</a>
+        </Link>
+  })
+}
+
+const Menu = (props) =>
+  <div className={props.style.component}>
+    {renderLinks(props.links, props.style)}
+  </div>
+
+Menu.propTypes = propTypes
+export default Menu
