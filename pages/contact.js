@@ -3,6 +3,7 @@ import css from 'next/css'
 import { style, merge } from 'glamor'
 
 import HeadBloc from '../components/layout/HeadBloc'
+import FullBackground from '../components/FullBackground'
 
 export default () =>
   <div className={centeredbox}>
@@ -10,6 +11,7 @@ export default () =>
       title="Guillaume Kolly | Contact"
       description="Guillaume Kolly | Full stack developer living in Lyon. Contact Me here."
     />
+    <FullBackground />
     <div className={formblock}>
       <h1>CONTACT ME</h1>
       <form action="https://formspree.io/guillaume.kolly@gmail.com">
@@ -58,6 +60,8 @@ const formblock = css({
   zIndex: '1',
   background: 'transparent',
   color: '#242424',
+  zIndex: '1',
+  background: '#fff',
   '@media(max-width: 1240px)': {
     padding: '2em',
     width: '50%',
