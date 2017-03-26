@@ -5,9 +5,9 @@ export default class MovingText extends React.Component {
 
   static propTypes = {
     beforetext: PropTypes.string,
-    aftertext: PropTypes.string,
+    aftertext:  PropTypes.string,
     movingtext: PropTypes.string.isRequired,
-    style: PropTypes.object
+    style:      PropTypes.object
   }
 
   constructor(props) {
