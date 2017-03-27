@@ -8,6 +8,7 @@ import Menu from '../components/Menu'
 import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
 import TextTyped from '../components/TextTyped'
+
 import socials from '../data/socials'
 
 export default class extends React.Component {
