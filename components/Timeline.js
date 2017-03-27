@@ -9,7 +9,9 @@ const propTypes = {
 
 const renderTimelineItems = (items) => {
   return items.map( (item, i) => {
-    return <TimelineItem key={i} item={item} />
+    return (i % 2 === 0)
+      ? <TimelineItem key={i} item={item} style={timelineBlockRight} />
+      : <TimelineItem key={i} item={item} style={timelineBlockLeft} />
   })
 }
 
@@ -42,6 +44,22 @@ const containerBefore = css({
   '@media screen and (max-width: 768px)': {
     left: '8px',
     width: '2px',
+  }
+})
+
+const timelineBlockLeft = css({
+  float: 'left',
+  direction: 'rtl',
+  '@media screen and (max-width: 768px)': {
+    float: 'none',
+    direction: 'ltr',
+  }
+})
+
+const timelineBlockRight = css({
+  float: 'right',
+  '@media screen and (max-width: 768px)': {
+    float: 'none'
   }
 })
 

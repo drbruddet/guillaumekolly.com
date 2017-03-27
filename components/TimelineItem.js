@@ -7,7 +7,7 @@ const propTypes = {
 
 const TimelineItem = (props) =>
   <div>
-    <div className={css(timelineBlock, timelineBlockRight)}>
+    <div className={css(timelineBlock, props.style)}>
       <div className={marker} />
       <div className={timelineContent}>
         <h3 className={title}>{props.item.title}</h3>
@@ -36,21 +36,6 @@ const timelineBlock = css({
   }
 })
 
-const timelineBlockLeft = css({
-  float: 'left',
-  direction: 'rtl',
-  '@media screen and (max-width: 768px)': {
-    float: 'none',
-    direction: 'ltr',
-  }
-})
-
-const timelineBlockRight = css({
-  float: 'right',
-  '@media screen and (max-width: 768px)': {
-    float: 'none'
-  }
-})
 
 const marker = css({
   width: '16px',
