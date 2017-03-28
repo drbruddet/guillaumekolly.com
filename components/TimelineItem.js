@@ -3,17 +3,16 @@ import css from 'next/css'
 
 const propTypes = {
   item: PropTypes.object.isRequired,
+  style: PropTypes.object,
 }
 
 const TimelineItem = (props) =>
-  <div>
-    <div className={css(timelineBlock, props.style)}>
-      <div className={marker} />
-      <div className={timelineContent}>
-        <h3 className={title}>{props.item.title}</h3>
-        <span className={subtitle}>{props.item.subtitle}</span>
-        <p className={description}>{props.item.description}</p>
-      </div>
+  <div className={css(timelineBlock, props.side)}>
+    <div className={css(marker, props.style.marker)} />
+    <div className={timelineContent}>
+      <h3 className={css(title, props.style.title)}>{props.item.title}</h3>
+      <span className={css(subtitle, props.style.subtitle)}>{props.item.subtitle}</span>
+      <p className={css(description, props.style.description)}>{props.item.description}</p>
     </div>
   </div>
 
@@ -36,13 +35,12 @@ const timelineBlock = css({
   }
 })
 
-
 const marker = css({
-  width: '16px',
-  height: '16px',
+  width: '10px',
+  height: '10px',
   borderRadius: '50%',
   border: '2px solid #F5F7FA',
-  background: '#4FC1E9',
+  background: '#000',
   marginTop: '10px',
   zIndex: '9999'
 })

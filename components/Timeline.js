@@ -5,13 +5,25 @@ import TimelineItem from '../components/TimelineItem'
 
 const propTypes = {
   items: PropTypes.array.isRequired,
+  type: PropTypes.string,
+  style: PropTypes.object
 }
 
-const renderTimelineItems = (items) => {
+const renderTimelineItems = (items, type, style) => {
   return items.map( (item, i) => {
-    return (i % 2 === 0)
-      ? <TimelineItem key={i} item={item} style={timelineBlockRight} />
-      : <TimelineItem key={i} item={item} style={timelineBlockLeft} />
+    switch (type) {
+      case "right":
+        return <TimelineItem key={i} item={item} side={timelineBlockRight} style={style} />
+        break
+      case "left":
+        return <TimelineItem key={i} item={item} side={timelineBlockLeft} style={style} />
+        break
+      default:
+        return (i % 2 === 0)
+          ? <TimelineItem key={i} item={item} side={timelineBlockRight} style={style} />
+          : <TimelineItem key={i} item={item} side={timelineBlockLeft} style={style} />
+        break
+    }
   })
 }
 
@@ -19,7 +31,7 @@ const Timeline = (props) =>
   <div>
     <div className={container}>
       <div className={containerBefore} />
-      {renderTimelineItems(props.items)}
+      {renderTimelineItems(props.items, props.type, props.style)}
     </div>
   </div>
 
