@@ -29,8 +29,8 @@ const renderTimelineItems = (items, type, style) => {
 
 const Timeline = (props) =>
   <div>
-    <div className={container}>
-      <div className={containerBefore} />
+    <div className={css(container, props.style.container)}>
+      <div className={css(containerBefore, props.style.containerBefore)} />
       {renderTimelineItems(props.items, props.type, props.style)}
     </div>
   </div>
