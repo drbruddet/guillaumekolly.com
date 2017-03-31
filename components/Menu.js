@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import css from 'next/css'
 import Link from 'next/link'
 
 const propTypes = {

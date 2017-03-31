@@ -10,6 +10,7 @@ import MovingText from '../components/MovingText'
 import TextTyped from '../components/TextTyped'
 
 import socials from '../data/socials'
+import { theme, _tag } from '../components/layout/Theme'
 
 export default class extends React.Component {
 
@@ -26,20 +27,19 @@ export default class extends React.Component {
           title="Guillaume Kolly"
           description="Guillaume Kolly | Full stack developer living in Lyon."
         />
-        <FullBackground style={background}/>
+        <FullBackground />
         <Menu links={socials} style={social} />
-        <MovingText
-          beforetext="Hi, I'm "
-          movingtext="Guillaume Kolly"
-          aftertext="."
-          style={movingText} />
+        <MovingText beforetext="Hi, I'm "
+                    movingtext="Guillaume Kolly"
+                    aftertext="."
+                    style={movingText} />
         <TextTyped style={texttyped}>
           I’m a <strong>Full Stack Developer</strong> born & raised
           in the French Alps, but I’m currently living in Lyon - France.
           I’m fluent in Node / Meteor / JS / React, but I’m recently
-          started experimenting with GraphQL, Redux and Webpack. I also
-          have skills with Photoshop / Illustrator. Do not hezitate
-          to <Link href="#"><a className='a'>contact me</a></Link>. <br/>
+          started experimenting with GraphQL, Redux and Webpack.
+          You can discover <Link prefetch href="/resume"><a className={_tag}>my resume here</a></Link>. Do not hezitate
+          to <Link prefetch href="/contact"><a className={_tag}>contact me</a></Link>. <br/>
           PS: This website is made with NextJS / ReactJS / Glamor.
         </TextTyped>
       </div>
@@ -73,9 +73,9 @@ const movingText = {
     top: '30%'
   }),
   movingtitle: style({
-    color: '#2b2b2b'
+    color: theme.colors.text
   }),
-  movingtitlebackground: 'rgba(99, 231, 175, 0.8)',
+  movingtitlebackground: theme.colors.teal,
   animation: {
     transform_mouse_pos_x: '-100',
     transform_mouse_pos_y: '-100',
@@ -97,16 +97,12 @@ const social = {
   link: style({
     margin: '0 10px 0 0',
     textDecoration: 'none',
-    color: '#000',
+    color: theme.colors.black,
     ':hover': {
       textDecoration: 'line-through'
     }
   })
 }
-
-const background = css({
-  zIndex: '-1',
-})
 
 const container = css({
   height: '100vh',

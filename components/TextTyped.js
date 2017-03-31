@@ -8,12 +8,11 @@ const propTypes = {
 
 const TextTyped = (props) =>
   <div className={props.style}>
-    <Typist
-      avgTypingSpeed={10}
-      stdTypingDelay={30}
-      startDelay={1000}
-      cursor={{ hideWhenDone: true }} >
-
+    <Typist avgTypingSpeed={10}
+            stdTypingDelay={30}
+            startDelay={1000}
+            cursor={{ hideWhenDone: true }} >
+            
       {props.children}
     </Typist>
   </div>

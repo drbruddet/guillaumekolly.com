@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import css from 'next/css'
 
 export default class MovingText extends React.Component {
 

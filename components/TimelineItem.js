@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
 import css from 'next/css'
 
+import { theme } from '../components/layout/Theme'
+
 const propTypes = {
   item: PropTypes.object.isRequired,
   style: PropTypes.object,
@@ -47,27 +49,27 @@ const marker = css({
 
 const timelineContent = css({
   width: '95%',
-  padding: '0 15px',
-  color: '#666'
+  padding: '0 15px'
 })
 
 const title = css({
   marginTop: '5px',
   marginBottom: '5px',
   fontSize: '25px',
-  fontWeight: '500'
+  fontWeight: '500',
+  color: '#000'
 })
 
 const subtitle = css({
   fontSize: '15px',
-  color: '#a4a4a4'
+  color: '#000'
 })
 
 const description = css({
   fontSize: '14px',
   lineHeight: '1.5em',
   wordSpacing: '1px',
-  color: '#888'
+  color: '#000'
 })
 
 TimelineItem.propTypes = propTypes

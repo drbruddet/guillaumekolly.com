@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import css from 'next/css'
 
 import TimelineItem from '../components/TimelineItem'
+import { theme } from '../components/layout/Theme'
 
 const propTypes = {
   items: PropTypes.array.isRequired,
@@ -51,7 +52,7 @@ const containerBefore = css({
   marginLeft: '-1px',
   width: '2px',
   height: '100%',
-  background: '#CCD1D9',
+  background: '#000',
   zIndex: '1',
   '@media screen and (max-width: 768px)': {
     left: '8px',

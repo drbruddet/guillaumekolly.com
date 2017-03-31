@@ -28,7 +28,7 @@ const textarea = css({
   lineHeight: 'normal',
   background: 'none',
   border: 'none',
-  borderBottom: 'solid 2px #2b2b2b',
+  borderBottom: 'solid 2px #fff',
   fontSize: '1em',
   margin: '0em 0 1.875em 0',
   padding: '0 0 0.875em 0',
