@@ -74,7 +74,7 @@ const left = css({
 
 const right = css({
   right: '0',
-  background: theme.colors.teal,
+  background: theme.colors.primary,
   zIndex: '999',
   display: 'flex',
   alignItems: 'center',

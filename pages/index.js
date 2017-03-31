@@ -75,7 +75,7 @@ const movingText = {
   movingtitle: style({
     color: theme.colors.text
   }),
-  movingtitlebackground: theme.colors.teal,
+  movingtitlebackground: theme.colors.primary,
   animation: {
     transform_mouse_pos_x: '-100',
     transform_mouse_pos_y: '-100',

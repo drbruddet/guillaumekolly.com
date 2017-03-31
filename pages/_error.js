@@ -7,6 +7,8 @@ import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
 
+import { theme } from '../components/layout/Theme'
+
 export default class Error extends React.Component {
 
   static getInitialProps ({ res, jsonPageRes }) {
@@ -56,13 +58,13 @@ const movingText = {
     width: '100%',
   }),
   movingtitle: style({
-    color: '#2b2b2b',
+    color: theme.colors.black,
     fontSize: '1000%',
     '@media(max-width: 640px)': {
       fontSize: '300%',
     }
   }),
-  movingtitlebackground: 'rgba(99, 231, 175, 0.8)',
+  movingtitlebackground: theme.colors.primary,
   animation: {
     transform_mouse_pos_x: '-100',
     transform_mouse_pos_y: '-100',
@@ -112,5 +114,5 @@ const centeredvert = css({
   textAlign: 'center',
   zIndex: '1',
   background: 'transparent',
-  color: '#242424',
+  color: theme.colors.black,
 })
