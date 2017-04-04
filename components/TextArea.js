@@ -20,6 +20,7 @@ const TextArea = (props) =>
               rows={props.rows ? props.rows : 5}
               required>
     </textarea>
+    <span className={animation}/>
   </div>
 
 const textarea = css({
@@ -51,7 +52,19 @@ const textarea = css({
   ':focus': {
     outline: 'none',
     padding: '0 0 0.875em 0',
+  },
+  ':focus ~ span': {
+    marginLeft: '-50px'
   }
+})
+
+const animation = css({
+  WebkitTransition: 'all 0.5s linear',
+  MozTransition: 'all 0.5s linear',
+  MsTransition: 'all 0.5s linear',
+  OTransition: 'all 0.5s linear',
+  transition: 'all 0.5s linear',
+  content: '',
 })
 
 TextArea.propTypes = propTypes

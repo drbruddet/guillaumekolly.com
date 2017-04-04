@@ -16,6 +16,7 @@ const Input = (props) =>
            className={input}
            placeholder={props.placeholder ? props.placeholder : props.name}
            required />
+         <span className={animation} />
   </div>
 
 const input = css({
@@ -32,7 +33,19 @@ const input = css({
   ':focus': {
     outline: 'none',
     padding: '0 0 0.875em 0',
+  },
+  ':focus ~ span': {
+    marginLeft: '-50px'
   }
+})
+
+const animation = css({
+  WebkitTransition: 'all 0.5s linear',
+  MozTransition: 'all 0.5s linear',
+  MsTransition: 'all 0.5s linear',
+  OTransition: 'all 0.5s linear',
+  transition: 'all 0.5s linear',
+  content: '',
 })
 
 Input.propTypes = propTypes
