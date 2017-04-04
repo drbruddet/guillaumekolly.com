@@ -24,4 +24,24 @@ const _button = css({
   color: theme.colors.primary,
 })
 
-export { theme, _tag, _button }
+const _vertical_menu = {
+  component: css({
+    display: 'inline-block',
+    margin: '15px 20px',
+    transformOrigin: 'left top',
+    transform: 'rotate(270deg) translateX(-100%)',
+    textTransform: 'uppercase',
+    zIndex: '1',
+    textDecoration: 'none'
+  }),
+  link: css({
+    margin: '0 10px 0 0',
+    textDecoration: 'none',
+    color: theme.colors.black,
+    ':hover': {
+      textDecoration: 'line-through'
+    }
+  })
+}
+
+export { theme, _tag, _button, _vertical_menu }

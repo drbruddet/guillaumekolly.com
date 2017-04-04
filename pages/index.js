@@ -11,7 +11,7 @@ import TextTyped from '../components/TextTyped'
 
 import socials from '../data/socials'
 import config from '../data/config'
-import { theme, _tag } from '../components/layout/Theme'
+import { theme, _tag, _vertical_menu } from '../components/layout/Theme'
 
 export default class extends React.Component {
 
@@ -30,7 +30,7 @@ export default class extends React.Component {
       <div className={container}>
         <HeadBloc title={meta.title} description={meta.description} keywords={meta.keywords} />
         <FullBackground />
-        <Menu links={socials} style={social} />
+        <Menu links={socials} style={_vertical_menu} />
         <MovingText beforetext="Hi, I'm "
                     movingtext="Guillaume Kolly"
                     aftertext="."
@@ -84,26 +84,6 @@ const movingText = {
     shadow_mouse_pos_x: '-70',
     shadow_mouse_pos_y: '80',
   }
-}
-
-const social = {
-  component: style({
-    display: 'inline-block',
-    margin: '15px 20px',
-    transformOrigin: 'left top',
-    transform: 'rotate(270deg) translateX(-100%)',
-    textTransform: 'uppercase',
-    zIndex: '1',
-    textDecoration: 'none'
-  }),
-  link: style({
-    margin: '0 10px 0 0',
-    textDecoration: 'none',
-    color: theme.colors.black,
-    ':hover': {
-      textDecoration: 'line-through'
-    }
-  })
 }
 
 const container = css({

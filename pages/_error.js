@@ -1,11 +1,10 @@
 import React from 'react'
 import css from 'next/css'
-import Link from 'next/link'
-import { style } from 'glamor'
 
 import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
+import ButtonLink from '../components/ButtonLink'
 
 import { theme } from '../components/layout/Theme'
 import config from '../data/config'
@@ -43,7 +42,9 @@ export default class Error extends React.Component {
             {this.renderError()}
           </h2>
           <MovingText movingtext={movingtextstringify} style={movingText} />
-          <Link href="/"><a className={link}>Home Page</a></Link>
+          <ButtonLink url="/" title="Home" alt="Home Page" style={button} />
+          <ButtonLink url="/resume" title="Resume" alt="Resume Page" style={button} />
+          <ButtonLink url="/contact" title="Contact" alt="Contact Page" style={button} />
         </div>
       </div>
     )
@@ -51,11 +52,11 @@ export default class Error extends React.Component {
 }
 
 const movingText = {
-  background: style({
+  background: css({
     height: '100%',
     width: '100%',
   }),
-  movingtitle: style({
+  movingtitle: css({
     color: theme.colors.black,
     fontSize: '1000%',
     '@media(max-width: 640px)': { fontSize: '300%' }
@@ -87,13 +88,6 @@ const errornumber = css({
   }
 })
 
-const link = css({
-  color: '#242424',
-  textDecoration: 'none',
-  border: '3px solid #242424',
-  padding: '10px',
-})
-
 const centeredbox = css({
   display: 'flex',
   alignItems: 'center',
@@ -109,4 +103,17 @@ const centeredvert = css({
   zIndex: '1',
   background: 'transparent',
   color: theme.colors.black,
+})
+
+const button = css({
+  width: '160px',
+  border: "4px solid " + theme.colors.primary,
+  ':hover': {
+    backgroundColor: theme.colors.primary,
+    color: theme.colors.white,
+    '> a': { color: theme.colors.white }
+  },
+  '> a': {
+    color: theme.colors.black,
+  }
 })
