@@ -13,7 +13,7 @@ const HeadBloc = (props) =>
     <meta charSet='utf-8' />
     <meta name='viewport' content='initial-scale=1.0, width=device-width' />
     <meta name='description' content={props.description} />
-    <meta name='keywords' content='guillaume, kolly, frontend, backend, full stack, developer, web, javascript, reactJS, Meteor, Js, NextJS, Webpack' />
+    <meta name='keywords' content={props.keywords} />
     <meta name='copyright' content='Guillaume Kolly' />
   </Head>
 

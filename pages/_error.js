@@ -8,6 +8,7 @@ import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
 
 import { theme } from '../components/layout/Theme'
+import config from '../data/config'
 
 export default class Error extends React.Component {
 
@@ -15,7 +16,10 @@ export default class Error extends React.Component {
     const statusCode = res
       ? res.statusCode
       : (jsonPageRes ? jsonPageRes.status : null)
-    return { statusCode }
+    return {
+      statusCode,
+      config: config
+    }
   }
 
   renderError() {
@@ -25,27 +29,21 @@ export default class Error extends React.Component {
   }
 
   render () {
-    const title = `Guillaume kolly | ${this.props.statusCode} Page not found`;
-    const movingtextstringify = String(this.props.statusCode);
+    const meta = this.props.config.meta.error
+    const title = `${meta.title} ${this.props.statusCode} Page not found`
+    const movingtextstringify = String(this.props.statusCode)
 
     return (
       <div className={centeredbox}>
-        <HeadBloc
-          title={title}
-          description="Guillaume Kolly's Website. Do not hesitate to contact me."
-        />
+        <HeadBloc title={title} description={meta.description} keywords={meta.keywords} />
         <FullBackground />
         <div className={centeredvert}>
           <h2 className={errortext}>
             The page your looking for can't be found.
             {this.renderError()}
           </h2>
-          <MovingText
-            movingtext={movingtextstringify}
-            style={movingText} />
-          <Link href="/">
-            <a className={link}>Go Back Home</a>
-          </Link>
+          <MovingText movingtext={movingtextstringify} style={movingText} />
+          <Link href="/"><a className={link}>Home Page</a></Link>
         </div>
       </div>
     )
@@ -60,9 +58,7 @@ const movingText = {
   movingtitle: style({
     color: theme.colors.black,
     fontSize: '1000%',
-    '@media(max-width: 640px)': {
-      fontSize: '300%',
-    }
+    '@media(max-width: 640px)': { fontSize: '300%' }
   }),
   movingtitlebackground: theme.colors.primary,
   animation: {
@@ -77,9 +73,7 @@ const errortext = css({
   fontSize: '140%',
   padding: '0',
   margin: '0',
-  '@media(max-width: 640px)': {
-    fontSize: '90%',
-  }
+  '@media(max-width: 640px)': { fontSize: '90%' }
 })
 
 const errornumber = css({

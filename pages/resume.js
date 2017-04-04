@@ -6,6 +6,7 @@ import HeadBloc from '../components/layout/HeadBloc'
 import Timeline from '../components/Timeline'
 
 import { theme, _tag } from '../components/layout/Theme'
+import config from '../data/config'
 import { experiences, projects, education } from '../data/resume'
 
 export default class extends React.Component {
@@ -15,18 +16,17 @@ export default class extends React.Component {
       experiences:  experiences,
       projects:     projects,
       education:    education,
+      config:       config,
     }
   }
 
   render() {
-    const { experiences, projects, education } = this.props
+    const { config, experiences, projects, education } = this.props
+    const meta = config.meta.resume
 
     return (
       <div>
-        <HeadBloc
-          title="Guillaume Kolly | About me"
-          description="Guillaume Kolly | Full stack developer living in Lyon. Everything to know about me here."
-        />
+        <HeadBloc title={meta.title} description={meta.description} keywords={meta.keywords} />
         <h2 className={title}> 01. Skills </h2>
         <p className={skillBlock}>
           Highly skilled in creating performant

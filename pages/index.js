@@ -10,23 +10,25 @@ import MovingText from '../components/MovingText'
 import TextTyped from '../components/TextTyped'
 
 import socials from '../data/socials'
+import config from '../data/config'
 import { theme, _tag } from '../components/layout/Theme'
 
 export default class extends React.Component {
 
   static getInitialProps () {
-    return { socials: socials }
+    return {
+      socials: socials,
+      config: config
+    }
   }
 
   render() {
-    const { socials } = this.props
+    const { config, socials } = this.props
+    const meta = config.meta.index
 
     return (
       <div className={container}>
-        <HeadBloc
-          title="Guillaume Kolly"
-          description="Guillaume Kolly | Full stack developer living in Lyon."
-        />
+        <HeadBloc title={meta.title} description={meta.description} keywords={meta.keywords} />
         <FullBackground />
         <Menu links={socials} style={social} />
         <MovingText beforetext="Hi, I'm "
@@ -37,10 +39,10 @@ export default class extends React.Component {
           I’m a <strong>Full Stack Developer</strong> born & raised
           in the French Alps, but I’m currently living in Lyon - France.
           I’m fluent in Node / Meteor / JS / React, but I’m recently
-          started experimenting with GraphQL, Redux and Webpack.
-          You can discover <Link prefetch href="/resume"><a className={_tag}>my resume here</a></Link>. Do not hezitate
-          to <Link prefetch href="/contact"><a className={_tag}>contact me</a></Link>. <br/>
-          PS: This website is made with NextJS / ReactJS / Glamor.
+          started experimenting with GraphQL, Redux and Webpack. You can discover
+          <Link prefetch href="/resume"><a className={_tag}>my resume here</a></Link>.
+          Do not hezitate to <Link prefetch href="/contact"><a className={_tag}>contact me</a></Link>.
+          <br/>PS: This website is made with NextJS / ReactJS / Glamor.
         </TextTyped>
       </div>
     )

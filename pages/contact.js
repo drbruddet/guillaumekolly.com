@@ -10,31 +10,35 @@ import ContactForm from '../components/ContactForm'
 
 import { theme, _tag } from '../components/layout/Theme'
 import socials from '../data/socials'
+import config from '../data/config'
 
 export default class extends React.Component {
 
   static getInitialProps () {
-    return { socials: socials }
+    return {
+      socials: socials,
+      config: config
+    }
   }
 
   render() {
-    const { socials } = this.props
+    const { socials, config } = this.props
+    const meta = config.meta.contact
 
     return (
       <div>
-        <HeadBloc title="Guillaume Kolly | Contact"
-          description="Guillaume Kolly | Full stack developer living in Lyon. Contact Me here." />
+        <HeadBloc title={meta.title} description={meta.description} keywords={meta.keywords} />
         <section className={css(halfside, left )}>
           <FullBackground />
           <Menu links={socials} style={social} />
           <div className={resume}>
             You can also watch my&nbsp;
             <Link prefetch href="/resume"><a className={_tag}>online resume</a></Link> or&nbsp;
-            <Link href="#"><a className={_tag}>download it</a></Link>.
+            <Link href={config.application.cv_pdf_url}><a className={_tag}>download it</a></Link>.
           </div>
         </section>
         <section className={css(halfside, right)}>
-          <ContactForm sendTo="guillaume.kolly@gmail.com"/>
+          <ContactForm sendTo={config.application.email}/>
         </section>
       </div>
     )

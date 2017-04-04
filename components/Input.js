@@ -16,7 +16,7 @@ const Input = (props) =>
            className={input}
            placeholder={props.placeholder ? props.placeholder : props.name}
            required />
-         <span className={animation} />
+    <span className={animation} />
   </div>
 
 const input = css({
