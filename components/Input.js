@@ -11,11 +11,11 @@ const propTypes = {
 const Input = (props) =>
   <div className={props.style}>
     <label htmlFor={props.name}></label>
-    <input  type={props.type}
-            name={props.name}
-            className={input}
-            placeholder={props.placeholder ? props.placeholder : props.name}
-    />
+    <input type={props.type}
+           name={props.name}
+           className={input}
+           placeholder={props.placeholder ? props.placeholder : props.name}
+           required />
   </div>
 
 const input = css({
