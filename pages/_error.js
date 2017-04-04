@@ -5,8 +5,8 @@ import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
 import ButtonLink from '../components/ButtonLink'
+import { theme, _centeredBox } from '../components/layout/Theme'
 
-import { theme } from '../components/layout/Theme'
 import config from '../data/config'
 
 export default class Error extends React.Component {
@@ -33,11 +33,11 @@ export default class Error extends React.Component {
     const movingtextstringify = String(this.props.statusCode)
 
     return (
-      <div className={centeredbox}>
+      <div className={_centeredBox}>
         <HeadBloc title={title} description={meta.description} keywords={meta.keywords} />
         <FullBackground />
-        <div className={centeredvert}>
-          <h2 className={errortext}>
+        <div className={verticalyCentered}>
+          <h2 className={errorText}>
             The page your looking for can't be found.
             {this.renderError()}
           </h2>
@@ -50,6 +50,19 @@ export default class Error extends React.Component {
     )
   }
 }
+
+const button = css({
+  width: '160px',
+  border: "4px solid " + theme.colors.primary,
+  ':hover': {
+    backgroundColor: theme.colors.primary,
+    color: theme.colors.white,
+    '> a': { color: theme.colors.white }
+  },
+  '> a': {
+    color: theme.colors.black,
+  }
+})
 
 const movingText = {
   background: css({
@@ -70,50 +83,20 @@ const movingText = {
   },
 }
 
-const errortext = css({
+const errorText = css({
   fontSize: '140%',
   padding: '0',
   margin: '0',
-  '@media(max-width: 640px)': { fontSize: '90%' }
-})
-
-const errornumber = css({
-  fontSize: '2000%',
-  padding: '0',
-  margin: '0',
   '@media(max-width: 640px)': {
-    fontSize: '600%',
-    padding: '20px 10px',
-    margin: 'auto',
+    fontSize: '90%'
   }
 })
 
-const centeredbox = css({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '100vw',
-  height: '100vh',
-})
-
-const centeredvert = css({
+const verticalyCentered = css({
   padding: '2em',
   maxWidth: '50%',
   textAlign: 'center',
   zIndex: '1',
   background: 'transparent',
   color: theme.colors.black,
-})
-
-const button = css({
-  width: '160px',
-  border: "4px solid " + theme.colors.primary,
-  ':hover': {
-    backgroundColor: theme.colors.primary,
-    color: theme.colors.white,
-    '> a': { color: theme.colors.white }
-  },
-  '> a': {
-    color: theme.colors.black,
-  }
 })

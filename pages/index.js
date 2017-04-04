@@ -11,7 +11,7 @@ import TextTyped from '../components/TextTyped'
 
 import socials from '../data/socials'
 import config from '../data/config'
-import { theme, _tag, _vertical_menu } from '../components/layout/Theme'
+import { theme, _tag, _verticalMenu } from '../components/layout/Theme'
 
 export default class extends React.Component {
 
@@ -30,7 +30,7 @@ export default class extends React.Component {
       <div className={container}>
         <HeadBloc title={meta.title} description={meta.description} keywords={meta.keywords} />
         <FullBackground />
-        <Menu links={socials} style={_vertical_menu} />
+        <Menu links={socials} style={_verticalMenu} />
         <MovingText beforetext="Hi, I'm "
                     movingtext="Guillaume Kolly"
                     aftertext="."

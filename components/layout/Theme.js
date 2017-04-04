@@ -24,7 +24,7 @@ const _button = css({
   color: theme.colors.primary,
 })
 
-const _vertical_menu = {
+const _verticalMenu = {
   component: css({
     display: 'inline-block',
     margin: '15px 20px',
@@ -44,4 +44,12 @@ const _vertical_menu = {
   })
 }
 
-export { theme, _tag, _button, _vertical_menu }
+const _centeredBox = css({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100vw',
+  height: '100vh',
+})
+
+export { theme, _tag, _button, _verticalMenu, _centeredBox }
