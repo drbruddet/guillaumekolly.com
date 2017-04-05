@@ -54,7 +54,7 @@ const social = {
     textAlign: 'center',
     display: 'block',
     margin: '0 auto',
-    '@media(max-width: 600px)': { top: 'calc(80px / 2)', },
+    '@media(max-width: 640px)': { top: 'calc(80px / 2)', },
   }),
   link: style({
     margin: '0 1% 0 1%',
@@ -68,7 +68,7 @@ const social = {
       display: 'list-item',
       margin: '10px auto',
     },
-    '@media(max-width: 600px)': {
+    '@media(max-width: 640px)': {
       fontSize: '0.9em',
       margin: '5px auto',
     }
@@ -81,7 +81,7 @@ const resume = css({
   textAlign: 'center',
   letterSpacing: '0.024em',
   '@media(max-width: 1240px)': { padding: '0 0.2em' },
-  '@media(max-width: 600px)': {
+  '@media(max-width: 640px)': {
     fontSize: '0.8em',
     margin: '5px auto',
     top: '70px',
@@ -94,13 +94,13 @@ const halfside = css({
   height: '100vh',
   position: 'absolute',
   top: '0',
-  '@media(max-width: 600px)': { width: '100%' }
+  '@media(max-width: 640px)': { width: '100%' }
 })
 
 const left = css({
   left: '0',
   background: 'transparent',
-  '@media(max-width: 600px)': { height: '160px', }
+  '@media(max-width: 640px)': { height: '160px', }
 })
 
 const right = css({
@@ -110,7 +110,7 @@ const right = css({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  '@media(max-width: 600px)': {
+  '@media(max-width: 640px)': {
     top: 'calc(160px + 20px)',
     left: '0',
     height: '100%',

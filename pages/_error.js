@@ -54,22 +54,16 @@ export default class Error extends React.Component {
 const button = css({
   width: '150px',
   border: "4px solid " + theme.colors.primary,
+  '> a': { color: theme.colors.black, },
   ':hover': {
     backgroundColor: theme.colors.primary,
     color: theme.colors.white,
     '> a': { color: theme.colors.white }
   },
-  '> a': {
-    color: theme.colors.black,
-  },
   '@media(max-width: 640px)': { width: '80%', fontSize: '1em' }
 })
 
 const movingText = {
-  background: css({
-    height: '100%',
-    width: '100%',
-  }),
   movingtitle: css({
     color: theme.colors.black,
     fontSize: '1000%',
@@ -91,9 +85,7 @@ const errorText = css({
   margin: '0 auto',
   lineHeight: '130%',
   color: theme.colors.light_text,
-  '@media(max-width: 640px)': {
-    fontSize: '100%'
-  }
+  '@media(max-width: 640px)': { fontSize: '100%' }
 })
 
 const verticalyCentered = css({
