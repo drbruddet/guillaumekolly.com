@@ -35,13 +35,16 @@ export default class extends React.Component {
                     aftertext="."
                     style={movingText} />
         <TextTyped style={texttyped}>
-          I’m a <strong>Full Stack Developer</strong> born & raised
-          in the French Alps, but I’m currently living in Lyon - France.
-          I’m fluent in Node / Meteor / JS / React, but I’m recently
-          started experimenting with GraphQL, Redux and Webpack. You can discover
-          <Link prefetch href="/resume"><a className={_tag}>my resume here</a></Link>.
-          Do not hezitate to <Link prefetch href="/contact"><a className={_tag}>contact me</a></Link>.
-          <br/>PS: This website is made with NextJS / ReactJS / Glamor.
+          I’m a <strong>FULL STACK DEVELOPER</strong> born & raised in the
+          French Alps, but I’m currently working in Lyon - France. I’m fluent in
+          the Javascript Stack ( Meteor / Node / Html / Css / React ) and I’ve
+          recently started experimenting with Webpack, Redux, GraphQL. I’m a tech
+          enthusiast constantly improve my skills and stay up-to-date
+          with new methods and technology. Writing readable, elegant and clean
+          code is as important as making a clean design. You can take a look on&nbsp;
+          <Link prefetch href="/resume"><a className={_tag}>my resume</a></Link> for
+          more, and do not hesitate to&nbsp;
+          <Link prefetch href="/contact"><a className={_tag}>contact me</a></Link>.
         </TextTyped>
       </div>
     )
@@ -53,7 +56,7 @@ const texttyped = css({
   position: 'absolute',
   right: '10%',
   fontSize: '1.1em',
-  lineHeight: '1.8em',
+  lineHeight: '1.5em',
   letterSpacing: '-0.3px',
   textAlign: 'justify',
   textJustify: 'inter-word',
