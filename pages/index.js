@@ -59,34 +59,50 @@ const texttyped = css({
   textJustify: 'inter-word',
   top: 'calc(30% + 4em + 3.2em)',
   color: theme.colors.black,
+  '@media(max-width: 1240px)': {
+    fontSize: '1em',
+    width: '467px',
+    top: 'calc(30% + 4em + 4em)',
+  },
+  '@media(max-width: 640px)': {
+    width: '280px',
+    top: 'calc(30% + 2em)',
+  },
 })
 
 const movingText = {
   background: style({
-    height: '100vh',
-    width: 'calc(100vw - 50px)',
+    height: 'calc(100vh)',
+    width: 'calc(100vw - 55px)',
     position: 'absolute',
     top: '0',
     left: '50px',
     fontFamily: theme.font.title,
-    top: '30%',
   }),
   beforetext: style({
     position: 'absolute',
     fontSize: '15em',
     right: '28.6%',
     letterSpacing: '-0.07em',
-    color: theme.colors.almost_white
+    top: '30%',
+    color: theme.colors.almost_white,
+    '@media(max-width: 1240px)': { fontSize: '10em', top: '34%', right: '40%' },
+    '@media(max-width: 640px)': { fontSize: '8em', top: '21%', right: '20%' },
+    '@media(max-width: 440px)': { display: 'none' },
   }),
   fixedtitle: style({
     position: 'absolute',
     fontSize: '6em',
     right: '10%',
+    top: '30%',
     letterSpacing: '-6px',
+    '@media(max-width: 640px)': { top: '10%' },
   }),
   movingtitle: style({
     color: theme.colors.black,
     letterSpacing: '-6px',
+    '@media(max-width: 1240px)': { fontSize: '0.8em', },
+    '@media(max-width: 640px)': { fontSize: '0.47em', letterSpacing: '-4px',},
   }),
   movingtitlebackground: theme.colors.primary,
   animation: {
@@ -100,5 +116,5 @@ const movingText = {
 const container = css({
   height: '100vh',
   width: '100vw',
-  position: 'relative'
+  position: 'relative',
 })
