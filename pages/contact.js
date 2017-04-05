@@ -1,16 +1,15 @@
 import React from 'react'
-import css from 'next/css'
-import { style } from 'glamor'
+import { css, style } from 'next/css'
 import Link from 'next/link'
 
+import { theme, _tag } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
 import Menu from '../components/Menu'
 import ContactForm from '../components/ContactForm'
 
-import { theme, _tag } from '../components/layout/Theme'
-import socials from '../data/socials'
 import config from '../data/config'
+import socials from '../data/socials'
 
 export default class extends React.Component {
 
@@ -38,7 +37,7 @@ export default class extends React.Component {
           </div>
         </section>
         <section className={css(halfside, right)}>
-          <ContactForm sendTo={config.application.email}/>
+          <ContactForm sendTo={config.application.email} style={contactForm}/>
         </section>
       </div>
     )
@@ -52,13 +51,13 @@ const social = {
     zIndex: '999',
     position: 'relative',
     top: '50%',
+    textAlign: 'center',
     display: 'block',
     margin: '0 auto',
-    textAlign: 'center',
-    '@media(max-width: 600px)': { top: 'calc(80px / 2)', }
+    '@media(max-width: 600px)': { top: 'calc(80px / 2)', },
   }),
   link: style({
-    margin: '0 3% 0 0',
+    margin: '0 1% 0 1%',
     textDecoration: 'none',
     color: theme.colors.black,
     fontSize: '1.2em',
@@ -80,6 +79,8 @@ const resume = css({
   position: 'relative',
   top: 'calc(50% + 20px)',
   textAlign: 'center',
+  letterSpacing: '0.024em',
+  '@media(max-width: 1240px)': { padding: '0 0.2em' },
   '@media(max-width: 600px)': {
     fontSize: '0.8em',
     margin: '5px auto',
@@ -114,5 +115,12 @@ const right = css({
     left: '0',
     height: '100%',
     position: 'relative',
-  }
+  },
 })
+
+const contactForm = {
+  title: style({
+    fontFamily: theme.font.title,
+    marginBottom: '1.5em'
+  }),
+}

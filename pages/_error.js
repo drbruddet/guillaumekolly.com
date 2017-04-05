@@ -1,11 +1,11 @@
 import React from 'react'
 import css from 'next/css'
 
+import { theme, _centeredBox } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
 import ButtonLink from '../components/ButtonLink'
-import { theme, _centeredBox } from '../components/layout/Theme'
 
 import config from '../data/config'
 
@@ -38,7 +38,7 @@ export default class Error extends React.Component {
         <FullBackground />
         <div className={verticalyCentered}>
           <h2 className={errorText}>
-            The page your looking for can't be found.
+            The page your looking for can't be found.<br/>
             {this.renderError()}
           </h2>
           <MovingText movingtext={movingtextstringify} style={movingText} />
@@ -52,7 +52,7 @@ export default class Error extends React.Component {
 }
 
 const button = css({
-  width: '160px',
+  width: '150px',
   border: "4px solid " + theme.colors.primary,
   ':hover': {
     backgroundColor: theme.colors.primary,
@@ -61,7 +61,8 @@ const button = css({
   },
   '> a': {
     color: theme.colors.black,
-  }
+  },
+  '@media(max-width: 640px)': { width: '80%', fontSize: '1em' }
 })
 
 const movingText = {
@@ -72,7 +73,8 @@ const movingText = {
   movingtitle: css({
     color: theme.colors.black,
     fontSize: '1000%',
-    '@media(max-width: 640px)': { fontSize: '300%' }
+    lineHeight: '90%',
+    '@media(max-width: 640px)': { fontSize: '600%' }
   }),
   movingtitlebackground: theme.colors.primary,
   animation: {
@@ -85,16 +87,16 @@ const movingText = {
 
 const errorText = css({
   fontSize: '140%',
-  padding: '0',
-  margin: '0',
+  width: '100%',
+  margin: '0 auto',
+  lineHeight: '130%',
+  color: theme.colors.light_text,
   '@media(max-width: 640px)': {
-    fontSize: '90%'
+    fontSize: '100%'
   }
 })
 
 const verticalyCentered = css({
-  padding: '2em',
-  maxWidth: '50%',
   textAlign: 'center',
   zIndex: '1',
   background: 'transparent',

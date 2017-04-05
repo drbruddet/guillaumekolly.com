@@ -16,7 +16,7 @@ const sendToAddress = (email) => "https://formspree.io/" + email
 
 const ContactForm = (props) =>
   <div className={css(formblock, props.style)}>
-    <h1 className={title}>CONTACT ME</h1>
+    <h1 className={css(title, props.style.title)}>CONTACT ME</h1>
     <form action={sendToAddress(props.sendTo)} method="POST">
       <Input type="text" name="name" style={name} />
       <Input type="email" name="email" style={email} />

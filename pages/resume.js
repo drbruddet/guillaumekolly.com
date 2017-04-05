@@ -1,11 +1,10 @@
 import React from 'react'
-import css from 'next/css'
-import { style } from 'glamor'
+import { css, style } from 'next/css'
 
+import { theme, _tag } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import Timeline from '../components/Timeline'
 
-import { theme, _tag } from '../components/layout/Theme'
 import config from '../data/config'
 import { experiences, projects, education } from '../data/resume'
 
@@ -93,5 +92,6 @@ const timelineStyle = {
 
 const title = css({
   textAlign: 'center',
+  fontFamily: "'Roboto', sans-serif",
   textTransform: 'uppercase',
 })

@@ -1,17 +1,16 @@
 import React from 'react'
-import css from 'next/css'
-import { style } from 'glamor'
+import { css, style } from 'next/css'
 import Link from 'next/link'
 
+import { theme, _tag, _verticalMenu } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import Menu from '../components/Menu'
 import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
 import TextTyped from '../components/TextTyped'
 
-import socials from '../data/socials'
 import config from '../data/config'
-import { theme, _tag, _verticalMenu } from '../components/layout/Theme'
+import socials from '../data/socials'
 
 export default class extends React.Component {
 
@@ -50,14 +49,16 @@ export default class extends React.Component {
 }
 
 const texttyped = css({
-  width: '702px',
+  width: '598px',
   position: 'absolute',
   right: '10%',
-  fontSize: '18px',
-  lineHeight: '1.7',
+  fontSize: '1.1em',
+  lineHeight: '1.8em',
+  letterSpacing: '-0.3px',
   textAlign: 'justify',
   textJustify: 'inter-word',
-  top: 'calc(30% + 4em + 3em)'
+  top: 'calc(30% + 4em + 3.2em)',
+  color: theme.colors.black,
 })
 
 const movingText = {
@@ -66,16 +67,26 @@ const movingText = {
     width: 'calc(100vw - 50px)',
     position: 'absolute',
     top: '0',
-    left: '50px'
+    left: '50px',
+    fontFamily: theme.font.title,
+    top: '30%',
+  }),
+  beforetext: style({
+    position: 'absolute',
+    fontSize: '15em',
+    right: '28.6%',
+    letterSpacing: '-0.07em',
+    color: theme.colors.almost_white
   }),
   fixedtitle: style({
     position: 'absolute',
-    fontSize: '4em',
+    fontSize: '6em',
     right: '10%',
-    top: '30%'
+    letterSpacing: '-6px',
   }),
   movingtitle: style({
-    color: theme.colors.text
+    color: theme.colors.black,
+    letterSpacing: '-6px',
   }),
   movingtitlebackground: theme.colors.primary,
   animation: {
