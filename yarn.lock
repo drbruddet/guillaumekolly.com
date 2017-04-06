@@ -2156,6 +2156,10 @@ react-hot-loader@3.0.0-beta.6:
     redbox-react "^1.2.5"
     source-map "^0.4.4"
 
+react-parallax@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-1.2.6.tgz#7595d990c729af1b1701135af9bee0841868ed1c"
+
 react-particles-js@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-1.5.0.tgz#d30313c52941282b8f8f58eaf909056bcf57a2ba"
@@ -2175,17 +2179,9 @@ react-typist@^1.0.3:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-typist/-/react-typist-1.1.0.tgz#25c3f5f0f583255719d511c14fa0edef54c44fc0"
 
-react@15.4.1:
+react@15.4.1, react@^15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.1.tgz#498e918602677a3983cd0fd206dfe700389a0dd6"
-  dependencies:
-    fbjs "^0.8.4"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-
-react@^15.4.1:
-  version "15.4.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"

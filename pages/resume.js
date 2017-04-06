@@ -4,9 +4,13 @@ import { css, style } from 'next/css'
 import { theme, _tag } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import Timeline from '../components/Timeline'
+import ParallaxBlock from '../components/ParallaxBlock'
+import Particles from 'react-particles-js'
 
 import config from '../data/config'
+import particles from '../data/particles'
 import { experiences, projects, education } from '../data/resume'
+
 
 export default class extends React.Component {
 
@@ -16,7 +20,59 @@ export default class extends React.Component {
       projects:     projects,
       education:    education,
       config:       config,
+      particles:    particles
     }
+  }
+
+  renderSkills() {
+    return (
+      <p className={skillBlock}>
+        Highly skilled in creating performant
+        &nbsp;<strong className={_tag}>Html</strong>, <strong className={_tag}>Css</strong>,
+        &nbsp;<strong className={_tag}>React components</strong>,
+        I play a lot since over than one year with <strong className={_tag}>Meteor</strong>.
+        I experienced a lot <strong className={_tag}>Ruby On Rails</strong>.
+        I'm passionate about the 'MERN' stack (<strong className={_tag}>MongoDb</strong>,
+        <strong className={_tag}>ExpressJs</strong>, <strong className={_tag}>ReactJs</strong>,
+        &thinsp;<strong className={_tag}>NodeJs</strong>).
+        Experienced with design, I'm playing a lot with
+        <strong className={_tag}>Illustrator</strong> and <strong className={_tag}>Photoshop</strong>.
+        Skilled with css pre-processors and frameworks, like
+        <strong className={_tag}>Bootstrap</strong>, <strong className={_tag}>Semantic-ui</strong>,
+        <strong className={_tag}>Stylus</strong>, <strong className={_tag}>Sass</strong>, <strong className={_tag}>Haml</strong>.
+        I also play a lot with templating like
+        <strong className={_tag}>Jade</strong> or <strong className={_tag}>Blaze </strong>
+        with my Meteor apps. I'm fluent with Sql (
+        <strong className={_tag}>MySql</strong> / <strong className={_tag}>PostgreSql</strong>)
+        and noSql (<strong className={_tag}>MongoDb</strong> ).
+        I believe <strong className={_tag}>code has to clean</strong>, like a design has to be
+        <strong className={_tag}>responsive</strong> and <strong className={_tag}>accessible</strong>.
+        I'm fan of <strong className={_tag}>Git</strong> and use <strong className={_tag}>Github</strong> and
+        <strong className={_tag}>Bitbucket</strong>. Recently, I learned to playing with
+        <strong className={_tag}>Redux</strong>, <strong className={_tag}>Webpack</strong>, and
+        <strong className={_tag}>GraphQl</strong> and love it!
+        <br/><br/>
+        I'm <strong className={css(_tag, yellow)}>French native</strong> and I'm <strong className={css(_tag, yellow)}>fluent in English</strong>.
+      </p>
+    )
+  }
+
+  renderTimeline(items) {
+    return <Timeline items={items} style={timelineStyle} />
+  }
+
+  getParallaxBg() {
+    return <Particles height="100vh" width="100vw" params={particles} />
+  }
+
+  renderParallaxBlock(title, content) {
+    return (
+      <ParallaxBlock  title={title}
+                      background={this.getParallaxBg()}
+                      style={ParallaxBlockStyle}>
+        {content}
+      </ParallaxBlock>
+    )
   }
 
   render() {
@@ -26,44 +82,31 @@ export default class extends React.Component {
     return (
       <div>
         <HeadBloc title={meta.title} description={meta.description} keywords={meta.keywords} />
-        <h2 className={title}> 01. Skills </h2>
-        <p className={skillBlock}>
-          Highly skilled in creating performant
-          &nbsp;<strong className={_tag}>Html</strong>, <strong className={_tag}>Css</strong>,
-          &nbsp;<strong className={_tag}>React components</strong>,
-          I play a lot since over than one year with <strong className={_tag}>Meteor</strong>.
-          I experienced a lot <strong className={_tag}>Ruby On Rails</strong>.
-          I'm passionate about the 'MERN' stack (<strong className={_tag}>MongoDb</strong>,
-          <strong className={_tag}>ExpressJs</strong>, <strong className={_tag}>ReactJs</strong>,
-          &thinsp;<strong className={_tag}>NodeJs</strong>).
-          Experienced with design, I'm playing a lot with
-          <strong className={_tag}>Illustrator</strong> and <strong className={_tag}>Photoshop</strong>.
-          Skilled with css pre-processors and frameworks, like
-          <strong className={_tag}>Bootstrap</strong>, <strong className={_tag}>Semantic-ui</strong>,
-          <strong className={_tag}>Stylus</strong>, <strong className={_tag}>Sass</strong>, <strong className={_tag}>Haml</strong>.
-          I also play a lot with templating like
-          <strong className={_tag}>Jade</strong> or <strong className={_tag}>Blaze </strong>
-          with my Meteor apps. I'm fluent with Sql (
-          <strong className={_tag}>MySql</strong> / <strong className={_tag}>PostgreSql</strong>)
-          and noSql (<strong className={_tag}>MongoDb</strong> ).
-          I believe <strong className={_tag}>code has to clean</strong>, like a design has to be
-          <strong className={_tag}>responsive</strong> and <strong className={_tag}>accessible</strong>.
-          I'm fan of <strong className={_tag}>Git</strong> and use <strong className={_tag}>Github</strong> and
-          <strong className={_tag}>Bitbucket</strong>. Recently, I learned to playing with
-          <strong className={_tag}>Redux</strong>, <strong className={_tag}>Webpack</strong>, and
-          <strong className={_tag}>GraphQl</strong> and love it!
-          <br/><br/>
-          I'm <strong className={css(_tag, yellow)}>French native</strong> and I'm <strong className={css(_tag, yellow)}>fluent in English</strong>.
-        </p>
-        <h2 className={title}> 02. Work Experiences </h2>
-        <Timeline items={experiences} style={timelineStyle} />
-        <h2 className={title}> 03. Personal Projects </h2>
-        <Timeline items={projects} style={timelineStyle} />
-        <h2 className={title}> 04. Education </h2>
-        <Timeline items={education} style={timelineStyle} />
+        {this.renderParallaxBlock("01 . Skills", this.renderSkills())}
+        {this.renderParallaxBlock("02 . Work Experiences", this.renderTimeline(experiences))}
+        {this.renderParallaxBlock("03 . Personal Projects", this.renderTimeline(projects))}
+        {this.renderParallaxBlock("04 . Education", this.renderTimeline(education))}
       </div>
     )
   }
+}
+
+const ParallaxBlockStyle = {
+  parallax: style({
+    height: '200px',
+    width: '100%',
+    borderTop: '1px solid #ddd',
+  }),
+  title: style({
+    textAlign: 'center',
+    fontFamily: "'Roboto', sans-serif",
+    textTransform: 'uppercase',
+    fontSize: '2.3em',
+    paddingTop: '70px'
+  }),
+  content: style({
+    margin: '5% auto'
+  })
 }
 
 const skillBlock = css({
@@ -73,8 +116,6 @@ const skillBlock = css({
   lineHeight: '1.8em',
   fontSize: '1.1em',
   color: theme.colors.text,
-  //textAlign: 'justify',
-  //textJustify: 'inter-word'
 })
 
 const yellow = css({
@@ -89,9 +130,3 @@ const timelineStyle = {
   description: { color: theme.colors.text },
   containerBefore: { backgroundColor: theme.colors.time_line }
 }
-
-const title = css({
-  textAlign: 'center',
-  fontFamily: "'Roboto', sans-serif",
-  textTransform: 'uppercase',
-})

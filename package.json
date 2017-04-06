@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "next": "^1.2.3",
+    "react-parallax": "^1.2.6",
     "react-particles-js": "^1.5.0",
     "react-typist": "^1.0.3"
   },
