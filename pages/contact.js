@@ -26,7 +26,9 @@ export default class extends React.Component {
 
     return (
       <div>
-        <HeadBloc title={meta.title} description={meta.description} keywords={meta.keywords} />
+        <HeadBloc title={meta.title}
+                  description={meta.description}
+                  keywords={meta.keywords} />
         <section className={css(halfside, left )}>
           <FullBackground />
           <Menu links={socials} style={social} />

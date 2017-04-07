@@ -14,15 +14,27 @@ const renderTimelineItems = (items, type, style) => {
   return items.map( (item, i) => {
     switch (type) {
       case "right":
-        return <TimelineItem key={i} item={item} side={timelineBlockRight} style={style} />
+        return ( <TimelineItem key={i}
+                               item={item}
+                               side={timelineBlockRight}
+                               style={style} /> )
         break
       case "left":
-        return <TimelineItem key={i} item={item} side={timelineBlockLeft} style={style} />
+        return ( <TimelineItem key={i}
+                               item={item}
+                               side={timelineBlockLeft}
+                               style={style} /> )
         break
       default:
         return (i % 2 === 0)
-          ? <TimelineItem key={i} item={item} side={timelineBlockRight} style={style} />
-          : <TimelineItem key={i} item={item} side={timelineBlockLeft} style={style} />
+          ? ( <TimelineItem key={i}
+                            item={item}
+                            side={timelineBlockRight}
+                            style={style} /> )
+          : ( <TimelineItem key={i}
+                            item={item}
+                            side={timelineBlockLeft}
+                            style={style} /> )
         break
     }
   })

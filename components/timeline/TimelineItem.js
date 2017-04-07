@@ -13,8 +13,12 @@ const TimelineItem = (props) =>
     <div className={css(marker, props.style.marker)} />
     <div className={timelineContent}>
       <h3 className={css(title, props.style.title)}>{props.item.title}</h3>
-      <span className={css(subtitle, props.style.subtitle)}>{props.item.subtitle}</span>
-      <p className={css(description, props.style.description)}>{props.item.description}</p>
+      <span className={css(subtitle, props.style.subtitle)}>
+        {props.item.subtitle}
+      </span>
+      <p className={css(description, props.style.description)}>
+        {props.item.description}
+      </p>
     </div>
   </div>
 

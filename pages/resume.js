@@ -30,33 +30,50 @@ export default class extends React.Component {
   renderSkills() {
     return (
       <p className={skillBlock}>
-        Highly skilled in creating performant
-        &nbsp;<strong className={_tag}>Html</strong>, <strong className={_tag}>Css</strong>,
-        &nbsp;<strong className={_tag}>React components</strong>,
-        I play a lot since over than one year with <strong className={_tag}>Meteor</strong>.
-        I'm passionate about the 'MERN' stack (<strong className={_tag}>MongoDb</strong>,
-        <strong className={_tag}>ExpressJs</strong>, <strong className={_tag}>ReactJs</strong>,
-        &thinsp;<strong className={_tag}>NodeJs</strong>).
-        I also code some backend work using <strong className={_tag}>Ruby On Rails</strong>,
-        and enjoy using the term, I know <strong className={_tag}>Shell scripting</strong> to
-        make my life easier. Experienced with design, I'm playing a lot with&nbsp;
-        <strong className={_tag}>Illustrator</strong> and <strong className={_tag}>Photoshop</strong>.
-        Skilled with css pre-processors and frameworks, like&nbsp;
-        <strong className={_tag}>Bootstrap</strong>, <strong className={_tag}>Semantic-ui</strong>,&nbsp;
-        <strong className={_tag}>Stylus</strong>, <strong className={_tag}>Scss</strong>,&nbsp;
-        <strong className={_tag}>Haml</strong>. I also play with templating like&nbsp;
-        <strong className={_tag}>Jade</strong> / <strong className={_tag}>Blaze</strong>
+        Highly skilled in creating performant&thinsp;
+        <strong className={_tag}>Html</strong>,&thinsp;
+        <strong className={_tag}>Css</strong>,&thinsp;
+        <strong className={_tag}>React components</strong>,
+        I play a lot since over than one year with&thinsp;
+        <strong className={_tag}>Meteor</strong>.
+        I'm passionate about the 'MERN' stack&thinsp;
+        (<strong className={_tag}>MongoDb</strong>,&thinsp;
+        <strong className={_tag}>ExpressJs</strong>,&thinsp;
+        <strong className={_tag}>ReactJs</strong>,&thinsp;
+        <strong className={_tag}>NodeJs</strong>).
+        I also code some backend work using&thinsp;
+        <strong className={_tag}>Ruby On Rails</strong>,&thinsp;
+        and enjoy using the term, I know&thinsp;
+        <strong className={_tag}>Shell scripting</strong> to&thinsp;
+        make my life easier. Experienced with design, I'm playing a
+        lot with <strong className={_tag}>Illustrator</strong> and&thinsp;
+        <strong className={_tag}>Photoshop</strong>.
+        Skilled with css pre-processors and frameworks, like&thinsp;
+        <strong className={_tag}>Bootstrap</strong>,&thinsp;
+        <strong className={_tag}>Semantic-ui</strong>,&thinsp;
+        <strong className={_tag}>Stylus</strong>,&thinsp;
+        <strong className={_tag}>Scss</strong>,&thinsp;
+        <strong className={_tag}>Haml</strong>. I also play with templating
+        like <strong className={_tag}>Jade</strong> /&thinsp;
+        <strong className={_tag}>Blaze</strong>
         &nbsp;with my Meteor apps. I'm fluent with Sql (
-        <strong className={_tag}>MySql</strong> / <strong className={_tag}>PostgreSql</strong>)
+        <strong className={_tag}>MySql</strong> /&thinsp;
+        <strong className={_tag}>PostgreSql</strong>)
         and noSql (<strong className={_tag}>MongoDb</strong>).
-        I believe <strong className={_tag}>code has to clean</strong>, like a design has to be&nbsp;
-        <strong className={_tag}>responsive</strong> and <strong className={_tag}>accessible</strong>.
-        I'm fan of <strong className={_tag}>Git</strong> and use <strong className={_tag}>Github</strong> and
-        &nbsp;<strong className={_tag}>Bitbucket</strong>. Recently, I'm learning to play with&nbsp;
-        <strong className={_tag}>Redux</strong>, <strong className={_tag}>Webpack</strong>, and&nbsp;
+        I believe <strong className={_tag}>code has to clean</strong>, like
+        a design has to be&thinsp;
+        <strong className={_tag}>responsive</strong> and&thinsp;
+        <strong className={_tag}>accessible</strong>.
+        I'm fan of <strong className={_tag}>Git</strong> and use&thinsp;
+        <strong className={_tag}>Github</strong> and&thinsp;
+        <strong className={_tag}>Bitbucket</strong>. Recently,
+        I'm learning to play with&thinsp;
+        <strong className={_tag}>Redux</strong>,&thinsp;
+        <strong className={_tag}>Webpack</strong>, and&thinsp;
         <strong className={_tag}>GraphQl</strong> and I'm loving it!
         <br/><br/>
-        I'm <strong className={css(_tag, yellow)}>French native</strong> and I'm <strong className={css(_tag, yellow)}>fluent in English</strong>.
+        I'm <strong className={css(_tag, yellow)}>French native</strong>&thinsp;
+        and I'm <strong className={css(_tag, yellow)}>fluent in English</strong>.
       </p>
     )
   }
@@ -105,11 +122,16 @@ export default class extends React.Component {
 
     return (
       <div>
-        <HeadBloc title={meta.title} description={meta.description} keywords={meta.keywords} />
+        <HeadBloc title={meta.title}
+                  description={meta.description}
+                  keywords={meta.keywords} />
         {this.renderParallaxBlock("01 . Skills", this.renderSkills())}
-        {this.renderParallaxBlock("02 . Work Experiences", this.renderTimeline(experiences))}
-        {this.renderParallaxBlock("03 . Personal Projects", this.renderTimeline(projects))}
-        {this.renderParallaxBlock("04 . Education", this.renderTimeline(education))}
+        {this.renderParallaxBlock("02 . Work Experiences",
+          this.renderTimeline(experiences))}
+        {this.renderParallaxBlock("03 . Personal Projects",
+          this.renderTimeline(projects))}
+        {this.renderParallaxBlock("04 . Education",
+          this.renderTimeline(education))}
         {this.renderParallaxBlock("05 . Find Me", this.renderFindMe())}
         {this.renderMenuIcons()}
       </div>

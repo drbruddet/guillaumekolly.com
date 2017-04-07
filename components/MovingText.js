@@ -31,10 +31,15 @@ export default class MovingText extends React.Component {
     const { beforetext, aftertext, movingtext, style } = this.props
 
     let offset = {
-      transform: `translate3d( ${this.state.mousePos.x / this.props.style.animation.transform_mouse_pos_x}px,
-        ${this.state.mousePos.y / this.props.style.animation.transform_mouse_pos_y}px, 0 )`,
-      textShadow: `${- this.state.mousePos.x / this.props.style.animation.shadow_mouse_pos_x}px
-        ${this.state.mousePos.y / this.props.style.animation.shadow_mouse_pos_y}px
+      transform: `translate3d( ${this.state.mousePos.x /
+        this.props.style.animation.transform_mouse_pos_x}px,
+        ${this.state.mousePos.y /
+        this.props.style.animation.transform_mouse_pos_y}px, 0 )`,
+
+      textShadow: `${- this.state.mousePos.x /
+        this.props.style.animation.shadow_mouse_pos_x}px
+        ${this.state.mousePos.y /
+        this.props.style.animation.shadow_mouse_pos_y}px
         ${this.props.style.movingtitlebackground}`
     }
 

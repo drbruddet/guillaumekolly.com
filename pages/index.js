@@ -27,7 +27,9 @@ export default class extends React.Component {
 
     return (
       <div className={container}>
-        <HeadBloc title={meta.title} description={meta.description} keywords={meta.keywords} />
+        <HeadBloc title={meta.title}
+                  description={meta.description}
+                  keywords={meta.keywords} />
         <FullBackground />
         <Menu links={socials} style={_verticalMenu} />
         <MovingText beforetext="Hi, I'm "
@@ -36,14 +38,15 @@ export default class extends React.Component {
                     style={movingText} />
         <TextTyped style={texttyped}>
           I’m a <strong>FULL STACK DEVELOPER</strong> born & raised in the
-          French Alps, but I’m currently working in Lyon - France. I’m fluent in
-          the Javascript Stack ( Meteor / Node / Html / Css / React ) and I’ve
-          recently started experimenting with Webpack, Redux, GraphQL. I’m a tech
-          enthusiast constantly improve my skills and stay up-to-date
-          with new methods and technology. Writing readable, elegant and clean
-          code is as important as making a clean design. You can take a look on&nbsp;
-          <Link prefetch href="/resume"><a className={_tag}>my resume</a></Link> for
-          more, and do not hesitate to&nbsp;
+          French Alps, but I’m currently working in Lyon - France. I’m fluent
+          in the Javascript Stack ( Meteor / Node / Html / Css / React ) and
+          I’ve recently started experimenting with Webpack, Redux, GraphQL.
+          I’m a tech enthusiast constantly improve my skills and stay
+          up-to-date with new methods and technology. Writing readable, elegant
+          and clean code is as important as making a clean design.
+          You can take a look on&nbsp;
+          <Link prefetch href="/resume"><a className={_tag}>my resume</a></Link>
+          &nbsp;for more, and do not hesitate to&nbsp;
           <Link prefetch href="/contact"><a className={_tag}>contact me</a></Link>.
         </TextTyped>
       </div>

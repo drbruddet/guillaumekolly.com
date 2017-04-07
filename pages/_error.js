@@ -34,7 +34,9 @@ export default class Error extends React.Component {
 
     return (
       <div className={_centeredBox}>
-        <HeadBloc title={title} description={meta.description} keywords={meta.keywords} />
+        <HeadBloc title={title}
+                  description={meta.description}
+                  keywords={meta.keywords} />
         <FullBackground />
         <div className={verticalyCentered}>
           <h2 className={errorText}>
@@ -42,9 +44,18 @@ export default class Error extends React.Component {
             {this.renderError()}
           </h2>
           <MovingText movingtext={movingtextstringify} style={movingText} />
-          <ButtonLink url="/" title="Home" alt="Home Page" style={button} />
-          <ButtonLink url="/resume" title="Resume" alt="Resume Page" style={button} />
-          <ButtonLink url="/contact" title="Contact" alt="Contact Page" style={button} />
+          <ButtonLink url="/"
+                      title="Home"
+                      alt="Home Page"
+                      style={button} />
+          <ButtonLink url="/resume"
+                      title="Resume"
+                      alt="Resume Page"
+                      style={button} />
+          <ButtonLink url="/contact"
+                      title="Contact"
+                      alt="Contact Page"
+                      style={button} />
         </div>
       </div>
     )
