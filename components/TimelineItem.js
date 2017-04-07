@@ -44,7 +44,7 @@ const marker = css({
   border: '2px solid #F5F7FA',
   background: '#000',
   marginTop: '10px',
-  zIndex: '9999'
+  zIndex: '888'
 })
 
 const timelineContent = css({
