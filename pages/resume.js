@@ -5,7 +5,7 @@ import Particles from 'react-particles-js'
 import { theme, _tag } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import ParallaxBlock from '../components/ParallaxBlock'
-import Timeline from '../components/Timeline'
+import Timeline from '../components/timeline/Timeline'
 import ButtonLink from '../components/ButtonLink'
 import Menu from '../components/Menu'
 
@@ -128,6 +128,7 @@ const ParallaxBlockStyle = {
     textTransform: 'uppercase',
     fontSize: '2.3em',
     lineHeight: '2.5em',
+    color: theme.colors.black,
     paddingTop: '30px',
     '@media(max-width: 640px)': { fontSize: '1.3em', lineHeight: '1.5em' }
   }),

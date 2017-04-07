@@ -5,7 +5,7 @@ import Input from './Input'
 import TextArea from './TextArea'
 import Button from './Button'
 
-import { theme, _button } from './layout/Theme'
+import { theme, _button } from '../layout/Theme'
 
 const propTypes = {
   sendTo: PropTypes.string.isRequired,

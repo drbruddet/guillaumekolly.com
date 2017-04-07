@@ -6,7 +6,7 @@ import { theme, _tag } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
 import Menu from '../components/Menu'
-import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/forms/ContactForm'
 
 import config from '../data/config'
 import socials from '../data/socials'

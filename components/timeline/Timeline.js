@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import css from 'next/css'
 
-import TimelineItem from '../components/TimelineItem'
-import { theme } from '../components/layout/Theme'
+import TimelineItem from './TimelineItem'
+import { theme } from '../layout/Theme'
 
 const propTypes = {
   items: PropTypes.array.isRequired,

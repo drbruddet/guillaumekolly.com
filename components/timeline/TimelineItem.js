@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import css from 'next/css'
 
-import { theme } from '../components/layout/Theme'
+import { theme } from '../layout/Theme'
 
 const propTypes = {
   item: PropTypes.object.isRequired,
