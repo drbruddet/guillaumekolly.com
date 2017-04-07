@@ -5,13 +5,18 @@ import css from 'next/css'
 const propTypes = {
   url:    PropTypes.string.isRequired,
   title:  PropTypes.string.isRequired,
+  blank:  PropTypes.bool,
   alt:    PropTypes.string,
   style:  PropTypes.object,
 }
 
 const ButtonLink = (props) =>
   <button className={css(button, props.style)}>
-    <Link href={props.url}><a alt={props.alt}>{props.title}</a></Link>
+    <Link href={props.url}>
+      <a target={"_blank" ? props.blank : ""} alt={props.alt}>
+        {props.title}
+      </a>
+    </Link>
   </button>
 
 const button = css({
@@ -34,11 +39,7 @@ const button = css({
     color: '#fff',
     '> a': { color: '#fff'}
   },
-  '> a': {
-    color: '#000',
-    textDecoration: 'none',
-    padding: '10px',
-  }
+  '> a': { color: '#000', textDecoration: 'none', padding: '10px' }
 })
 
 ButtonLink.propTypes = propTypes

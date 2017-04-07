@@ -38,9 +38,7 @@ const _verticalMenu = {
     margin: '0 10px 0 0',
     textDecoration: 'none',
     color: theme.colors.black,
-    ':hover': {
-      textDecoration: 'line-through'
-    }
+    ':hover': { textDecoration: 'line-through' }
   })
 }
 

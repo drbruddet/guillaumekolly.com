@@ -54,26 +54,18 @@ const containerBefore = css({
   height: '100%',
   background: '#000',
   zIndex: '1',
-  '@media screen and (max-width: 768px)': {
-    left: '8px',
-    width: '2px',
-  }
+  '@media screen and (max-width: 768px)': { left: '8px', width: '2px' }
 })
 
 const timelineBlockLeft = css({
   float: 'left',
   direction: 'rtl',
-  '@media screen and (max-width: 768px)': {
-    float: 'none',
-    direction: 'ltr',
-  }
+  '@media screen and (max-width: 768px)': { float: 'none', direction: 'ltr' }
 })
 
 const timelineBlockRight = css({
   float: 'right',
-  '@media screen and (max-width: 768px)': {
-    float: 'none'
-  }
+  '@media screen and (max-width: 768px)': { float: 'none' }
 })
 
 Timeline.propTypes = propTypes

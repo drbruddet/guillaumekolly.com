@@ -34,28 +34,16 @@ const textarea = css({
   margin: '0em 0 1.875em 0',
   padding: '0 0 0.875em 0',
   width: '100%',
-  WebkitBoxSizing: 'border-box',
-  MozBoxSizing: 'border-box',
-  MsBoxSizing: 'border-box',
-  OBoxSizing: 'border-box',
-  boxSizing: 'border-box',
-  WebkitTransition: 'all 0.3s',
-  MozTransition: 'all 0.3s',
-  MsTransition: 'all 0.3s',
-  OTransition: 'all 0.3s',
-  transition: 'all 0.3s',
+  boxShadow: 'none',
+  MozBoxShadow: 'none',
+  WebkitBoxShadow: 'none',
   height: '150px',
   resize: 'none',
   width: '100%',
   lineHeight: '150%',
   overflow: 'auto',
-  ':focus': {
-    outline: 'none',
-    padding: '0 0 0.875em 0',
-  },
-  ':focus ~ span': {
-    marginLeft: '-50px'
-  }
+  ':focus': { outline: 'none', padding: '0 0 0.875em 0' },
+  ':focus ~ span': { marginLeft: '-50px' }
 })
 
 const animation = css({

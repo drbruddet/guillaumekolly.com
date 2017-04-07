@@ -27,10 +27,7 @@ const button = css({
   OTransition: 'all 600ms',
   MsTransition: 'all 600ms',
   transition: 'all 600ms',
-  ':hover': {
-    backgroundColor: 'rgba(0,0,0,0)',
-    color: '#fff',
-  }
+  ':hover': { backgroundColor: 'rgba(0,0,0,0)', color: '#fff' }
 })
 
 Button.propTypes = propTypes

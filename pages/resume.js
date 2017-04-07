@@ -37,12 +37,13 @@ export default class extends React.Component {
         I'm passionate about the 'MERN' stack (<strong className={_tag}>MongoDb</strong>,
         <strong className={_tag}>ExpressJs</strong>, <strong className={_tag}>ReactJs</strong>,
         &thinsp;<strong className={_tag}>NodeJs</strong>).
-        I also code some backend work using <strong className={_tag}>Ruby On Rails</strong>.
-        Experienced with design, I'm playing a lot with&nbsp;
+        I also code some backend work using <strong className={_tag}>Ruby On Rails</strong>,
+        and enjoy using the term, I know <strong className={_tag}>Shell scripting</strong> to
+        make my life easier. Experienced with design, I'm playing a lot with&nbsp;
         <strong className={_tag}>Illustrator</strong> and <strong className={_tag}>Photoshop</strong>.
         Skilled with css pre-processors and frameworks, like&nbsp;
         <strong className={_tag}>Bootstrap</strong>, <strong className={_tag}>Semantic-ui</strong>,&nbsp;
-        <strong className={_tag}>Stylus</strong>, <strong className={_tag}>Sass</strong>,&nbsp;
+        <strong className={_tag}>Stylus</strong>, <strong className={_tag}>Scss</strong>,&nbsp;
         <strong className={_tag}>Haml</strong>. I also play with templating like&nbsp;
         <strong className={_tag}>Jade</strong> / <strong className={_tag}>Blaze</strong>
         &nbsp;with my Meteor apps. I'm fluent with Sql (
@@ -68,15 +69,15 @@ export default class extends React.Component {
     return <Timeline items={items} style={timelineStyle} />
   }
 
-  getParallaxBg() {
+  renderParallaxBackground() {
     return <Particles height="100vh" width="100vw" params={particles} />
   }
 
   renderParallaxBlock(title, content) {
     return (
-      <ParallaxBlock  title={title}
-                      background={this.getParallaxBg()}
-                      style={ParallaxBlockStyle}>
+      <ParallaxBlock title={title}
+                     background={this.renderParallaxBackground()}
+                     style={ParallaxBlockStyle}>
         {content}
       </ParallaxBlock>
     )
@@ -88,7 +89,8 @@ export default class extends React.Component {
         <ButtonLink style={menu.button}
           url={config.application.cv_pdf_url}
           title='Download CV'
-          alt="Download PDF Resume" />
+          alt="Download PDF Resume"
+          blank={true} />
         <ButtonLink style={menu.button}
           url="/contact"
           title="Contact"
@@ -168,7 +170,7 @@ const menu = {
     position: 'fixed',
     top: '50%',
     left: '3%',
-    width: '110px',
+    width: '120px',
     height: '50px',
     '@media(max-width: 640px)': {
       top: 'auto',
@@ -178,7 +180,7 @@ const menu = {
     }
   }),
   button: css({
-    width: '110px',
+    width: '120px',
     border: "4px solid " + theme.colors.primary,
     fontSize: '0.6em',
     letterSpacing: '-0.04em',

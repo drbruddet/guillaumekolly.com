@@ -32,8 +32,13 @@ export default class extends React.Component {
           <Menu links={socials} style={social} />
           <div className={resume}>
             You can also watch my&nbsp;
-            <Link prefetch href="/resume"><a className={_tag}>online resume</a></Link> or&nbsp;
-            <Link href={config.application.cv_pdf_url}><a className={_tag}>download it</a></Link>.
+            <Link prefetch href="/resume">
+              <a className={_tag}>online resume</a>
+            </Link>
+            &nbsp;or&nbsp;
+            <Link href={config.application.cv_pdf_url}>
+              <a target="_blank" className={_tag}>download it</a>
+            </Link>.
           </div>
         </section>
         <section className={css(halfside, right)}>
@@ -44,7 +49,6 @@ export default class extends React.Component {
   }
 }
 
-// SOCIAL AND RESUME links
 const social = {
   component: style({
     textTransform: 'uppercase',
@@ -88,7 +92,6 @@ const resume = css({
   }
 })
 
-// CONTAINER SETTINGS
 const halfside = css({
   width: '50%',
   height: '100vh',

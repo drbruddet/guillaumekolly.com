@@ -27,16 +27,14 @@ const input = css({
   border: 'none',
   borderBottom: 'solid 2px #fff',
   fontSize: '1em',
+  boxShadow: 'none',
+  MozBoxShadow: 'none',
+  WebkitBoxShadow: 'none',
   margin: '0em 0 1.875em 0',
   padding: '0 0 0.875em 0',
   width: '100%',
-  ':focus': {
-    outline: 'none',
-    padding: '0 0 0.875em 0',
-  },
-  ':focus ~ span': {
-    marginLeft: '-50px'
-  }
+  ':focus': { outline: 'none', padding: '0 0 0.875em 0' },
+  ':focus ~ span': { marginLeft: '-50px' }
 })
 
 const animation = css({

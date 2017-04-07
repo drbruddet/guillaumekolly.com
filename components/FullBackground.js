@@ -18,13 +18,13 @@ export default class FullBackground extends React.Component {
 
     return (
       <div className={style}
-        style={{
-          position: 'fixed',
-          width: '100%',
-          height: '100vh',
-          top: '0',
-          left: '0',
-        }} >
+           style={{
+            position: 'fixed',
+            width: '100%',
+            height: '100vh',
+            top: '0',
+            left: '0',
+      }} >
         <Particles height="100vh" width="100vw" params={particles} />
       </div>
     )

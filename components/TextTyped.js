@@ -12,7 +12,6 @@ const TextTyped = (props) =>
             stdTypingDelay={30}
             startDelay={1000}
             cursor={{ hideWhenDone: true }} >
-
       {props.children}
     </Typist>
   </div>
