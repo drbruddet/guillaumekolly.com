@@ -27,7 +27,7 @@ const _button = css({
 const _verticalMenu = {
   component: css({
     display: 'inline-block',
-    margin: '15px 20px',
+    margin: '20px 30px',
     transformOrigin: 'left top',
     transform: 'rotate(270deg) translateX(-100%)',
     textTransform: 'uppercase',
@@ -36,6 +36,7 @@ const _verticalMenu = {
   }),
   link: css({
     margin: '0 10px 0 0',
+    fontSize: '140%',
     textDecoration: 'none',
     color: theme.colors.black,
     ':hover': { textDecoration: 'line-through' }
