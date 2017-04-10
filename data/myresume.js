@@ -6,17 +6,17 @@ const experiences = [
   },
   {
     "title": "WEB DEVELOPER @ FREELANCE",
-    "subtitle": "Sept 2013 - Feb 2016",
+    "subtitle": "Sep 2013 - Feb 2016",
     "description": "Bug Fixing, improvement and development of functionalities using PHP, Javascript, HTML and CSS. Development of websites and e-shops with Wordpress or Ruby on Rails. Development of a Jquery library able to manage events on a video hosted on the web."
   },
   {
     "title": "FULL STACK DEVELOPER @ ALTAGEM",
-    "subtitle": "Mar 2013 - Sept 2016",
+    "subtitle": "Mar 2013 - Sep 2013",
     "description": "Altagem is a mobile team tracking application. Technicians receive data (their schedules, daily customers ...) on their tablets. The API (ruby on rails) group and treat theses data for the administrators. I was charged to develop some calculation features via Rails, to place the technicians on a map  in real time (Via Angular-JS), as well as get some administrations datas."
   },
   {
     "title": "BI FUNCTIONAL EXPERT @ GROUPE SEB",
-    "subtitle": "Sept 2012 - March 2013",
+    "subtitle": "Sep 2012 - Mar 2013",
     "description": "Development of business intelligence projects with Qlikview (reporting tool). Assists in the migration of Qlickview vesrion on SEB production servers."
   },
 ]

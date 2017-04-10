@@ -206,18 +206,18 @@ const menu = {
     }
   }),
   button: css({
-    border: "4px solid " + theme.colors.primary,
     fontSize: '1em',
     letterSpacing: '-0.04em',
     width: '120px',
     textAlign: 'center',
     backgroundColor: theme.colors.white,
     '@media(max-width: 640px)': { display: 'table-cell' },
-    '> a': { color: theme.colors.black },
+    '> a': {
+      color: theme.colors.black,
+      border: "4px solid " + theme.colors.primary,},
     ':hover': {
-      backgroundColor: theme.colors.primary,
       color: theme.colors.white,
-      '> a': { color: theme.colors.white }
+      '> a': { backgroundColor: theme.colors.primary }
     },
   })
 }

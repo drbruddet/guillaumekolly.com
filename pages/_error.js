@@ -66,12 +66,12 @@ const button = css({
   width: '60%',
   textAlign: 'center',
   margin: '10px auto',
-  border: "4px solid " + theme.colors.primary,
-  '> a': { color: theme.colors.black, },
+  '> a': {
+    color: theme.colors.black,
+    border: "4px solid " + theme.colors.primary },
   ':hover': {
-    backgroundColor: theme.colors.primary,
     color: theme.colors.white,
-    '> a': { color: theme.colors.white }
+    '> a': { backgroundColor: theme.colors.primary }
   },
   '@media(max-width: 640px)': { width: '80%', fontSize: '1em' }
 })

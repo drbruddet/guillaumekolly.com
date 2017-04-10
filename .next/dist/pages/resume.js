@@ -444,18 +444,18 @@ var menu = {
     }
   }),
   button: (0, _css.css)({
-    border: "4px solid " + _Theme.theme.colors.primary,
     fontSize: '1em',
     letterSpacing: '-0.04em',
     width: '120px',
     textAlign: 'center',
     backgroundColor: _Theme.theme.colors.white,
     '@media(max-width: 640px)': { display: 'table-cell' },
-    '> a': { color: _Theme.theme.colors.black },
+    '> a': {
+      color: _Theme.theme.colors.black,
+      border: "4px solid " + _Theme.theme.colors.primary },
     ':hover': {
-      backgroundColor: _Theme.theme.colors.primary,
       color: _Theme.theme.colors.white,
-      '> a': { color: _Theme.theme.colors.white }
+      '> a': { backgroundColor: _Theme.theme.colors.primary }
     }
   })
 };

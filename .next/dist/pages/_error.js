@@ -132,12 +132,12 @@ var button = (0, _css2.default)({
   width: '60%',
   textAlign: 'center',
   margin: '10px auto',
-  border: "4px solid " + _Theme.theme.colors.primary,
-  '> a': { color: _Theme.theme.colors.black },
+  '> a': {
+    color: _Theme.theme.colors.black,
+    border: "4px solid " + _Theme.theme.colors.primary },
   ':hover': {
-    backgroundColor: _Theme.theme.colors.primary,
     color: _Theme.theme.colors.white,
-    '> a': { color: _Theme.theme.colors.white }
+    '> a': { backgroundColor: _Theme.theme.colors.primary }
   },
   '@media(max-width: 640px)': { width: '80%', fontSize: '1em' }
 });

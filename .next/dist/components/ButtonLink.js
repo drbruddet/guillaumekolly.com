@@ -44,8 +44,6 @@ var ButtonLink = function ButtonLink(props) {
 
 var button = (0, _css2.default)({
   margin: '5px 5px 5px 5px',
-  padding: '15px 5px',
-  border: "4px solid #000",
   background: 'transparent',
   letterSpacing: '0.12em',
   fontSize: '1.3em',
@@ -57,12 +55,16 @@ var button = (0, _css2.default)({
   OTransition: 'all 600ms',
   MsTransition: 'all 600ms',
   transition: 'all 600ms',
-  ':hover': {
-    backgroundColor: '#000',
-    color: '#fff',
-    '> a': { color: '#fff' }
+  '> a': {
+    color: '#000',
+    textDecoration: 'none',
+    display: 'block',
+    padding: '10px',
+    width: '100%',
+    height: '100%',
+    border: "4px solid #000"
   },
-  '> a': { color: '#000', textDecoration: 'none', padding: '10px' }
+  ':hover': { '> a': { color: '#fff', backgroundColor: '#000' } }
 });
 
 ButtonLink.propTypes = propTypes;
