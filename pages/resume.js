@@ -188,27 +188,31 @@ const timelineStyle = {
 
 const menu = {
   block: css({
-    zIndex: '999',
     position: 'fixed',
     top: '50%',
     left: '3%',
-    width: '120px',
     height: '50px',
+    zIndex: '999',
+    width: '120px',
     '@media(max-width: 640px)': {
+      left: '2%',
+      right: '2%',
       top: 'auto',
-      bottom: '2%',
-      left: '1%',
-      width: '100%',
+      bottom: '1%',
+      width: '96%',
+      display: 'table',
+      borderCollapse: 'separate',
+      borderSpacing: '4px',
     }
   }),
   button: css({
-    width: '120px',
     border: "4px solid " + theme.colors.primary,
-    fontSize: '0.6em',
+    fontSize: '1em',
     letterSpacing: '-0.04em',
+    width: '120px',
     textAlign: 'center',
     backgroundColor: theme.colors.white,
-    '@media(max-width: 640px)': { width: '47%', margin: '1%' },
+    '@media(max-width: 640px)': { display: 'table-cell' },
     '> a': { color: theme.colors.black },
     ':hover': {
       backgroundColor: theme.colors.primary,

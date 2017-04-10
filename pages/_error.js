@@ -63,7 +63,9 @@ export default class Error extends React.Component {
 }
 
 const button = css({
-  width: '150px',
+  width: '60%',
+  textAlign: 'center',
+  margin: '10px auto',
   border: "4px solid " + theme.colors.primary,
   '> a': { color: theme.colors.black, },
   ':hover': {

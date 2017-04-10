@@ -11,13 +11,13 @@ const propTypes = {
 }
 
 const ButtonLink = (props) =>
-  <button className={css(button, props.style)}>
+  <div className={css(button, props.style)}>
     <Link href={props.url}>
       <a target={"_blank" ? props.blank : ""} alt={props.alt}>
         {props.title}
       </a>
     </Link>
-  </button>
+  </div>
 
 const button = css({
   margin: '5px 5px 5px 5px',
