@@ -1,2 +1,4 @@
 node_modules/
-data/
+data/resume
+node_modules/
+.next/

@@ -11,7 +11,7 @@ import Menu from '../components/Menu'
 
 import config from '../data/config'
 import particles from '../data/particles'
-import { experiences, projects, education } from '../data/resume'
+import { experiences, projects, education } from '../data/myresume'
 import socials from '../data/socials'
 
 export default class extends React.Component {
