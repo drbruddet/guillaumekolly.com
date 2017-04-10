@@ -64,7 +64,7 @@ var _particles = require('../data/particles');
 
 var _particles2 = _interopRequireDefault(_particles);
 
-var _resume = require('../data/resume');
+var _myresume = require('../data/myresume');
 
 var _socials = require('../data/socials');
 
@@ -362,9 +362,9 @@ var _class = function (_React$Component) {
     key: 'getInitialProps',
     value: function getInitialProps() {
       return {
-        experiences: _resume.experiences,
-        projects: _resume.projects,
-        education: _resume.education,
+        experiences: _myresume.experiences,
+        projects: _myresume.projects,
+        education: _myresume.education,
         config: _config2.default,
         particles: _particles2.default,
         socials: _socials2.default

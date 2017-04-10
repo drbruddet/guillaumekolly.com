@@ -46,14 +46,16 @@ var _verticalMenu = {
     transform: 'rotate(270deg) translateX(-100%)',
     textTransform: 'uppercase',
     zIndex: '1',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    '@media(max-width: 640px)': { margin: '10px 10px' }
   }),
   link: (0, _css2.default)({
     margin: '0 10px 0 0',
     fontSize: '140%',
     textDecoration: 'none',
     color: theme.colors.black,
-    ':hover': { textDecoration: 'line-through' }
+    ':hover': { textDecoration: 'line-through' },
+    '@media(max-width: 640px)': { fontSize: '100%' }
   })
 };
 
