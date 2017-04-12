@@ -22,7 +22,7 @@ const ContactForm = (props) =>
       <Input type="email" name="email" style={email} />
       <Input type="text" name="subject" style={subject} />
       <TextArea name="message" style={message} />
-      <input type="hidden" name="_next" value="http://localhost:3000" />
+      <input type="hidden" name="_next" value="/" />
       <Button type="submit" value="Send" style={_button} />
     </form>
   </div>

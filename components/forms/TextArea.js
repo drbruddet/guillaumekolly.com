@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import css from 'next/css'
+import { placeholder, css } from 'next/css'
 
 const propTypes = {
   name:         PropTypes.string.isRequired,
@@ -12,7 +12,8 @@ const propTypes = {
 const TextArea = (props) =>
   <div className={props.style}>
     <label htmlFor={props.name}></label>
-    <textarea className={textarea}
+    <textarea {...placeholder({color: placeholderColor})}
+              className={textarea}
               type="text"
               name={props.name}
               placeholder={props.placeholder ? props.placeholder : props.name}
@@ -45,6 +46,8 @@ const textarea = css({
   ':focus': { outline: 'none', padding: '0 0 0.875em 0' },
   ':focus ~ span': { marginLeft: '-50px' }
 })
+
+const placeholderColor = '#242424'
 
 const animation = css({
   WebkitTransition: 'all 0.5s linear',

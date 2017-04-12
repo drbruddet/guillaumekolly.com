@@ -70,10 +70,7 @@ const texttyped = css({
     width: '467px',
     top: 'calc(30% + 4em + 4em)',
   },
-  '@media(max-width: 640px)': {
-    width: '280px',
-    top: 'calc(30% + 2em)',
-  },
+  '@media(max-width: 640px)': { width: '280px', top: '50px' },
 })
 
 const movingText = {
@@ -102,7 +99,7 @@ const movingText = {
     right: '10%',
     top: '30%',
     letterSpacing: '-6px',
-    '@media(max-width: 640px)': { top: '10%' },
+    '@media(max-width: 640px)': { top: '30px' },
   }),
   movingtitle: style({
     color: theme.colors.black,
@@ -119,8 +116,4 @@ const movingText = {
   }
 }
 
-const container = css({
-  height: '100vh',
-  width: '100vw',
-  position: 'relative',
-})
+const container = css({ height: '100vh', width: '100vw', position: 'relative' })

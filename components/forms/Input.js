@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import css from 'next/css'
+import { placeholder, css } from 'next/css'
 
 const propTypes = {
   type:         PropTypes.string.isRequired,
@@ -11,7 +11,8 @@ const propTypes = {
 const Input = (props) =>
   <div className={props.style}>
     <label htmlFor={props.name}></label>
-    <input type={props.type}
+    <input {...placeholder({color: placeholderColor})}
+           type={props.type}
            name={props.name}
            className={input}
            placeholder={props.placeholder ? props.placeholder : props.name}
@@ -36,6 +37,8 @@ const input = css({
   ':focus': { outline: 'none', padding: '0 0 0.875em 0' },
   ':focus ~ span': { marginLeft: '-50px' }
 })
+
+const placeholderColor = '#242424'
 
 const animation = css({
   WebkitTransition: 'all 0.5s linear',

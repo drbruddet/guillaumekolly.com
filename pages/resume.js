@@ -166,11 +166,7 @@ const skillBlock = css({
   lineHeight: '1.8em',
   fontSize: '1.1em',
   color: theme.colors.text,
-  '@media(max-width: 640px)': {
-    width: '90%',
-    textAlign: 'justify',
-    textJustify: 'inter-word',
-  }
+  '@media(max-width: 640px)': { width: '90%' }
 })
 
 const yellow = css({
@@ -199,7 +195,7 @@ const menu = {
       right: '2%',
       top: 'auto',
       bottom: '1%',
-      width: '96%',
+      width: '90%',
       display: 'table',
       borderCollapse: 'separate',
       borderSpacing: '4px',
@@ -208,8 +204,8 @@ const menu = {
   button: css({
     fontSize: '1em',
     letterSpacing: '-0.04em',
-    width: '120px',
     textAlign: 'center',
+    width: '120px',
     backgroundColor: theme.colors.white,
     '@media(max-width: 640px)': { display: 'table-cell' },
     '> a': {
@@ -233,7 +229,7 @@ const social = {
     margin: '10% auto',
     '@media(max-width: 640px)': {
       top: 'calc(80px / 2)',
-      marginBottom: 'calc(5% + 80px)'
+      marginBottom: 'calc(5% + 110px)'
     }
   }),
   link: style({
@@ -248,9 +244,6 @@ const social = {
       display: 'list-item',
       margin: '20px auto'
     },
-    '@media(max-width: 640px)': {
-      fontSize: '1.3em',
-      margin: '20px auto'
-    }
+    '@media(max-width: 640px)': { fontSize: '1.3em' }
   })
 }
