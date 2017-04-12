@@ -63,17 +63,24 @@ export default class Error extends React.Component {
 }
 
 const button = css({
-  width: '60%',
+  fontSize: '1.2em',
+  letterSpacing: '-0.02em',
   textAlign: 'center',
+  backgroundColor: theme.colors.white,
   margin: '10px auto',
+  width: '100%',
+  '@media(max-width: 640px)': { width: '80%', fontSize: '1em' },
   '> a': {
     color: theme.colors.black,
-    border: "4px solid " + theme.colors.primary },
+    border: '4px solid ' + theme.colors.primary,
+    display: 'block',
+    padding: '10px',
+    boxSizing: 'border-box',
+  },
   ':hover': {
     color: theme.colors.white,
     '> a': { backgroundColor: theme.colors.primary }
-  },
-  '@media(max-width: 640px)': { width: '80%', fontSize: '1em' }
+  }
 })
 
 const movingText = {

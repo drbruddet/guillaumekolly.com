@@ -20,9 +20,7 @@ const ButtonLink = (props) =>
   </div>
 
 const button = css({
-  margin: '5px 5px 5px 5px',
   background: 'transparent',
-  letterSpacing: '0.12em',
   fontSize: '1.3em',
   fontWeight: 'bold',
   textTransform: 'uppercase',
@@ -35,11 +33,8 @@ const button = css({
   '> a': {
     color: '#000',
     textDecoration: 'none',
-    display: 'block',
-    padding: '10px',
     width: '100%',
     height: '100%',
-    border: "4px solid #000",
   },
   ':hover': { '> a': { color: '#fff', backgroundColor: '#000' } }
 })

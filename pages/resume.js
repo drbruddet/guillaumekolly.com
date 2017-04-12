@@ -164,9 +164,15 @@ const skillBlock = css({
   margin: '60px auto',
   textAlign: 'center',
   lineHeight: '1.8em',
+  wordWrap: 'break-word',
   fontSize: '1.1em',
   color: theme.colors.text,
-  '@media(max-width: 640px)': { width: '90%' }
+  '@media(max-width: 1240px)': { width: '70%' },
+  '@media(max-width: 640px)': {
+    width: '84%',
+    textAlign: 'justify',
+    textJustify: 'inter-cluster',
+  }
 })
 
 const yellow = css({
@@ -187,30 +193,37 @@ const menu = {
     position: 'fixed',
     top: '50%',
     left: '3%',
-    height: '50px',
     zIndex: '999',
     width: '120px',
     '@media(max-width: 640px)': {
-      left: '2%',
-      right: '2%',
       top: 'auto',
       bottom: '1%',
-      width: '90%',
       display: 'table',
       borderCollapse: 'separate',
       borderSpacing: '4px',
+      width: '98%',
+      left: '1%'
     }
   }),
   button: css({
     fontSize: '1em',
     letterSpacing: '-0.04em',
     textAlign: 'center',
-    width: '120px',
     backgroundColor: theme.colors.white,
-    '@media(max-width: 640px)': { display: 'table-cell' },
+    width: '100%',
+    marginBottom: '5px',
+    '@media(max-width: 640px)': {
+      display: 'table-cell',
+      verticalAlign: 'middle',
+      width: '45%'
+    },
     '> a': {
       color: theme.colors.black,
-      border: "4px solid " + theme.colors.primary,},
+      display: 'block',
+      padding: '10px',
+      boxSizing: 'border-box',
+      border: '4px solid ' + theme.colors.primary,
+    },
     ':hover': {
       color: theme.colors.white,
       '> a': { backgroundColor: theme.colors.primary }
