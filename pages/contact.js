@@ -60,7 +60,7 @@ const social = {
     textAlign: 'center',
     display: 'block',
     margin: '0 auto',
-    '@media(max-width: 640px)': { top: 'calc(80px / 2)', },
+    '@media(max-width: 640px)': { top: '40px' },
   }),
   link: style({
     margin: '0 1% 0 1%',
@@ -73,10 +73,6 @@ const social = {
       fontSize: '1em',
       display: 'list-item',
       margin: '10px auto',
-    },
-    '@media(max-width: 640px)': {
-      fontSize: '0.9em',
-      margin: '5px auto',
     }
   })
 }
@@ -88,7 +84,7 @@ const resume = css({
   letterSpacing: '0.024em',
   '@media(max-width: 1240px)': { padding: '0 0.2em' },
   '@media(max-width: 640px)': {
-    fontSize: '0.8em',
+    fontSize: '0.9em',
     margin: '5px auto',
     top: '70px',
   }
@@ -102,11 +98,7 @@ const halfside = css({
   '@media(max-width: 640px)': { width: '100%' }
 })
 
-const left = css({
-  left: '0',
-  background: 'transparent',
-  '@media(max-width: 640px)': { height: '160px', }
-})
+const left = css({ left: '0', background: 'transparent' })
 
 const right = css({
   right: '0',
@@ -116,7 +108,7 @@ const right = css({
   alignItems: 'center',
   justifyContent: 'center',
   '@media(max-width: 640px)': {
-    top: 'calc(160px + 20px)',
+    top: '240px',
     left: '0',
     height: '100%',
     position: 'relative',
@@ -124,8 +116,5 @@ const right = css({
 })
 
 const contactForm = {
-  title: style({
-    fontFamily: theme.font.title,
-    marginBottom: '1.5em'
-  }),
+  title: style({ fontFamily: theme.font.title, marginBottom: '1.5em' })
 }
