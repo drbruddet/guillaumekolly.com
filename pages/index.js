@@ -68,7 +68,7 @@ const texttyped = css({
   '@media(max-width: 1240px)': {
     fontSize: '1em',
     width: '467px',
-    top: 'calc(30% + 4em + 4em)',
+    top: 'calc(30% + 4em + 4em)'
   },
   '@media(max-width: 640px)': {
     width: '335px',
@@ -77,7 +77,8 @@ const texttyped = css({
     marginBottom: '20px'
   },
   '@media(max-width: 440px)': {
-    width: '240px',
+    minWidth: '240px',
+    width: 'calc(80%)',
     top: 'calc(10% + 2.5em)',
     right: '5%',
     fontSize: '0.8em'
@@ -118,8 +119,8 @@ const movingText = {
     color: theme.colors.black,
     display: 'inline-block',
     letterSpacing: '-6px',
-    '@media(max-width: 1240px)': { fontSize: '0.8em', },
-    '@media(max-width: 640px)': { letterSpacing: '-3px',},
+    '@media(max-width: 1240px)': { fontSize: '0.85em' },
+    '@media(max-width: 640px)': { letterSpacing: '-3px' },
   }),
   movingtitlebackground: theme.colors.primary,
   animation: {
@@ -144,7 +145,7 @@ const verticalMenu = {
       left: '8px',
       top: '10px',
       margin: '0',
-      position: 'absolute',
+      position: 'absolute'
     }
   }),
   link: css({
