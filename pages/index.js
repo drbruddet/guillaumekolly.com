@@ -2,7 +2,7 @@ import React from 'react'
 import { css, style } from 'next/css'
 import Link from 'next/link'
 
-import { theme, _tag, _verticalMenu } from '../components/layout/Theme'
+import { theme, _tag } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import Menu from '../components/Menu'
 import FullBackground from '../components/FullBackground'
@@ -31,7 +31,7 @@ export default class extends React.Component {
                   description={meta.description}
                   keywords={meta.keywords} />
         <FullBackground />
-        <Menu links={socials} style={_verticalMenu} />
+        <Menu links={socials} style={verticalMenu} />
         <MovingText beforetext="Hi, I'm "
                     movingtext="Guillaume Kolly"
                     aftertext="."
@@ -63,24 +63,36 @@ const texttyped = css({
   letterSpacing: '-0.3px',
   textAlign: 'justify',
   textJustify: 'inter-word',
-  top: 'calc(30% + 4em + 3.2em)',
+  top: 'calc(30% + 7.2em)',
   color: theme.colors.black,
   '@media(max-width: 1240px)': {
     fontSize: '1em',
     width: '467px',
     top: 'calc(30% + 4em + 4em)',
   },
-  '@media(max-width: 640px)': { width: '280px', top: '50px' },
+  '@media(max-width: 640px)': {
+    width: '335px',
+    top: 'calc(30% + 2.3em)',
+    right: '9%',
+    marginBottom: '20px'
+  },
+  '@media(max-width: 440px)': {
+    width: '240px',
+    top: 'calc(10% + 2.5em)',
+    right: '5%',
+    fontSize: '0.8em'
+  },
 })
 
 const movingText = {
   background: style({
-    height: 'calc(100vh)',
+    height: '100vh',
     width: 'calc(100vw - 55px)',
     position: 'absolute',
     top: '0',
-    left: '50px',
+    left: '55px',
     fontFamily: theme.font.title,
+    '@media(max-width: 640px)': { left: '30px', width: 'calc(100vw - 30px)' }
   }),
   beforetext: style({
     position: 'absolute',
@@ -99,13 +111,15 @@ const movingText = {
     right: '10%',
     top: '30%',
     letterSpacing: '-6px',
-    '@media(max-width: 640px)': { top: '30px' },
+    '@media(max-width: 640px)': { top: '20%', fontSize: '3em' },
+    '@media(max-width: 440px)': { top: '0', right: '5%', letterSpacing: '0' },
   }),
   movingtitle: style({
     color: theme.colors.black,
+    display: 'inline-block',
     letterSpacing: '-6px',
     '@media(max-width: 1240px)': { fontSize: '0.8em', },
-    '@media(max-width: 640px)': { fontSize: '0.47em', letterSpacing: '-4px',},
+    '@media(max-width: 640px)': { letterSpacing: '-3px',},
   }),
   movingtitlebackground: theme.colors.primary,
   animation: {
@@ -114,6 +128,33 @@ const movingText = {
     shadow_mouse_pos_x: '-70',
     shadow_mouse_pos_y: '80',
   }
+}
+
+const verticalMenu = {
+  component: css({
+    display: 'inline-block',
+    margin: '20px 30px',
+    transformOrigin: 'left top',
+    transform: 'rotate(270deg) translateX(-100%)',
+    textTransform: 'uppercase',
+    zIndex: '1',
+    textDecoration: 'none',
+    '@media(max-width: 640px)': {
+      whiteSpace: 'nowrap',
+      left: '8px',
+      top: '10px',
+      margin: '0',
+      position: 'absolute',
+    }
+  }),
+  link: css({
+    margin: '0 10px 0 0',
+    fontSize: '140%',
+    textDecoration: 'none',
+    color: theme.colors.black,
+    ':hover': { textDecoration: 'line-through' },
+    '@media(max-width: 640px)': { fontSize: '100%' }
+  })
 }
 
 const container = css({ height: '100vh', width: '100vw', position: 'relative' })
