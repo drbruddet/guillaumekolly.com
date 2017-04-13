@@ -9,6 +9,12 @@ export default class MovingText extends React.Component {
     style:      PropTypes.object
   }
 
+  static defaultProps = {
+    style: null,
+    beforetext: "",
+    aftertext: ""
+  }
+
   constructor(props) {
     super(props)
     this.init()
@@ -29,8 +35,7 @@ export default class MovingText extends React.Component {
 
   render() {
     const { beforetext, aftertext, movingtext, style } = this.props
-
-    let offset = {
+    const offset = {
       transform: `translate3d( ${this.state.mousePos.x /
         this.props.style.animation.transform_mouse_pos_x}px,
         ${this.state.mousePos.y /
@@ -44,19 +49,10 @@ export default class MovingText extends React.Component {
     }
 
     return (
-      <div
-        className={style.background}
-        onMouseMove={ this.mouseMove.bind(this) }
-      >
+      <div className={style.background} onMouseMove={this.mouseMove.bind(this)}>
         <span className={style.beforetext}> {beforetext} </span>
         <h1 style={{whiteSpace: 'nowrap'}} className={style.fixedtitle}>
-          <span
-            style={{display: 'inline-block', willChange: 'transform'}}
-            className={style.movingtitle}
-            style={offset}
-          >
-            {movingtext}
-          </span>
+          <span className={style.movingtitle} style={offset}>{movingtext}</span>
           {aftertext}
         </h1>
       </div>

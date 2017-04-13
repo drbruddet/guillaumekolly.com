@@ -8,6 +8,10 @@ const propTypes = {
   style:        PropTypes.object,
 }
 
+const defaultProps = {
+  style: null
+}
+
 const Input = (props) =>
   <div className={props.style}>
     <label htmlFor={props.name} />
@@ -52,4 +56,5 @@ const animation = css({
 })
 
 Input.propTypes = propTypes
+input.defaultProps = defaultProps
 export default Input

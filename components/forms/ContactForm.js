@@ -12,12 +12,14 @@ const propTypes = {
   style: PropTypes.object
 }
 
-const sendToAddress = (email) => "https://formspree.io/" + email
+const defaultProps = {
+  style: null
+}
 
 const ContactForm = (props) =>
   <div className={css(formblock, props.style)}>
     <h1 className={css(title, props.style.title)}>CONTACT ME</h1>
-    <form action={sendToAddress(props.sendTo)} method="POST">
+    <form action={props.sendTo} method="POST">
       <Input type="text" name="name" style={name} />
       <Input type="email" name="email" style={email} />
       <Input type="text" name="subject" style={subject} />
@@ -56,4 +58,5 @@ const subject = css({ width: '100%' })
 const message = css({ float: 'none' })
 
 ContactForm.propTypes = propTypes
+ContactForm.defaultProps = defaultProps
 export default ContactForm

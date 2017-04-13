@@ -9,14 +9,18 @@ const propTypes = {
   description:  PropTypes.string
 }
 
+const defaultProps = {
+  description: "Guillaume Kolly"
+}
+
 const HeadBloc = (props) =>
   <Head>
     <title>{props.title}</title>
-    <meta charSet='utf-8' />
-    <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-    <meta name='description' content={props.description} />
-    <meta name='keywords' content={props.keywords} />
-    <meta name='copyright' content='Guillaume Kolly' />
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="description" content={props.description} />
+    <meta name="keywords" content={props.keywords} />
+    <meta name="copyright" content="Guillaume Kolly" />
     <style> @import url({theme.font.import}); </style>
   </Head>
 
@@ -33,4 +37,5 @@ css.global('html, body',  {
 })
 
 HeadBloc.propTypes = propTypes
+HeadBloc.defaultProps = defaultProps
 export default HeadBloc

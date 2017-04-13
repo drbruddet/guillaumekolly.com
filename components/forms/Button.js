@@ -7,6 +7,10 @@ const propTypes = {
   style:  PropTypes.object,
 }
 
+const defaultProps = {
+  style: null
+}
+
 const Button = (props) =>
   <input
     type={props.type}
@@ -35,4 +39,5 @@ const button = css({
 })
 
 Button.propTypes = propTypes
+Button.defaultProps = defaultProps
 export default Button

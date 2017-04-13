@@ -14,7 +14,7 @@ import particles from '../data/particles'
 import { experiences, projects, education } from '../data/myresume'
 import socials from '../data/socials'
 
-export default class extends React.Component {
+export default class Resume extends React.Component {
 
   static getInitialProps () {
     return {
@@ -108,7 +108,7 @@ export default class extends React.Component {
         <ButtonLink
           style={menu.button}
           url={config.application.cv_pdf_url}
-          title='Download CV'
+          title="Download CV"
           alt="Download PDF Resume"
           blank={true}
         />

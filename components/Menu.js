@@ -6,12 +6,16 @@ const propTypes = {
   style: PropTypes.object
 }
 
+const defaultProps = {
+  style: null,
+}
+
 const renderLinks = (links, style) => {
   return links.map( (link, i) => {
-    return link.type === 'email'
-      ? <a key={i} className={style.link} href={ link.url }>{ link.name }</a>
-      : <Link key={i} href={ link.url }>
-          <a className={style.link} target="_blank">{ link.name }</a>
+    return link.type === "email"
+      ? <a key={i} className={style.link} href={ link.url }> {link.name} </a>
+      : <Link key={i} href={link.url}>
+          <a className={style.link} target="_blank"> {link.name} </a>
         </Link>
   })
 }
@@ -22,4 +26,5 @@ const Menu = (props) =>
   </div>
 
 Menu.propTypes = propTypes
+Menu.defaultProps = defaultProps
 export default Menu

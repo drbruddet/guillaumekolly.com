@@ -8,9 +8,14 @@ const propTypes = {
   style:      PropTypes.object
 }
 
+const defaultProps = {
+  strength: 600,
+  style: null
+}
+
 const ParallaxBlock = (props) =>
   <div>
-    <Parallax strength={ props.strength ? props.strength : 600 }>
+    <Parallax strength={props.strength}>
       <Background> {props.background} </Background>
       <div className={props.style.parallax}>
         <h2 className={props.style.title}> {props.title} </h2>
@@ -20,4 +25,5 @@ const ParallaxBlock = (props) =>
   </div>
 
 ParallaxBlock.propTypes = propTypes
+ParallaxBlock.defaultProps = defaultProps
 export default ParallaxBlock

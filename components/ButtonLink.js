@@ -10,6 +10,12 @@ const propTypes = {
   style:  PropTypes.object,
 }
 
+const defaultProps = {
+  alt: "",
+  black: false,
+  style: null
+}
+
 const ButtonLink = (props) =>
   <div className={css(button, props.style)}>
     <Link href={props.url}>
@@ -40,4 +46,5 @@ const button = css({
 })
 
 ButtonLink.propTypes = propTypes
+ButtonLink.defaultProps = defaultProps
 export default ButtonLink

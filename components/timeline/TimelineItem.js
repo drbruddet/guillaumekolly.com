@@ -8,6 +8,10 @@ const propTypes = {
   style: PropTypes.object,
 }
 
+const defaultProps = {
+  style: null
+}
+
 const TimelineItem = (props) =>
   <div className={css(timelineBlock, props.side)}>
     <div className={css(marker, props.style.marker)} />
@@ -77,4 +81,5 @@ const description = css({
 })
 
 TimelineItem.propTypes = propTypes
+TimelineItem.defaultProps = defaultProps
 export default TimelineItem

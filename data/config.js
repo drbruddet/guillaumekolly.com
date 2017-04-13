@@ -2,6 +2,7 @@ const config = {
   application: {
     email: 'guillaume.kolly@gmail.com',
     cv_pdf_url: 'https://www.dropbox.com/s/h2fxaaugg5a3uhu/guillaume%20kolly.pdf?dl=0',
+    mailServer: 'https://formspree.io/'
   },
   meta: {
     index: {

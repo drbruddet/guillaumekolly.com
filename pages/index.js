@@ -12,7 +12,7 @@ import TextTyped from '../components/TextTyped'
 import config from '../data/config'
 import socials from '../data/socials'
 
-export default class extends React.Component {
+export default class Index extends React.Component {
 
   static getInitialProps () {
     return {

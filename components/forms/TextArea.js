@@ -6,20 +6,26 @@ const propTypes = {
   placeholder:  PropTypes.string,
   style:        PropTypes.object,
   cols:         PropTypes.number,
-  raws:         PropTypes.number
+  rows:         PropTypes.number
+}
+
+const defaultProps = {
+  style: null,
+  cols: 30,
+  rows: 5
 }
 
 const TextArea = (props) =>
   <div className={props.style}>
-    <label htmlFor={props.name}></label>
+    <label htmlFor={props.name} />
     <textarea
       {...placeholder({color: placeholderColor})}
       className={textarea}
       type="text"
       name={props.name}
       placeholder={props.placeholder ? props.placeholder : props.name}
-      cols={props.cols ? props.cols : 30}
-      rows={props.rows ? props.rows : 5}
+      cols={props.cols}
+      rows={props.rows}
       required
     />
     <span className={animation}/>
@@ -60,4 +66,5 @@ const animation = css({
 })
 
 TextArea.propTypes = propTypes
+TextArea.defaultProps = defaultProps
 export default TextArea

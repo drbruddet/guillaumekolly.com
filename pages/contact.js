@@ -11,7 +11,7 @@ import ContactForm from '../components/forms/ContactForm'
 import config from '../data/config'
 import socials from '../data/socials'
 
-export default class extends React.Component {
+export default class Contact extends React.Component {
 
   static getInitialProps () {
     return {
@@ -23,6 +23,7 @@ export default class extends React.Component {
   render() {
     const { socials, config } = this.props
     const meta = config.meta.contact
+    const sendTo = config.application.mailServer + config.application.email
 
     return (
       <div>
@@ -31,7 +32,7 @@ export default class extends React.Component {
           description={meta.description}
           keywords={meta.keywords}
         />
-        <section className={css(halfside, left )}>
+        <section className={css(halfside, left)}>
           <FullBackground />
           <Menu links={socials} style={social} />
           <div className={resume}>
@@ -46,7 +47,7 @@ export default class extends React.Component {
           </div>
         </section>
         <section className={css(halfside, right)}>
-          <ContactForm sendTo={config.application.email} style={contactForm} />
+          <ContactForm sendTo={sendTo} style={contactForm} />
         </section>
       </div>
     )
