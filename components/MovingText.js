@@ -10,9 +10,9 @@ export default class MovingText extends React.Component {
   }
 
   static defaultProps = {
-    style: null,
+    style:      null,
     beforetext: "",
-    aftertext: ""
+    aftertext:  ""
   }
 
   constructor(props) {

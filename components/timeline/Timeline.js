@@ -11,8 +11,8 @@ const propTypes = {
 }
 
 const defaultProps = {
-  type: "",
-  style: null
+  type:   "",
+  style:  null
 }
 
 const renderTimelineItems = (items, type, style) => {

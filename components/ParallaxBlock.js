@@ -10,7 +10,7 @@ const propTypes = {
 
 const defaultProps = {
   strength: 600,
-  style: null
+  style:    null
 }
 
 const ParallaxBlock = (props) =>

@@ -11,9 +11,9 @@ const propTypes = {
 }
 
 const defaultProps = {
-  alt: "",
-  black: false,
-  style: null
+  alt:    "",
+  black:  false,
+  style:  null
 }
 
 const ButtonLink = (props) =>

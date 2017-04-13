@@ -10,9 +10,9 @@ const propTypes = {
 }
 
 const defaultProps = {
-  style: null,
-  cols: 30,
-  rows: 5
+  style:  null,
+  cols:   30,
+  rows:   5
 }
 
 const TextArea = (props) =>
