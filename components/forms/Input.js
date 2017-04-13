@@ -10,13 +10,15 @@ const propTypes = {
 
 const Input = (props) =>
   <div className={props.style}>
-    <label htmlFor={props.name}></label>
-    <input {...placeholder({color: placeholderColor})}
-           type={props.type}
-           name={props.name}
-           className={input}
-           placeholder={props.placeholder ? props.placeholder : props.name}
-           required />
+    <label htmlFor={props.name} />
+    <input
+      {...placeholder({color: placeholderColor})}
+      type={props.type}
+      name={props.name}
+      className={input}
+      placeholder={props.placeholder ? props.placeholder : props.name}
+      required
+    />
     <span className={animation} />
   </div>
 

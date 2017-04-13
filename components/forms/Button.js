@@ -8,9 +8,11 @@ const propTypes = {
 }
 
 const Button = (props) =>
-  <input type={props.type}
-         value={props.value}
-         className={css(button, props.style)} />
+  <input
+    type={props.type}
+    value={props.value}
+    className={css(button, props.style)}
+  />
 
 const button = css({
   color: '#000',

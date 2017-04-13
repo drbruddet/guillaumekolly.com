@@ -12,15 +12,16 @@ const propTypes = {
 const TextArea = (props) =>
   <div className={props.style}>
     <label htmlFor={props.name}></label>
-    <textarea {...placeholder({color: placeholderColor})}
-              className={textarea}
-              type="text"
-              name={props.name}
-              placeholder={props.placeholder ? props.placeholder : props.name}
-              cols={props.cols ? props.cols : 30}
-              rows={props.rows ? props.rows : 5}
-              required>
-    </textarea>
+    <textarea
+      {...placeholder({color: placeholderColor})}
+      className={textarea}
+      type="text"
+      name={props.name}
+      placeholder={props.placeholder ? props.placeholder : props.name}
+      cols={props.cols ? props.cols : 30}
+      rows={props.rows ? props.rows : 5}
+      required
+    />
     <span className={animation}/>
   </div>
 

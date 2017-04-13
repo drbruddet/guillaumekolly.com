@@ -27,15 +27,19 @@ export default class extends React.Component {
 
     return (
       <div className={container}>
-        <HeadBloc title={meta.title}
-                  description={meta.description}
-                  keywords={meta.keywords} />
+        <HeadBloc
+          title={meta.title}
+          description={meta.description}
+          keywords={meta.keywords}
+        />
         <FullBackground />
         <Menu links={socials} style={verticalMenu} />
-        <MovingText beforetext="Hi, I'm "
-                    movingtext="Guillaume Kolly"
-                    aftertext="."
-                    style={movingText} />
+        <MovingText
+          beforetext="Hi, I'm "
+          movingtext="Guillaume Kolly"
+          aftertext="."
+          style={movingText}
+        />
         <TextTyped style={texttyped}>
           I’m a <strong>FULL STACK DEVELOPER</strong> born & raised in the
           French Alps, but I’m currently working in Lyon - France. I’m fluent

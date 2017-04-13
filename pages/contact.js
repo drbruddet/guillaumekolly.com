@@ -26,9 +26,11 @@ export default class extends React.Component {
 
     return (
       <div>
-        <HeadBloc title={meta.title}
-                  description={meta.description}
-                  keywords={meta.keywords} />
+        <HeadBloc
+          title={meta.title}
+          description={meta.description}
+          keywords={meta.keywords}
+        />
         <section className={css(halfside, left )}>
           <FullBackground />
           <Menu links={socials} style={social} />
@@ -44,7 +46,7 @@ export default class extends React.Component {
           </div>
         </section>
         <section className={css(halfside, right)}>
-          <ContactForm sendTo={config.application.email} style={contactForm}/>
+          <ContactForm sendTo={config.application.email} style={contactForm} />
         </section>
       </div>
     )

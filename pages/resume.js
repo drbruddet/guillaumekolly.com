@@ -92,9 +92,11 @@ export default class extends React.Component {
 
   renderParallaxBlock(title, content) {
     return (
-      <ParallaxBlock title={title}
-                     background={this.renderParallaxBackground()}
-                     style={ParallaxBlockStyle}>
+      <ParallaxBlock
+        title={title}
+        background={this.renderParallaxBackground()}
+        style={ParallaxBlockStyle}
+      >
         {content}
       </ParallaxBlock>
     )
@@ -103,15 +105,19 @@ export default class extends React.Component {
   renderMenuIcons() {
     return (
       <div className={menu.block}>
-        <ButtonLink style={menu.button}
+        <ButtonLink
+          style={menu.button}
           url={config.application.cv_pdf_url}
           title='Download CV'
           alt="Download PDF Resume"
-          blank={true} />
-        <ButtonLink style={menu.button}
+          blank={true}
+        />
+        <ButtonLink
+          style={menu.button}
           url="/contact"
           title="Contact"
-          alt="Contact Me" />
+          alt="Contact Me"
+        />
       </div>
     )
   }
@@ -122,9 +128,11 @@ export default class extends React.Component {
 
     return (
       <div>
-        <HeadBloc title={meta.title}
-                  description={meta.description}
-                  keywords={meta.keywords} />
+        <HeadBloc
+          title={meta.title}
+          description={meta.description}
+          keywords={meta.keywords}
+        />
         {this.renderParallaxBlock("01 . Skills", this.renderSkills())}
         {this.renderParallaxBlock("02 . Work Experiences",
           this.renderTimeline(experiences))}
