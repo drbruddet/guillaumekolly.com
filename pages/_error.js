@@ -1,7 +1,6 @@
 import React from 'react'
-import css from 'next/css'
 
-import { theme, _centeredBox } from '../components/layout/Theme'
+import { theme } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
 import MovingText from '../components/MovingText'
@@ -33,92 +32,70 @@ export default class Error extends React.Component {
     const movingtextstringify = String(this.props.statusCode)
 
     return (
-      <div className={_centeredBox}>
+      <div className='centeredbox'>
         <HeadBloc
           title={title}
           description={meta.description}
           keywords={meta.keywords}
         />
         <FullBackground />
-        <div className={verticalyCentered}>
-          <h2 className={errorText}>
+        <div className='verticalycentered'>
+          <h2 className='errortext'>
             The page your looking for can't be found.<br/>
             {this.renderError()}
           </h2>
-          <MovingText movingtext={movingtextstringify} style={movingText} />
-          <ButtonLink
-            url="/"
-            title="Home"
-            alt="Home Page"
-            style={button}
-          />
-          <ButtonLink
-            url="/resume"
-            title="Resume"
-            alt="Resume Page"
-            style={button}
-          />
-          <ButtonLink
-            url="/contact"
-            title="Contact"
-            alt="Contact Page"
-            style={button}
-          />
+          <div className="statuscode">{movingtextstringify}</div>
+          <div className="buttonlink">
+            <ButtonLink url="/" title="Home" alt="Home Page" />
+            <ButtonLink url="/resume" title="Resume" alt="Resume Page" />
+            <ButtonLink url="/contact" title="Contact" alt="Contact Page" />
+          </div>
         </div>
+
+        <style jsx>{`
+            .centeredbox {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100vw;
+              height: 100vh;
+            }
+
+            .verticalycentered {
+              text-align: center;
+              z-index: 1;
+              background: transparent;
+              color: ${theme.colors.black};
+            }
+
+            .statuscode {
+              font-size: 20em;
+              line-height: 1em;
+              max-width: 480px;
+            }
+
+            .buttonlink {
+              width: 100%;
+              max-width: 480px;
+              margin: auto;
+            }
+
+            .errortext {
+              font-size: 140%;
+              width: 100%;
+              margin: 0 auto;
+              line-height: 130%;
+              color: ${theme.colors.light_text};
+            }
+
+            @media(max-width: 640px) {
+              .errortext { font-size: 100%; }
+              .statuscode { font-size: 5em; }
+              .verticalycentered { width: 100%; margin-top: 30px; }
+              .buttonlink { width: 90%; }
+            }
+        `}</style>
       </div>
     )
   }
 }
-
-const button = css({
-  fontSize: '1.2em',
-  letterSpacing: '-0.02em',
-  textAlign: 'center',
-  backgroundColor: theme.colors.white,
-  margin: '10px auto',
-  width: '100%',
-  '@media(max-width: 640px)': { width: '80%', fontSize: '1em' },
-  '> a': {
-    color: theme.colors.black,
-    border: '4px solid ' + theme.colors.primary,
-    display: 'block',
-    padding: '10px',
-    boxSizing: 'border-box',
-  },
-  ':hover': {
-    color: theme.colors.white,
-    '> a': { backgroundColor: theme.colors.primary }
-  }
-})
-
-const movingText = {
-  movingtitle: css({
-    color: theme.colors.black,
-    fontSize: '1000%',
-    lineHeight: '90%',
-    '@media(max-width: 640px)': { fontSize: '600%' }
-  }),
-  movingtitlebackground: theme.colors.primary,
-  animation: {
-    transform_mouse_pos_x: '-100',
-    transform_mouse_pos_y: '-100',
-    shadow_mouse_pos_x: '-20',
-    shadow_mouse_pos_y: '20',
-  },
-}
-
-const errorText = css({
-  fontSize: '140%',
-  width: '100%',
-  margin: '0 auto',
-  lineHeight: '130%',
-  color: theme.colors.light_text,
-  '@media(max-width: 640px)': { fontSize: '100%' }
-})
-
-const verticalyCentered = css({
-  textAlign: 'center',
-  zIndex: '1',
-  background: 'transparent',
-  color: theme.colors.black,
-})

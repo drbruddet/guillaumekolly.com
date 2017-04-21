@@ -1,8 +1,7 @@
 import React from 'react'
-import { css, style } from 'next/css'
 import Link from 'next/link'
 
-import { theme, _tag } from '../components/layout/Theme'
+import { theme } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
 import Menu from '../components/Menu'
@@ -32,92 +31,90 @@ export default class Contact extends React.Component {
           description={meta.description}
           keywords={meta.keywords}
         />
-        <section className={css(halfside, left)}>
+        <section className='halfside left'>
           <FullBackground />
-          <Menu links={socials} style={social} />
-          <div className={resume}>
-            You can also watch my&nbsp;
-            <Link prefetch href="/resume">
-              <a className={_tag}>online resume</a>
-            </Link>
-            &nbsp;or&nbsp;
-            <Link href={config.application.cv_pdf_url}>
-              <a target="_blank" className={_tag}>download it</a>
-            </Link>.
+          <div className="center">
+            <Menu horizontal links={socials} />
+            <div className='resume'>
+              You can also watch my&nbsp;
+              <Link prefetch href="/resume">
+                <a className='tag'>online resume</a>
+              </Link>
+              &nbsp;or&nbsp;
+              <Link href={config.application.cv_pdf_url}>
+                <a target="_blank" className='tag'>download it</a>
+              </Link>.
+            </div>
           </div>
         </section>
-        <section className={css(halfside, right)}>
-          <ContactForm sendTo={sendTo} style={contactForm} />
+        <section className='halfside right'>
+          <ContactForm sendTo={sendTo} />
         </section>
+
+        <style jsx>{`
+          .halfside {
+            width: 50%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+          }
+
+          .center {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+          }
+
+          .resume {
+            letter-spacing: 0.024em;
+            margin-top: 20px;
+          }
+
+          .left {
+            left: 0;
+            background: transparent;
+          }
+
+          .right {
+            right: 0;
+            background: ${theme.colors.primary};
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          @media(max-width: 1240px) {
+            .resume { padding: 0 0.2em; }
+          }
+
+          @media(max-width: 840px) {
+            .center { height: 400px; }
+            .left { margin-top: 0; left: 0; height: 400px; }
+            .resume { font-size: 1.2em; }
+            .halfside { width: 100%; }
+            .right {
+              position: relative;
+              top: 400px;
+              left: 0;
+              height: 100%;
+              display: inline-flex;
+            }
+          }
+
+          @media(max-width: 640px) {
+            .center { height: 160px; }
+            .left { height: 160px; }
+            .resume { font-size: 0.9em; }
+            .right { top: 160px; }
+          }
+        `}</style>
       </div>
     )
   }
-}
-
-const social = {
-  component: style({
-    textTransform: 'uppercase',
-    zIndex: '999',
-    position: 'relative',
-    top: '50%',
-    textAlign: 'center',
-    display: 'block',
-    margin: '0 auto',
-    '@media(max-width: 640px)': { top: '40px' },
-  }),
-  link: style({
-    margin: '0 1% 0 1%',
-    textDecoration: 'none',
-    color: theme.colors.black,
-    fontSize: '1.2em',
-    fontWeight: 'bold',
-    ':hover': { textDecoration: 'line-through' },
-    '@media(max-width: 1240px)': {
-      fontSize: '1em',
-      display: 'list-item',
-      margin: '10px auto',
-    }
-  })
-}
-
-const resume = css({
-  position: 'relative',
-  top: 'calc(50% + 20px)',
-  textAlign: 'center',
-  letterSpacing: '0.024em',
-  '@media(max-width: 1240px)': { padding: '0 0.2em' },
-  '@media(max-width: 640px)': {
-    fontSize: '0.9em',
-    margin: '5px auto',
-    top: '70px',
-  }
-})
-
-const halfside = css({
-  width: '50%',
-  height: '100vh',
-  position: 'absolute',
-  top: '0',
-  '@media(max-width: 640px)': { width: '100%' }
-})
-
-const left = css({ left: '0', background: 'transparent' })
-
-const right = css({
-  right: '0',
-  background: theme.colors.primary,
-  zIndex: '999',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  '@media(max-width: 640px)': {
-    top: '240px',
-    left: '0',
-    height: '100%',
-    position: 'relative',
-  },
-})
-
-const contactForm = {
-  title: style({ fontFamily: theme.font.title, marginBottom: '1.5em' })
 }

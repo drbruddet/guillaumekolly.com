@@ -3,11 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports._centeredBox = exports._button = exports._tag = exports.theme = undefined;
-
-var _css = require('/Users/guillaumekolly/Documents/NextJS/guillaumekolly.com/node_modules/next/dist/lib/css.js');
-
-var _css2 = _interopRequireDefault(_css);
+exports.theme = undefined;
 
 var _theme = require('../../data/theme');
 
@@ -17,36 +13,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var theme = _theme2.default;
 
-var _tag = (0, _css2.default)({
-  color: theme.colors.text,
-  fontWeight: '700',
-  transition: 'all 0.4s 0.2s ease-in-out',
-  borderRadius: '5px',
-  padding: '1px 3px 1px 3px',
-  backgroundColor: theme.colors.trans_primary,
-  textDecoration: 'none',
-  ':hover': {
-    transform: 'scale(1.05, 1.4)',
-    transitionDelay: '0s',
-    transitionDuration: '0.2s',
-    backgroundColor: theme.colors.primary
-  }
-});
-
-var _button = (0, _css2.default)({
-  background: theme.colors.white,
-  color: theme.colors.primary
-});
-
-var _centeredBox = (0, _css2.default)({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '100vw',
-  height: '100vh'
-});
-
 exports.theme = theme;
-exports._tag = _tag;
-exports._button = _button;
-exports._centeredBox = _centeredBox;

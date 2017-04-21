@@ -1,8 +1,10 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Typist from 'react-typist'
 
+import { theme } from './layout/Theme'
+
 const propTypes = {
-  style:          PropTypes.object,
   children:       PropTypes.array.isRequired,
   avgTypingDelay: PropTypes.number,
   stdTypingDelay: PropTypes.number,
@@ -11,15 +13,14 @@ const propTypes = {
 }
 
 const defaultProps = {
-  style:          null,
   avgTypingDelay: 50,
   stdTypingDelay: 20,
   startDelay:     1000,
-  hideWhenDone:   true
+  hideWhenDone:   true,
 }
 
 const TextTyped = (props) =>
-  <div className={props.style}>
+  <div className='texttyped'>
     <Typist
       avgTypingDelay={props.avgTypingDelay}
       stdTypingDelay={props.stdTypingDelay}
@@ -28,6 +29,48 @@ const TextTyped = (props) =>
     >
       {props.children}
     </Typist>
+
+    <style jsx>{`
+        .texttyped {
+          position: absolute;
+          width: 598px;
+          right: 10%;
+          font-size: 1.1em;
+          line-height: 1.5em;
+          letter-spacing: -0.3px;
+          text-align: justify;
+          text-justify: inner-word;
+          top: calc(30% + 7.2em);
+          color: ${theme.colors.black};
+        }
+
+        @media(max-width: 1240px) {
+          .texttyped {
+            font-size: 1em;
+            width: 467px;
+            top: calc(30% + 4em + 4em);
+          }
+        }
+
+        @media(max-width: 640px) {
+          .texttyped {
+            width: 335px;
+            top: calc(30% + 2.3em);
+            right: 9%;
+            margin-bottom: 20px;
+          }
+        }
+
+        @media(max-width: 440px) {
+          .texttyped {
+            min-width: 240px;
+            width: calc(80%);
+            top: calc(10% + 2.5em);
+            right: 5%;
+            font-size: 0.8em;
+          }
+        }
+    `}</style>
   </div>
 
 TextTyped.propTypes = propTypes

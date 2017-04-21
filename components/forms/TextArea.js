@@ -1,26 +1,25 @@
-import React, { PropTypes } from 'react'
-import { placeholder, css } from 'next/css'
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import { theme } from '../layout/Theme'
 
 const propTypes = {
   name:         PropTypes.string.isRequired,
   placeholder:  PropTypes.string,
-  style:        PropTypes.object,
   cols:         PropTypes.number,
   rows:         PropTypes.number
 }
 
 const defaultProps = {
-  style:  null,
-  cols:   30,
-  rows:   5
+  cols: 30,
+  rows: 5
 }
 
 const TextArea = (props) =>
-  <div className={props.style}>
+  <div>
     <label htmlFor={props.name} />
     <textarea
-      {...placeholder({color: placeholderColor})}
-      className={textarea}
+      className='textarea'
       type="text"
       name={props.name}
       placeholder={props.placeholder ? props.placeholder : props.name}
@@ -28,43 +27,47 @@ const TextArea = (props) =>
       rows={props.rows}
       required
     />
-    <span className={animation}/>
-  </div>
+    <span className='animation'/>
 
-const textarea = css({
-  font: 'inherit',
-  margin: '0',
-  lineHeight: 'normal',
-  background: 'none',
-  border: 'none',
-  borderBottom: 'solid 2px #fff',
-  fontSize: '1em',
-  margin: '0em 0 1.875em 0',
-  padding: '0 0 0.875em 0',
-  width: '100%',
-  boxShadow: 'none',
-  MozBoxShadow: 'none',
-  WebkitBoxShadow: 'none',
-  height: '150px',
-  resize: 'none',
-  width: '100%',
-  lineHeight: '150%',
-  overflow: 'auto',
-  ':focus': { outline: 'none', padding: '0 0 0.875em 0' },
-  ':focus ~ span': { marginLeft: '-50px' }
-})
+    <style jsx> {`
+        .textarea {
+          font: inherit;
+          margin: 0;
+          background: none;
+          border: none;
+          border-bottom: solid 2px ${theme.colors.white};;
+          font-size: 1em;
+          box-shadow: none;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          margin: 0 0 1.875em 0;
+          padding: 0 0 0.875em 0;
+          width: 100%;
+          height: 150px;
+          resize: none;
+          line-height: '150%',
+          overflow: auto;
+        }
 
-const placeholderColor = '#242424'
+        ::-webkit-input-placeholder { color: ${theme.colors.black}; }
+        ::-moz-placeholder { color: ${theme.colors.black}; }
+        :-ms-input-placeholder { color: ${theme.colors.black}; }
+        :-moz-placeholder { color: ${theme.colors.black}; }
 
-const animation = css({
-  WebkitTransition: 'all 0.5s linear',
-  MozTransition: 'all 0.5s linear',
-  MsTransition: 'all 0.5s linear',
-  OTransition: 'all 0.5s linear',
-  transition: 'all 0.5s linear',
-  content: '',
-})
+        .textarea:focus { outline: none; padding: 0 0 0.875em 0; }
+        .textarea:focus ~ span { margin-left: -50px; }
+        .message { float: none; }
 
-TextArea.propTypes = propTypes
-TextArea.defaultProps = defaultProps
-export default TextArea
+        .animation {
+          -webkit-transition: all 0.5s linear;
+          -moz-transition: all 0.5s linear;
+          -ms-transition: all 0.5s linear;
+          -o-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+          content: '';
+        }
+      `} </style>
+    </div>
+
+  TextArea.propTypes = propTypes
+  export default TextArea

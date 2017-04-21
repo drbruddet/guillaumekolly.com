@@ -1,27 +1,52 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Parallax, Background } from 'react-parallax'
+
+import { theme } from '../components/layout/Theme'
 
 const propTypes = {
   title:      PropTypes.string.isRequired,
   background: PropTypes.object.isRequired,
-  strength:   PropTypes.number,
-  style:      PropTypes.object
+  strength:   PropTypes.number
 }
 
 const defaultProps = {
-  strength: 600,
-  style:    null
+  strength: 600
 }
 
 const ParallaxBlock = (props) =>
   <div>
     <Parallax strength={props.strength}>
       <Background> {props.background} </Background>
-      <div className={props.style.parallax}>
-        <h2 className={props.style.title}> {props.title} </h2>
+      <div className='parallax'>
+        <h2 className='title'> {props.title} </h2>
       </div>
     </Parallax>
-    <div className={props.style.content}> {props.children} </div>
+    <div className='content'> {props.children} </div>
+
+    <style jsx>{`
+        .parallax {
+          height: 200px;
+          border-top: 1px solid #ddd;
+        }
+
+        .title {
+          text-align: center;
+          font-family: ${theme.font.title};
+          text-transform: uppercase;
+          font-size: 2.3em;
+          line-height: 2.5em;
+          color: ${theme.colors.black};
+          padding-top: 30px;
+        }
+
+        @media(max-width: 640px) {
+          .parallax { height: 100px; }
+          .title { font-size: 1.3em; line-height: 1.5em; }
+        }
+
+        .content { margin: 5% auto; }
+    `}</style>
   </div>
 
 ParallaxBlock.propTypes = propTypes

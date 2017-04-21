@@ -1,62 +1,47 @@
-import React, { PropTypes } from 'react'
-import css from 'next/css'
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import { theme } from '../layout/Theme'
 
 import Input from './Input'
 import TextArea from './TextArea'
 import Button from './Button'
 
-import { theme, _button } from '../layout/Theme'
-
 const propTypes = {
-  sendTo: PropTypes.string.isRequired,
-  style: PropTypes.object
-}
-
-const defaultProps = {
-  style: null
+  sendTo: PropTypes.string.isRequired
 }
 
 const ContactForm = (props) =>
-  <div className={css(formblock, props.style)}>
-    <h1 className={css(title, props.style.title)}>CONTACT ME</h1>
+  <div className='formblock'>
+    <h1 className='title'>CONTACT ME</h1>
     <form action={props.sendTo} method="POST">
-      <Input type="text" name="name" style={name} />
-      <Input type="email" name="email" style={email} />
-      <Input type="text" name="subject" style={subject} />
-      <TextArea name="message" style={message} />
+      <Input name type="text" name="name" style='name' />
+      <Input email type="email" name="email" style='email' />
+      <Input subject type="text" name="subject" style='subject' />
+      <TextArea message name="message" />
       <input type="hidden" name="_next" value="/" />
-      <Button type="submit" value="Send" style={_button} />
+      <Button type="submit" value="Send" />
     </form>
+
+    <style jsx>{`
+      .formblock {
+        padding: 2em;
+        width: 80%;
+        margin: 0 auto; 
+        text-align: center;
+      }
+      .title { font-size: 400%; color: ${theme.colors.white} }
+
+      @media(max-width: 1240px) {
+        .formblock { padding: 2em; width: 80%; }
+        .title { font-size: 200%; }
+      }
+
+      @media(max-width: 640px) {
+        .formblock { padding: 1em; width: 90%; height: 100%; }
+      }
+    `}</style>
   </div>
 
-const formblock = css({
-  padding: '2em',
-  width: '80%',
-  margin: '0 auto',
-  textAlign: 'center',
-  '@media(max-width: 1240px)': {
-    padding: '2em',
-    width: '80%',
-  },
-  '@media(max-width: 600px)': {
-    padding: '1em',
-    width: '90%',
-    height: '100%',
-  }
-})
-
-const title = css({
-  fontSize: '400%',
-  color: theme.colors.white,
-  '@media(max-width: 1240px)': { fontSize: '200%', },
-  '@media(max-width: 600px)': { fontSize: '200%', }
-})
-
-const name = css({ float: 'right', width: '45%' })
-const email = css({ float: 'right', width: '45%', marginRight: '10%' })
-const subject = css({ width: '100%' })
-const message = css({ float: 'none' })
-
 ContactForm.propTypes = propTypes
-ContactForm.defaultProps = defaultProps
 export default ContactForm

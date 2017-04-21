@@ -1,43 +1,42 @@
-import React, { PropTypes } from 'react'
-import css from 'next/css'
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import { theme } from '../layout/Theme'
 
 const propTypes = {
   type:   PropTypes.string.isRequired,
-  value:  PropTypes.string.isRequired,
-  style:  PropTypes.object,
-}
-
-const defaultProps = {
-  style: null
+  value:  PropTypes.string.isRequired
 }
 
 const Button = (props) =>
-  <input
-    type={props.type}
-    value={props.value}
-    className={css(button, props.style)}
-  />
+  <div>
+    <input type={props.type} value={props.value} />
 
-const button = css({
-  color: '#000',
-  float: 'left',
-  padding: '15px 5px',
-  border: '4px solid #fff',
-  background: 'transparent',
-  letterSpacing: '0.12em',
-  width: '100%',
-  fontSize: '1.3em',
-  fontWeight: 'bold',
-  textTransform: 'uppercase',
-  cursor: 'pointer',
-  WebkitTransition: 'all 600ms',
-  MozTransition: 'all 600ms',
-  OTransition: 'all 600ms',
-  MsTransition: 'all 600ms',
-  transition: 'all 600ms',
-  ':hover': { backgroundColor: 'rgba(0,0,0,0)', color: '#fff' }
-})
+    <style jsx>{`
+        input {
+          color: ${theme.colors.white};
+          float: left;
+          padding: 15px 5px;
+          border: 4px solid ${theme.colors.white};
+          background: transparent;
+          letter-spacing: 0.12em;
+          width: 100%;
+          font-size: 1.3em;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          -webkit-transition: all 600ms;
+          -moz-transition: all 600ms;
+          -o-transition: all 600ms;
+          -ms-transition: all 600ms;
+          transition: all 600ms;
+        }
+        input:hover {
+          background-color: ${theme.colors.white};
+          color: ${theme.colors.primary};
+        }
+    `}</style>
+  </div>
 
 Button.propTypes = propTypes
-Button.defaultProps = defaultProps
 export default Button
