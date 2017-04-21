@@ -45,7 +45,9 @@ const ParallaxBlock = (props) =>
           .title { font-size: 1.3em; line-height: 1.5em; }
         }
 
-        .content { margin: 5% auto; }
+        .content {
+           margin: 5% auto;
+         }
     `}</style>
   </div>
 

@@ -41,8 +41,14 @@ const TimelineItem = (props) =>
         clear: both;
       }
 
-      .left { float: left; direction: rtl; }
-      .right { float: right; }
+      .left {
+        float: left;
+        direction: rtl;
+      }
+
+      .right {
+        float: right;
+      }
 
       .marker {
         width: 10px;

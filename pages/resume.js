@@ -73,6 +73,7 @@ export default class Resume extends React.Component {
         <br/><br/>
         I'm <strong className="tag yellow">French native</strong>&thinsp;
         and I'm <strong className="tag yellow">fluent in English</strong>.
+
         <style jsx>{`
             .skillblock {
               width: 50%;
@@ -84,11 +85,11 @@ export default class Resume extends React.Component {
               color: ${theme.colors.text};
             }
 
-            @media(max-width: 1240px) {
+            @media screen and (max-width: 1240px) {
               .skillblock { width: 70%; }
             }
 
-            @media(max-width: 640px) {
+            @media screen and (max-width: 640px) {
               .skillblock {
                 width: 84%;
                 text-align: justify;
@@ -105,8 +106,12 @@ export default class Resume extends React.Component {
     return (
       <div className="menu">
         <Menu links={socials} />
+
         <style jsx>{`
-            .menu { margin: 30px auto 80px auto; text-align: center; }
+            .menu {
+              margin: 30px auto 80px auto;
+              text-align: center;
+            }
         `}</style>
       </div>
     )
@@ -142,6 +147,7 @@ export default class Resume extends React.Component {
           title="Contact"
           alt="Contact Me"
         />
+
         <style jsx>{`
             .menu {
               position: fixed;;
@@ -151,7 +157,7 @@ export default class Resume extends React.Component {
               width: 150px;
             }
 
-            @media(max-width: 640px) {
+            @media screen and (max-width: 640px) {
               .menu {
                 top: auto;
                 bottom: 1px;

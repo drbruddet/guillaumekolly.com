@@ -31,6 +31,7 @@ const Button = (props) =>
           -ms-transition: all 600ms;
           transition: all 600ms;
         }
+        
         input:hover {
           background-color: ${theme.colors.white};
           color: ${theme.colors.primary};

@@ -3,7 +3,6 @@ import React from 'react'
 import { theme } from '../components/layout/Theme'
 import HeadBloc from '../components/layout/HeadBloc'
 import FullBackground from '../components/FullBackground'
-import MovingText from '../components/MovingText'
 import ButtonLink from '../components/ButtonLink'
 
 import config from '../data/config'

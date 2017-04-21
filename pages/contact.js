@@ -89,11 +89,11 @@ export default class Contact extends React.Component {
             justify-content: center;
           }
 
-          @media(max-width: 1240px) {
+          @media screen and (max-width: 1240px) {
             .resume { padding: 0 0.2em; }
           }
 
-          @media(max-width: 840px) {
+          @media screen and (max-width: 840px) {
             .center { height: 400px; }
             .left { margin-top: 0; left: 0; height: 400px; }
             .resume { font-size: 1.2em; }
@@ -107,7 +107,7 @@ export default class Contact extends React.Component {
             }
           }
 
-          @media(max-width: 640px) {
+          @media screen and (max-width: 640px) {
             .center { height: 160px; }
             .left { height: 160px; }
             .resume { font-size: 0.9em; }

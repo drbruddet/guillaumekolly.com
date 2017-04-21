@@ -27,10 +27,14 @@ const ContactForm = (props) =>
       .formblock {
         padding: 2em;
         width: 80%;
-        margin: 0 auto; 
+        margin: 0 auto;
         text-align: center;
       }
-      .title { font-size: 400%; color: ${theme.colors.white} }
+      
+      .title {
+        font-size: 400%;
+        color: ${theme.colors.white}
+      }
 
       @media(max-width: 1240px) {
         .formblock { padding: 2em; width: 80%; }

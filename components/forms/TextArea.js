@@ -29,7 +29,7 @@ const TextArea = (props) =>
     />
     <span className='animation'/>
 
-    <style jsx> {`
+    <style jsx>{`
         .textarea {
           font: inherit;
           margin: 0;
@@ -66,7 +66,7 @@ const TextArea = (props) =>
           transition: all 0.5s linear;
           content: '';
         }
-      `} </style>
+      `}</style>
     </div>
 
   TextArea.propTypes = propTypes

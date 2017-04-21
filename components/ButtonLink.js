@@ -63,12 +63,7 @@ const ButtonLink = (props) =>
             padding: 0;
             line-height: 0.8em;
           }
-
-          .fixed {
-            display: table-cell;
-            vertical-align: middle;
-            width: 45%;
-          }
+          .fixed { display: table-cell; vertical-align: middle; width: 45%; }
         }
     `}</style>
   </div>

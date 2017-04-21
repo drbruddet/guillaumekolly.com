@@ -59,11 +59,10 @@ const Menu = (props) =>
             margin: 0;
             position: absolute;
           }
-          .horizontal {
-            font-size: 0.8em;
-          }
+          .horizontal { font-size: 0.8em; }
         }
     `}</style>
+
     <style jsx global>{`
       .link {
         margin: 0 10px 0 0;
@@ -72,7 +71,10 @@ const Menu = (props) =>
         color: ${theme.colors.black};
         cursor: pointer;
       }
-      .link:hover { text-decoration: line-through; }
+
+      .link:hover {
+        text-decoration: line-through;
+      }
 
       @media(max-width: 640px) {
         .link {
