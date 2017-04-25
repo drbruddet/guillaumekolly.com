@@ -37,30 +37,31 @@ const HeadBloc = (props) =>
         }
 
         .tag {
-            color: ${theme.colors.black};
-            font-weight: 700;
-            transition: all 0.4s 0.2s ease-in-out;
-            border-radius: 5px;
-            padding: 1px 3px;
-            background-color: ${theme.colors.trans_primary};
-            text-decoration: none;
-          }
+          color: ${theme.colors.black};
+          font-weight: 700;
+          transition: all 0.4s 0.2s ease-in-out;
+          border-radius: 5px;
+          padding: 1px 3px;
+          background-color: ${theme.colors.trans_primary};
+          text-decoration: none;
+          cursor: pointer;
+          z-index: 999;
+        }
 
-          .tag:hover {
-            transform: scale(1.05, 1.4);
-            transition-delay: 0s;
-            transition-duration: 0.2s;
-            background-color: ${theme.colors.primary};
-          }
+        .tag:hover {
+          transform: scale(1.05, 1.4);
+          transition-delay: 0s;
+          transition-duration: 0.2s;
+          background-color: ${theme.colors.primary};
+        }
 
-          .yellow {
-            background-color: ${theme.colors.trans_secondary};
-          }
+        .yellow {
+          background-color: ${theme.colors.trans_secondary};
+        }
 
-          .yellow:hover {
-            background-color: ${theme.colors.secondary};
-          }
-
+        .yellow:hover {
+          background-color: ${theme.colors.secondary};
+        }
     `}</style>
   </Head>
 

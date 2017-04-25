@@ -38,11 +38,11 @@ export default class Contact extends React.Component {
             <div className='resume'>
               You can also watch my&nbsp;
               <Link prefetch href="/resume">
-                <a className='tag'>online resume</a>
+                <a className="tag">online resume</a>
               </Link>
               &nbsp;or&nbsp;
               <Link href={config.application.cv_pdf_url}>
-                <a target="_blank" className='tag'>download it</a>
+                <a className="tag" target="_blank">download it</a>
               </Link>.
             </div>
           </div>

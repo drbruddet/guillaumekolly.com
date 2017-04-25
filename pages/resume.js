@@ -30,49 +30,49 @@ export default class Resume extends React.Component {
     return (
       <p className="skillblock">
         Highly skilled in creating performant&thinsp;
-        <strong className="tag">Html</strong>,&thinsp;
-        <strong className="tag">Css</strong>,&thinsp;
-        <strong className="tag">React components</strong>,
+        <a className="tag">Html</a>,&thinsp;
+        <a className="tag">Css</a>,&thinsp;
+        <a className="tag">React components</a>,
         I play a lot since over than one year with&thinsp;
-        <strong className="tag">Meteor</strong>.
+        <a className="tag">Meteor</a>.
         I'm passionate about the 'MERN' stack&thinsp;
-        (<strong className="tag">MongoDb</strong>,&thinsp;
-        <strong className="tag">ExpressJs</strong>,&thinsp;
-        <strong className="tag">ReactJs</strong>,&thinsp;
-        <strong className="tag">NodeJs</strong>).
+        (<a className="tag">MongoDb</a>,&thinsp;
+        <a className="tag">ExpressJs</a>,&thinsp;
+        <a className="tag">ReactJs</a>,&thinsp;
+        <a className="tag">NodeJs</a>).
         I also code some backend work using&thinsp;
-        <strong className="tag">Ruby On Rails</strong>,&thinsp;
+        <a className="tag">Ruby On Rails</a>,&thinsp;
         and enjoy using the term, I know&thinsp;
-        <strong className="tag">Shell scripting</strong> to&thinsp;
+        <a className="tag">Shell scripting</a> to&thinsp;
         make my life easier. Experienced with design, I'm playing a
-        lot with <strong className="tag">Illustrator</strong> and&thinsp;
-        <strong className="tag">Photoshop</strong>.
+        lot with <a className="tag">Illustrator</a> and&thinsp;
+        <a className="tag">Photoshop</a>.
         Skilled with css pre-processors and frameworks, like&thinsp;
-        <strong className="tag">Bootstrap</strong>,&thinsp;
-        <strong className="tag">Semantic-ui</strong>,&thinsp;
-        <strong className="tag">Stylus</strong>,&thinsp;
-        <strong className="tag">Scss</strong>,&thinsp;
-        <strong className="tag">Haml</strong>. I also play with templating
-        like <strong className="tag">Jade</strong> /&thinsp;
-        <strong className="tag">Blaze</strong>
+        <a className="tag">Bootstrap</a>,&thinsp;
+        <a className="tag">Semantic-ui</a>,&thinsp;
+        <a className="tag">Stylus</a>,&thinsp;
+        <a className="tag">Scss</a>,&thinsp;
+        <a className="tag">Haml</a>. I also play with templating
+        like <a className="tag">Jade</a> /&thinsp;
+        <a className="tag">Blaze</a>
         &nbsp;with my Meteor apps. I'm fluent with Sql (
-        <strong className="tag">MySql</strong> /&thinsp;
-        <strong className="tag">PostgreSql</strong>)
-        and noSql (<strong className="tag">MongoDb</strong>).
-        I believe <strong className="tag">code has to clean</strong>, like
+        <a className="tag">MySql</a> /&thinsp;
+        <a className="tag">PostgreSql</a>)
+        and noSql (<a className="tag">MongoDb</a>).
+        I believe <a className="tag">code has to clean</a>, like
         a design has to be&thinsp;
-        <strong className="tag">responsive</strong> and&thinsp;
-        <strong className="tag">accessible</strong>.
-        I'm fan of <strong className="tag">Git</strong> and use&thinsp;
-        <strong className="tag">Github</strong> and&thinsp;
-        <strong className="tag">Bitbucket</strong>. Recently,
+        <a className="tag">responsive</a> and&thinsp;
+        <a className="tag">accessible</a>.
+        I'm fan of <a className="tag">Git</a> and use&thinsp;
+        <a className="tag">Github</a> and&thinsp;
+        <a className="tag">Bitbucket</a>. Recently,
         I'm learning to play with&thinsp;
-        <strong className="tag">Redux</strong>,&thinsp;
-        <strong className="tag">Webpack</strong>, and&thinsp;
-        <strong className="tag">GraphQl</strong> and I'm loving it!
+        <a className="tag">Redux</a>,&thinsp;
+        <a className="tag">Webpack</a>, and&thinsp;
+        <a className="tag">GraphQl</a> and I'm loving it!
         <br/><br/>
-        I'm <strong className="tag yellow">French native</strong>&thinsp;
-        and I'm <strong className="tag yellow">fluent in English</strong>.
+        I'm <a className="tag yellow">French native</a>&thinsp;
+        and I'm <a className="tag yellow">fluent in English</a>.
 
         <style jsx>{`
             .skillblock {

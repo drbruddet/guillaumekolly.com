@@ -79,10 +79,14 @@ const Menu = (props) =>
       @media(max-width: 640px) {
         .link {
           font-size: 100%;
-          display: list-item;
-          list-style-type: none;
           width: 100%;
-          margin: 5px auto;
+          margin: auto 5px;
+        }
+      }
+
+      @media(max-width: 340px) {
+        .link {
+          font-size: 0.8em;
         }
       }
     `}</style>
