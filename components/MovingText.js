@@ -58,7 +58,8 @@ export default class MovingText extends React.Component {
               position: absolute;
               top: 0;
               left: 55px;
-              font-family: ${theme.font.title};
+              font-family: ${theme.font.title_flag};
+              font-weight: 900;
             }
 
             .beforetext {

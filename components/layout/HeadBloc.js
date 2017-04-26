@@ -13,6 +13,8 @@ const defaultProps = {
   description: "Guillaume Kolly"
 }
 
+const fonts = "../../" + theme.font.repository
+
 const HeadBloc = (props) =>
   <Head>
     <title>{props.title}</title>
@@ -21,8 +23,17 @@ const HeadBloc = (props) =>
     <meta name="description" content={props.description} />
     <meta name="keywords" content={props.keywords} />
     <meta name="copyright" content="Guillaume Kolly" />
+
     <style jsx global>{`
-        @import url(${theme.font.import});
+        @font-face {
+          font-family: ${theme.font.paragraph};
+          src: url(${fonts} + ${theme.font.paragraph_src}) format('truetype');
+        }
+
+        @font-face {
+          font-family: ${theme.font.title};
+          src: url(${fonts} + ${theme.font.title_src}) format('truetype');
+        }
 
         html, body {
           padding: 0;
@@ -31,9 +42,10 @@ const HeadBloc = (props) =>
           line-height: 1.3em;
           font-size: 1em;
           text-shadow: 0;
+          font-weight: 400;
           -webkit-font-smoothing: antialiazed;
           -moz-osx-font-smoothing: grayscale;
-          font-family: ${theme.font.paragraph};
+          font-family: ${theme.font.paragraph_flag};
         }
 
         .tag {

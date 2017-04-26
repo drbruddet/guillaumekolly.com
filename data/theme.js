@@ -5,7 +5,7 @@ const my_theme = {
     time_line       : '#CCD1D9',
     time_line_title : '#666',
     black           : '#242424',
-    almost_white    : '#ccc',
+    almost_white    : '#ddd',
     white           : '#fff',
     trans_primary   : 'rgba(111, 209, 189, 0.5)',
     primary         : 'rgba(99, 231, 175, 1)',
@@ -13,9 +13,13 @@ const my_theme = {
     secondary       : 'rgba(255, 243, 133, 1)',
   },
   font: {
-    import:         "https://fonts.googleapis.com/css?family=Roboto:900|Inconsolata",
-    title:          "'Roboto', sans-serif",
-    paragraph:      "'Inconsolata', monospace",
+    repository:     "static/fonts/",
+    title:          "Roboto",
+    title_flag:     "'Roboto', sans-serif",
+    title_src:      "Roboto/Roboto-Black.ttf",
+    paragraph:      "Inconsolata",
+    paragraph_flag: "'Inconsolata', monospace",
+    paragraph_src:  "Inconsolata/Inconsolata-Regular.ttf",
   }
 }
 
