@@ -19,6 +19,7 @@ const HeadBloc = (props) =>
   <Head>
     <title>{props.title}</title>
     <meta charSet="utf-8" />
+    <link rel="icon" type="image/png" href="../../static/favicon.png" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta name="description" content={props.description} />
     <meta name="keywords" content={props.keywords} />

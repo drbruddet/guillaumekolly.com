@@ -39,6 +39,7 @@ var HeadBloc = function HeadBloc(props) {
   return _react2.default.createElement(_head2.default, null, _react2.default.createElement('title', {
     'data-jsx': 4058285137
   }, props.title), _react2.default.createElement('meta', { charSet: 'utf-8', 'data-jsx': 4058285137
+  }), _react2.default.createElement('link', { rel: 'icon', type: 'image/png', href: '../../static/favicon.png', 'data-jsx': 4058285137
   }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', 'data-jsx': 4058285137
   }), _react2.default.createElement('meta', { name: 'description', content: props.description, 'data-jsx': 4058285137
   }), _react2.default.createElement('meta', { name: 'keywords', content: props.keywords, 'data-jsx': 4058285137
