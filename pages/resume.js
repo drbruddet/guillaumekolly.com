@@ -183,6 +183,7 @@ export default class Resume extends React.Component {
           title={meta.title}
           description={meta.description}
           keywords={meta.keywords}
+          config={this.props.config}
         />
         {this.renderParallaxBlock("01 . Skills", this.renderSkills())}
         {this.renderParallaxBlock("02 . Work Experiences",

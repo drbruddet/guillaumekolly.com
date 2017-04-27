@@ -6,31 +6,52 @@ import { theme } from './Theme'
 
 const propTypes = {
   title:        PropTypes.string.isRequired,
-  description:  PropTypes.string
+  description:  PropTypes.string,
+  config:       PropTypes.object.isRequired
 }
 
 const defaultProps = {
   description: "Guillaume Kolly"
 }
 
-const fonts = "../../" + theme.font.repository
+const fonts   = "../../" + theme.font.repository
+
+const favicon = (url) => {
+  return "../../static/favicon/" + url
+}
 
 const HeadBloc = (props) =>
   <Head>
     <title>{props.title}</title>
     <meta charSet="utf-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../../static/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../../static/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../../static/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="../../static/favicon/manifest.json" />
-    <link rel="mask-icon" href="../../static/favicon/safari-pinned-tab.svg" color="#04b3b0" />
-    <link rel="shortcut icon" href="../../static/favicon/favicon.ico" />
-    <meta name="msapplication-config" content="../../static/favicon/browserconfig.xml" />
+    <link rel="apple-touch-icon" sizes="180x180" href={favicon("apple-touch-icon.png")} />
+    <link rel="icon" type="image/png" sizes="32x32" href={favicon("favicon-32x32.png")} />
+    <link rel="icon" type="image/png" sizes="16x16" href={favicon("favicon-16x16.png")} />
+    <link rel="manifest" href={favicon("manifest.json")} />
+    <link rel="mask-icon" href={favicon("safari-pinned-tab.svg")} color="#04b3b0" />
+    <link rel="shortcut icon" href={favicon("favicon.ico")} />
+    <meta name="msapplication-config" content={favicon("browserconfig.xml")} />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta name="description" content={props.description} />
+    <meta name="subject" content={props.config.application.subject} />
     <meta name="keywords" content={props.keywords} />
-    <meta name="copyright" content="Guillaume Kolly" />
+    <meta name="copyright" content={props.config.application.title} />
+    <meta name='language' content={props.config.application.lang} />
+    <meta name='author' content={props.config.application.owner} />
+    <meta name='designer' content={props.config.application.owner} />
+    <meta name='owner' content={props.config.application.owner} />
+    <meta name='url' content={props.config.application.url} />
+    <meta name='identifier-URL' content={props.config.application.url} />
+    <meta name='coverage' content='Worldwide' />
+    <meta name='distribution' content='Global' />
+    <meta name='rating' content='General' />
+    <meta name='subtitle' content={props.config.application.subtitle} />
+    <meta name='target' content='all' />
+    <meta name="apple-mobile-web-app-title" content={props.config.application.title} />
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta name='apple-touch-fullscreen' content='yes' />
+    <meta name='apple-mobile-web-app-status-bar-style' content='black' />
 
     <style jsx global>{`
         @font-face {

@@ -36,6 +36,7 @@ export default class Error extends React.Component {
           title={title}
           description={meta.description}
           keywords={meta.keywords}
+          config={this.props.config}
         />
         <FullBackground />
         <div className="verticalycentered">

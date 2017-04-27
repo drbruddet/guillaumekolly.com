@@ -1,8 +1,14 @@
 const config = {
   application: {
-    email: 'guillaume.kolly@gmail.com',
-    cv_pdf_url: 'https://www.dropbox.com/s/h2fxaaugg5a3uhu/guillaume%20kolly.pdf?dl=0',
-    mailServer: 'https://formspree.io/'
+    email: "guillaume.kolly@gmail.com",
+    cv_pdf_url: "https://www.dropbox.com/s/h2fxaaugg5a3uhu/guillaume%20kolly.pdf?dl=0",
+    mailServer: "https://formspree.io/",
+    subtitle: "Personal Website",
+    url: "http://www.guillaumekolly.com",
+    title: "Guillaume Kolly",
+    lang: "EN",
+    owner: "Guillaume Kolly, guillaume.kolly@gmail.com",
+    subject: "Guillaume Kolly's personal website"
   },
   meta: {
     index: {

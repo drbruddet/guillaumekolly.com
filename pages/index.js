@@ -30,6 +30,7 @@ export default class Index extends React.Component {
           title={meta.title}
           description={meta.description}
           keywords={meta.keywords}
+          config={this.props.config}
         />
         <FullBackground />
         <Menu vertical links={socials} />

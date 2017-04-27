@@ -30,6 +30,7 @@ export default class Contact extends React.Component {
           title={meta.title}
           description={meta.description}
           keywords={meta.keywords}
+          config={this.props.config}
         />
         <section className="halfside left">
           <FullBackground />
