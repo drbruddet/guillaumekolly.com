@@ -10,7 +10,7 @@ const propTypes = {
 }
 
 const defaultProps = {
-  type:   ""
+  type: ""
 }
 
 const renderTimelineItems = (items, type) => {
@@ -33,8 +33,8 @@ const renderTimelineItems = (items, type) => {
 
 const Timeline = (props) =>
   <div>
-    <div className='container'>
-      <div className='containerbefore' />
+    <div className="container">
+      <div className="containerbefore" />
       {renderTimelineItems(props.items, props.type)}
     </div>
 

@@ -14,7 +14,7 @@ export default class FullBackground extends React.Component {
 
   render() {
     return (
-      <div className='fullbackground'>
+      <div className="fullbackground">
         <Particles height="100vh" width="100vw" params={particles} />
 
         <style jsx>{`

@@ -20,7 +20,7 @@ const defaultProps = {
 }
 
 const TextTyped = (props) =>
-  <div className='texttyped'>
+  <div className="texttyped">
     <Typist
       avgTypingDelay={props.avgTypingDelay}
       stdTypingDelay={props.stdTypingDelay}

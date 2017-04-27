@@ -25,7 +25,7 @@ export default class Index extends React.Component {
     const meta = config.meta.index
 
     return (
-      <div className='container'>
+      <div className="container">
         <HeadBloc
           title={meta.title}
           description={meta.description}

@@ -19,7 +19,7 @@ const Input = (props) =>
       placeholder={props.placeholder ? props.placeholder : props.name}
       required
     />
-    <span className='animation' />
+    <span className="animation" />
 
     <style jsx>{`
         .input {

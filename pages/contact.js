@@ -31,11 +31,11 @@ export default class Contact extends React.Component {
           description={meta.description}
           keywords={meta.keywords}
         />
-        <section className='halfside left'>
+        <section className="halfside left">
           <FullBackground />
           <div className="center">
             <Menu horizontal links={socials} />
-            <div className='resume'>
+            <div className="resume">
               You can also watch my&nbsp;
               <Link prefetch href="/resume">
                 <a className="tag">online resume</a>
@@ -47,7 +47,7 @@ export default class Contact extends React.Component {
             </div>
           </div>
         </section>
-        <section className='halfside right'>
+        <section className="halfside right">
           <ContactForm sendTo={sendTo} />
         </section>
 

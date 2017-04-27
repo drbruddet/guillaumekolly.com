@@ -18,21 +18,21 @@ const ParallaxBlock = (props) =>
   <div>
     <Parallax strength={props.strength}>
       <Background> {props.background} </Background>
-      <div className='parallax'>
-        <h2 className='title'> {props.title} </h2>
+      <div className="parallax">
+        <h2 className="title"> {props.title} </h2>
       </div>
     </Parallax>
-    <div className='content'> {props.children} </div>
+    <div className="content"> {props.children} </div>
 
     <style jsx>{`
         .parallax {
           height: 200px;
-          border-top: 1px solid #ddd;
+          border-top: 1px solid ${theme.colors.almost_white};
         }
 
         .title {
           text-align: center;
-          font-family: ${theme.font.title};
+          font-family: ${theme.font.title_flag};
           text-transform: uppercase;
           font-size: 2.3em;
           line-height: 2.5em;

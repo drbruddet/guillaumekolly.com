@@ -31,15 +31,15 @@ export default class Error extends React.Component {
     const movingtextstringify = String(this.props.statusCode)
 
     return (
-      <div className='centeredbox'>
+      <div className="centeredbox">
         <HeadBloc
           title={title}
           description={meta.description}
           keywords={meta.keywords}
         />
         <FullBackground />
-        <div className='verticalycentered'>
-          <h2 className='errortext'>
+        <div className="verticalycentered">
+          <h2 className="errortext">
             The page your looking for can't be found.<br/>
             {this.renderError()}
           </h2>

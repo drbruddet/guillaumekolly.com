@@ -20,7 +20,7 @@ const renderLinks = (links) => {
 
 const Menu = (props) =>
   <div className={props.vertical
-  ? 'vertical menu' : props.horizontal ? 'horizontal menu' : 'menu'}>
+  ? "vertical menu" : props.horizontal ? "horizontal menu" : "menu"}>
     {renderLinks(props.links)}
 
     <style jsx>{`

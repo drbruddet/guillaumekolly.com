@@ -44,10 +44,10 @@ export default class MovingText extends React.Component {
     }
 
     return (
-      <div className='background' onMouseMove={this.mouseMove.bind(this)}>
-        <span className='beforetext'> {beforetext} </span>
-        <h1 className='fixedtitle'>
-          <span className='movingtext' style={offset}>{movingtext}</span>
+      <div className="background" onMouseMove={this.mouseMove.bind(this)}>
+        <span className="beforetext"> {beforetext} </span>
+        <h1 className="fixedtitle">
+          <span className="movingtext" style={offset}>{movingtext}</span>
           {aftertext}
         </h1>
 

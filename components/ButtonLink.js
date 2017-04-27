@@ -17,7 +17,7 @@ const defaultProps = {
 }
 
 const ButtonLink = (props) =>
-  <div className={props.table ? 'buttonlink fixed' : 'buttonlink'}>
+  <div className={props.table ? "buttonlink fixed" : "buttonlink"}>
     <Link prefetch href={props.url}>
       <a target={"_blank" ? props.blank : ""} alt={props.alt}>{props.title}</a>
     </Link>

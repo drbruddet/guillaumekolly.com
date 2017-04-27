@@ -13,16 +13,16 @@ const defaultProps = {
 }
 
 const giveClass = (side) => {
-  return side == "right" ? 'timelineblock right' : 'timelineblock left'
+  return side == "right" ? "timelineblock right" : "timelineblock left"
 }
 
 const TimelineItem = (props) =>
   <div className={giveClass(props.side)}>
-    <div className='marker' />
-    <div className='timelinecontent'>
-      <h3 className='title'>{props.item.title}</h3>
-      <span className='subtitle'>{props.item.subtitle}</span>
-      <p className='description'>{props.item.description}</p>
+    <div className="marker" />
+    <div className="timelinecontent">
+      <h3 className="title">{props.item.title}</h3>
+      <span className="subtitle">{props.item.subtitle}</span>
+      <p className="description">{props.item.description}</p>
     </div>
 
     <style jsx>{`
