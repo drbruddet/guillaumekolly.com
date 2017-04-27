@@ -70,7 +70,7 @@ const HeadBloc = (props) =>
           border: 0;
           line-height: 1.3em;
           font-size: 1em;
-          text-shadow: 0;
+          text-shadow: none;
           font-weight: 400;
           -webkit-font-smoothing: antialiazed;
           -moz-osx-font-smoothing: grayscale;

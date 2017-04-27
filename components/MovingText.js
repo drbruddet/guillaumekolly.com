@@ -76,7 +76,7 @@ export default class MovingText extends React.Component {
               font-size: 6em;
               right: 10%;
               top: 30%;
-              letterSpacing: -6px;
+              letter-spacing: -6px;
               white-space: nowrap;
               color: ${theme.colors.black};
             }

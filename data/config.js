@@ -12,23 +12,23 @@ const config = {
   },
   meta: {
     index: {
-      title: "Guillaume Kolly",
-      description: "Guillaume Kolly | Full stack developer living in Lyon.",
+      title: "Guillaume Kolly - Javascript Full Stack Developer",
+      description: "Guillaume Kolly | FULL STACK DEVELOPER born & raised in the French Alps. I’m fluent in the Javascript Stack (Meteor / Node / React)",
       keywords: "guillaume, kolly, frontend, backend, full stack, developer, web, javascript, reactJS, Meteor, Js, NextJS, Webpack",
     },
     error: {
-      title: "Guillaume Kolly | ",
-      description: "Guillaume Kolly's Website. Do not hesitate to contact me.",
+      title: "Guillaume Kolly - Javascript Full Stack Developer | ",
+      description: "Guillaume Kolly | Javascript Full stack developer living in Lyon. An Error occured on the page.",
       keywords: "guillaume, kolly, frontend, backend, full stack, developer, web, javascript, reactJS, Meteor, Js, NextJS, Webpack",
     },
     contact: {
-      title: "Guillaume Kolly | Contact",
-      description: "I'm a full stack developer living in Lyon. Contact Me here.",
+      title: "Guillaume Kolly - Javascript Full Stack Developer | Contact",
+      description: "Guillaume Kolly | Javascript Full stack developer living in Lyon. Do not hezitate to contact me for any questions.",
       keywords: "guillaume, kolly, frontend, backend, full stack, developer, web, javascript, reactJS, Meteor, Js, NextJS, Webpack",
     },
     resume: {
-      title: "Guillaume Kolly | Resume",
-      description: "Guillaume Kolly's online Resume. You can check here all my biography and download my resume.",
+      title: "Guillaume Kolly - Javascript Full Stack Developer | Resume",
+      description: "Guillaume Kolly | Javascript Full stack developer. You can check my skills, experiences, personal projects and studies here.",
       keywords: "guillaume, kolly, frontend, backend, full stack, developer, web, javascript, reactJS, Meteor, Js, NextJS, Webpack",
     },
   }

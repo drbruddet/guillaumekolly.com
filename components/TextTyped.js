@@ -39,7 +39,7 @@ const TextTyped = (props) =>
           line-height: 1.5em;
           letter-spacing: -0.3px;
           text-align: justify;
-          text-justify: inner-word;
+          text-justify: inter-word;
           top: calc(30% + 7.2em);
           color: ${theme.colors.black};
         }
