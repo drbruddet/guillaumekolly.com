@@ -60,7 +60,6 @@ const Menu = (props) =>
             position: absolute;
           }
           .horizontal { display: table; table-layout: fixed; margin: 0 auto; }
-
         }
 
     `}</style>

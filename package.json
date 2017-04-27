@@ -8,6 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "@mars/heroku-nextjs-build": "^2.0.0",
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
     "iltorb": "^1.2.1",
     "install": "^0.8.8",
     "next": "latest",
@@ -20,9 +22,9 @@
     "styled-jsx": "^0.5.7"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start -p $PORT",
+    "start": "NODE_ENV=production node server.js -p $PORT",
     "heroku-postbuild": "heroku-nextjs-build"
   },
   "engines": {
