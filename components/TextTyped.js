@@ -13,9 +13,9 @@ const propTypes = {
 }
 
 const defaultProps = {
-  avgTypingDelay: 50,
+  avgTypingDelay: 30,
   stdTypingDelay: 20,
-  startDelay:     1000,
+  startDelay:     500,
   hideWhenDone:   true,
 }
 
