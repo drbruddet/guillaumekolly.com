@@ -55,30 +55,65 @@ var HeadBloc = function HeadBloc(props) {
       fileName: _jsxFileName,
       lineNumber: 21
     }
-  }), _react2.default.createElement('link', { rel: 'icon', type: 'image/png', href: '../../static/favicon.png', 'data-jsx': 4058285137,
+  }), _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '180x180', href: '../../static/favicon/apple-touch-icon.png', 'data-jsx': 4058285137,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     }
-  }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', 'data-jsx': 4058285137,
+  }), _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '../../static/favicon/favicon-32x32.png', 'data-jsx': 4058285137,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     }
-  }), _react2.default.createElement('meta', { name: 'description', content: props.description, 'data-jsx': 4058285137,
+  }), _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '../../static/favicon/favicon-16x16.png', 'data-jsx': 4058285137,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     }
-  }), _react2.default.createElement('meta', { name: 'keywords', content: props.keywords, 'data-jsx': 4058285137,
+  }), _react2.default.createElement('link', { rel: 'manifest', href: '../../static/favicon/manifest.json', 'data-jsx': 4058285137,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     }
-  }), _react2.default.createElement('meta', { name: 'copyright', content: 'Guillaume Kolly', 'data-jsx': 4058285137,
+  }), _react2.default.createElement('link', { rel: 'mask-icon', href: '../../static/favicon/safari-pinned-tab.svg', color: '#04b3b0', 'data-jsx': 4058285137,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
+    }
+  }), _react2.default.createElement('link', { rel: 'shortcut icon', href: '../../static/favicon/favicon.ico', 'data-jsx': 4058285137,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    }
+  }), _react2.default.createElement('meta', { name: 'msapplication-config', content: '../../static/favicon/browserconfig.xml', 'data-jsx': 4058285137,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    }
+  }), _react2.default.createElement('meta', { name: 'theme-color', content: '#ffffff', 'data-jsx': 4058285137,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    }
+  }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', 'data-jsx': 4058285137,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    }
+  }), _react2.default.createElement('meta', { name: 'description', content: props.description, 'data-jsx': 4058285137,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    }
+  }), _react2.default.createElement('meta', { name: 'keywords', content: props.keywords, 'data-jsx': 4058285137,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    }
+  }), _react2.default.createElement('meta', { name: 'copyright', content: 'Guillaume Kolly', 'data-jsx': 4058285137,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
     }
   }), _react2.default.createElement(_style2.default, {
     styleId: 4058285137,
