@@ -59,8 +59,9 @@ const Menu = (props) =>
             margin: 0;
             position: absolute;
           }
-          .horizontal { font-size: 0.8em; }
+          .horizontal { display: inline-grid; }
         }
+
     `}</style>
 
     <style jsx global>{`

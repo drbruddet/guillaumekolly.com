@@ -105,7 +105,7 @@ export default class Resume extends React.Component {
   renderFindMe() {
     return (
       <div className="menu">
-        <Menu links={socials} />
+        <Menu horizontal links={socials} />
 
         <style jsx>{`
             .menu {
