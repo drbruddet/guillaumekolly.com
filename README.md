@@ -13,3 +13,7 @@ I'm using some additional packages:
 - react-parallax [react-parallax](https://github.com/RRutsche/react-parallax)
 
 The site is hosted by [Heroku](http://www.heroku.com)
+
+Speed tests:
+![Image of Google PageSpeed](https://img4.hostingpics.net/pics/411750Capturedecran20170427a154909.jpg)
+![Image of PingdomTools](https://img4.hostingpics.net/pics/505357Capturedecran20170427a154920.jpg)
