@@ -56,7 +56,7 @@ const ButtonLink = (props) =>
           height: 100%;
         }
 
-        @media(max-width: 640px) {
+        @media screen and (max-width: 640px) {
           .buttonlink {
             width: 80%;
             font-size: 1em;

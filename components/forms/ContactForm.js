@@ -30,18 +30,18 @@ const ContactForm = (props) =>
         margin: 0 auto;
         text-align: center;
       }
-      
+
       .title {
         font-size: 400%;
         color: ${theme.colors.white}
       }
 
-      @media(max-width: 1240px) {
+      @media screen and (max-width: 1240px) {
         .formblock { padding: 2em; width: 80%; }
         .title { font-size: 200%; }
       }
 
-      @media(max-width: 640px) {
+      @media screen and (max-width: 640px) {
         .formblock { padding: 1em; width: 90%; height: 100%; }
       }
     `}</style>

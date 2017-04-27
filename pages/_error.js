@@ -88,7 +88,7 @@ export default class Error extends React.Component {
               color: ${theme.colors.light_text};
             }
 
-            @media(max-width: 640px) {
+            @media screen and (max-width: 640px) {
               .errortext { font-size: 100%; }
               .statuscode { font-size: 5em; }
               .verticalycentered { width: 100%; margin-top: 30px; }

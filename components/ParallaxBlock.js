@@ -40,7 +40,7 @@ const ParallaxBlock = (props) =>
           padding-top: 30px;
         }
 
-        @media(max-width: 640px) {
+        @media screen and (max-width: 640px) {
           .parallax { height: 100px; }
           .title { font-size: 1.3em; line-height: 1.5em; }
         }

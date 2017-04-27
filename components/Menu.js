@@ -43,15 +43,15 @@ const Menu = (props) =>
           position: relative;
         }
 
-        @media(max-width: 1080px) {
+        @media screen and (max-width: 1080px) {
           .horizontal { font-size: 0.7em; }
         }
 
-        @media(max-width: 840px) {
+        @media screen and (max-width: 840px) {
           .horizontal { font-size: 1.1em; }
         }
 
-        @media(max-width: 640px) {
+        @media screen and (max-width: 640px) {
           .vertical {
             white-space: nowrap;
             left: 8px;
@@ -59,7 +59,8 @@ const Menu = (props) =>
             margin: 0;
             position: absolute;
           }
-          .horizontal { display: inline-grid; }
+          .horizontal { display: table; table-layout: fixed; margin: 0 auto; }
+
         }
 
     `}</style>
@@ -77,18 +78,13 @@ const Menu = (props) =>
         text-decoration: line-through;
       }
 
-      @media(max-width: 640px) {
-        .link {
-          font-size: 100%;
-          width: 100%;
-          margin: auto 5px;
-        }
+      @media screen and (max-width: 640px) {
+        .link { font-size: 100%; width: 100%; margin: auto 5px; }
+        .horizontal .link { display: table-cell; display: block; }
       }
 
-      @media(max-width: 340px) {
-        .link {
-          font-size: 0.8em;
-        }
+      @media screen and (max-width: 340px) {
+        .link { font-size: 0.8em; }
       }
     `}</style>
   </div>

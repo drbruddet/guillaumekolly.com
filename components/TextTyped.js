@@ -44,7 +44,7 @@ const TextTyped = (props) =>
           color: ${theme.colors.black};
         }
 
-        @media(max-width: 1240px) {
+        @media screen and (max-width: 1240px) {
           .texttyped {
             font-size: 1em;
             width: 467px;
@@ -52,7 +52,7 @@ const TextTyped = (props) =>
           }
         }
 
-        @media(max-width: 640px) {
+        @media screen and (max-width: 640px) {
           .texttyped {
             width: 335px;
             top: calc(30% + 2.3em);
@@ -61,7 +61,7 @@ const TextTyped = (props) =>
           }
         }
 
-        @media(max-width: 440px) {
+        @media screen and (max-width: 440px) {
           .texttyped {
             min-width: 240px;
             width: calc(80%);

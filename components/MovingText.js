@@ -87,17 +87,17 @@ export default class MovingText extends React.Component {
               color: ${theme.colors.black};
             }
 
-            @media(max-width: 1240px) {
+            @media screen and (max-width: 1240px) {
               .beforetext { font-size: 10em; top: 34%; right: 40%; }
               .movingtext { font-size: 0.85em; }
             }
-            @media(max-width: 640px) {
+            @media screen and (max-width: 640px) {
               .background { left: 30px; width: calc(100vw - 30px); }
               .beforetext { font-size: 8em; top: 21%; right: 20%; }
               .fixedtitle { top: 20%; font-size: 3em; }
               .movingtext { letter-spacing: -3px; }
             }
-            @media(max-width: 440px) {
+            @media screen and (max-width: 440px) {
               .beforetext { display: none; }
               .fixedtitle { top: 0; right: 5%; letter-spacing: 0; }
             }
