@@ -28,4 +28,4 @@ app.prepare()
     if (err) throw err
     console.log('> Ready on http://localhost:3000')
   })
-})
+}).listen(process.env.PORT || 5000)
