@@ -36,11 +36,21 @@ export default class Index extends React.Component {
         <Menu vertical links={socials} />
         <MovingText
           beforetext="Hi, I'm "
-          movingtext="Moving Text"
+          movingtext="Guillaume Kolly"
           aftertext="."
         />
         <TextTyped>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+          I’m a <strong>FULL STACK DEVELOPER</strong> born & raised in the
+          French Alps, but I’m currently working in Lyon - France. I’m fluent
+          in the Javascript Stack ( Meteor / Node / Html / Css / React / Webpack) and
+          I’ve recently started experimenting with Redux, GraphQL and React Native.
+          I’m a tech enthusiast constantly improve my skills and stay
+          up-to-date with new methods and technology. Writing readable, elegant
+          and clean code is as important as making a clean design.
+          You can take a look on&nbsp;
+          <Link prefetch href="/resume"><a className="tag">my resume</a></Link>
+          &nbsp;for more, and do not hesitate to&nbsp;
+          <Link prefetch href="/contact"><a className="tag">contact me</a></Link>.
         </TextTyped>
 
         <style jsx>{`

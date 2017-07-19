@@ -39,8 +39,9 @@ export default class Resume extends React.Component {
         (<a className="tag">MongoDb</a>,&thinsp;
         <a className="tag">ExpressJs</a>,&thinsp;
         <a className="tag">ReactJs</a>,&thinsp;
-        <a className="tag">NodeJs</a>).
-        I also code some backend work using&thinsp;
+        <a className="tag">NodeJs</a>). I love to use the module bundler
+        <a className="tag">Webpack</a>,&thinsp;
+        and I'm also code some backend work using&thinsp;
         <a className="tag">Ruby On Rails</a>,&thinsp;
         and enjoy using the term, I know&thinsp;
         <a className="tag">Shell scripting</a> to&thinsp;
@@ -68,7 +69,7 @@ export default class Resume extends React.Component {
         <a className="tag">Bitbucket</a>. Recently,
         I'm learning to play with&thinsp;
         <a className="tag">Redux</a>,&thinsp;
-        <a className="tag">Webpack</a>, and&thinsp;
+        <a className="tag">React Native</a>, and&thinsp;
         <a className="tag">GraphQl</a> and I'm loving it!
         <br/><br/>
         I'm <a className="tag yellow">French native</a>&thinsp;
