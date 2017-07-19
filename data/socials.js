@@ -1,17 +1,17 @@
 const socials = [
   {
     "name": "LinkedIn",
-    "url": "https://www.linkedin.com/in/guillaumekolly/",
+    "url": "#",
     "type": "url"
   },
   {
     "name": "Github",
-    "url": "https://github.com/guillaumeko",
+    "url": "#",
     "type": "url"
   },
   {
-    "name": "guillaume.kolly[at]gmail.com",
-    "url": "mailto:guillaume.kolly@gmail.com",
+    "name": "toto[at]gmail.com",
+    "url": "#",
     "type": "email"
   }
 ];
