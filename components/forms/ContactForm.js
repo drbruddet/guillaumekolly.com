@@ -29,11 +29,13 @@ const ContactForm = (props) =>
         width: 80%;
         margin: 0 auto;
         text-align: center;
+        font-family: ${theme.font.paragraph_flag};
       }
 
       .title {
         font-size: 400%;
         color: ${theme.colors.white}
+        font-family: ${theme.font.title_flag};
       }
 
       @media screen and (max-width: 1240px) {

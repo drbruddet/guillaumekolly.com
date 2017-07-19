@@ -84,6 +84,7 @@ export default class Resume extends React.Component {
               word-wrap: break-word;
               font-size: 1.1em;
               color: ${theme.colors.text};
+              font-family: ${theme.font.paragraph_flag};
             }
 
             @media screen and (max-width: 1240px) {
@@ -156,6 +157,7 @@ export default class Resume extends React.Component {
               left: 3%;
               z-index: 999;
               width: 150px;
+              font-family: ${theme.font.paragraph_flag};
             }
 
             @media screen and (max-width: 640px) {

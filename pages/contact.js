@@ -58,6 +58,7 @@ export default class Contact extends React.Component {
             height: 100vh;
             position: absolute;
             top: 0;
+            font-family: ${theme.font.paragraph_flag};
           }
 
           .center {

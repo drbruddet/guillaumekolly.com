@@ -38,6 +38,7 @@ const ParallaxBlock = (props) =>
           line-height: 2.5em;
           color: ${theme.colors.black};
           padding-top: 30px;
+          font-family: ${theme.font.title_flag};
         }
 
         @media screen and (max-width: 640px) {

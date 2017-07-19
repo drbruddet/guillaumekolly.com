@@ -39,6 +39,7 @@ const TimelineItem = (props) =>
         -moz-box-pack: justify;
         justify-content: space-between;
         clear: both;
+        font-family: ${theme.font.paragraph_flag};
       }
 
       .left {
@@ -63,6 +64,7 @@ const TimelineItem = (props) =>
       .timelinecontent {
         width: 95%;
         padding: 0 15px;
+        font-family: inherit;
       }
 
       .title {
@@ -71,11 +73,13 @@ const TimelineItem = (props) =>
         font-size: 25px;
         font-weight: 500;
         color: ${theme.colors.time_line_title};
+        font-family: ${theme.font.title_flag};
       }
 
       .subtitle {
         font-size: 15px;
         color: ${theme.colors.light_text};
+        font-family: inherit;
       }
 
       .description {
@@ -83,6 +87,7 @@ const TimelineItem = (props) =>
         line-height: 1.5em;
         word-spacing: 1px;
         color: ${theme.colors.text};
+        font-family: inherit;
       }
 
       @media screen and (max-width: 768px) {
