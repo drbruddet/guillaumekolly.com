@@ -28,6 +28,7 @@ const Menu = (props) =>
           text-transform: uppercase;
           z-index: 1;
           text-decoration: none;
+          font-family: ${theme.font.paragraph_flag};
         }
 
         .vertical {

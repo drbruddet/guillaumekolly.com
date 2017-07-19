@@ -81,7 +81,6 @@ const HeadBloc = (props) =>
           font-weight: 400;
           -webkit-font-smoothing: antialiazed;
           -moz-osx-font-smoothing: grayscale;
-          font-family: ${theme.font.paragraph_flag};
         }
 
         .tag {
